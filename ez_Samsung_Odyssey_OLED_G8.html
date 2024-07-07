@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EZTech | Odyssey OLED G8</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="media/logoicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="ez_reset.css"/>
+    <link rel="stylesheet" href="ez_base.css"/>
+    <link rel="stylesheet" href="ez_product_detail_desktop.css"/> 
+</head>
+
+<body>
+  <header>
+    <a href="ez_index.html"><img src="media/logo.jpg" alt="Logo" id="ezlogo" /></a>
+      <div class="top-buttons">
+        <a class="home-button" href="ez_index.html"><span class="buttontxt">Home</span></a>
+        <a class="aboutus-button" href="ez_about_us.html"><span class="buttontxt">About Us</span></a>
+        <a class="contactus-button" href="ez_contact_us.html"><span class="buttontxt">Contact Us</span></a>
+        <a class="promotion-button" href="ez_promotions.html"><span class="buttontxt">Promotions</span></a>
+        <a class="cart-button" href="ez_shopcart.html"><span class="buttontxt">Cart</span></a>
+        <a class="support-button">
+          <span class="buttontxt">Support</span>
+          <ul id="support-options">
+            <li id="ds">Device Support</li>
+            <li id="faq">FAQs</li>
+          </ul>
+        </a>
+        <button type="submit" onclick="showsearchbar()" class="mySearch">
+          <img src="media\search.png" width="30" class="Btn" id="myBtn">
+        </button>
+        <div class="search">
+          <script>                
+              function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('myInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName('li');
+              
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+              function showsearchbar() {
+                  var modal = document.getElementById("myModal");
+                  var btn = document.getElementById("myBtn");
+                  var span = document.getElementsByClassName("close")[0];
+                  
+                  document.getElementById("myModal").style.display = "block";
+                  
+                  span.onclick = function() {
+                  modal.style.display = "none";
+                  }
+  
+                  window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                      }
+                  }
+              }
+          </script>
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products.."><i class="fa fa-search"></i></input>
+                  <ul id="myUL">
+                    <li><a href="ez_desktop.html">Desktop PCs</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_imac512GB.html">IMAC 24" 512 GB Storage</a></li>
+                        <li><a href="ez_apple_imac256GB.html">IMAC 24" 256 GB Storage</a></li>
+                        <li><a href="ez_Samsung_ArtPC_PULSE.html">Samsung ArtPc Pulse</a></li>
+                        <li><a href="ez_Samsung_Odyssey_OLED_G8.html">Odyssey OLED G8</a></li>
+                        <li><a href="ez_huawei_matestation_x.html">Huawei Matestation X</a></li>
+                        <li><a href="ez_huawei_matestation_s.html">Huawei Matestation S</a</li>
+                        <li><a href="ez_ASUS_V241.html">Asus V241</a></li>
+                        <li><a href="ez_ASUS_ZenAio.html">Asus Zen AIO 24 A5401</a></li>
+                    </ul>
+                    <li><a href="ez_smartphone.html">Smartphone</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_iphone14plus.html">Iphone 14 Plus</a></li>
+                        <li><a href="ez_apple_iphone14promax.html">Iphone 14 Pro Max</a></li>
+                        <li><a href="ez_Samsung_Galaxy_A53_5G.html">Samsung A53 5G</a></li>
+                        <li><a href="ez_Samsung_Galaxy_A73_5G.html">Samsung A73 5G</a></li>
+                        <li><a href="ez_huawei_nova_10.html">Huawei Nova 10</a></li>
+                        <li><a href="ez_huawei_mate_50_pro.html">Huawei Mate 50 Pro</a></li>
+                        <li><a href="ez_ASUS_Zenfone8.html">Zenfone 8</a></li>
+                        <li><a href="ez_ASUS_Zenfone9.html">Zenfone 9</a></li>
+                    </ul>
+                    <li><a href="ez_laptop.html">Laptop</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_macbookair.html">Macbook Air</a></li>
+                        <li><a href="ez_apple_macbookpro.html">Macbook Pro 14"</a></li>
+                        <li><a href="ez_Samsung_Galaxy_Book2_pro_360.html">Galaxy Book 2 Pro 360</a></li>
+                        <li><a href="ez_Samsung_Galaxy_Book2_pro.html">Galaxy Book 2</a></li>
+                        <li><a href="ez_huawei_matebook_d14.html">Huawei Matebook D14</a></li>
+                        <li><a href="ez_huawei_matebook_xpro.html">Huawei Matebook XPRO</a></li>
+                        <li><a href="ez_ASUS_ExpertBook14Flip.html">Expertbook B7 Flip</a></li>
+                        <li><a href="ez_ASUS_Zeenbook17Fold.html">Zenbook 17 Fold OLED</a></li>
+                    </ul>
+                </ul>
+              </div>
+        </div>
+      </div>
+      </div>
+  </header>   
+  <nav id="horizontal">
+    <ul>
+      <li class="cat">
+        <a href="ez_smartphone.html?brand=all" >Smartphones</a>
+        <ul id="subcat1">
+          <li class="brand"><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+          <li class="brand"><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+          <li class="brand"><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+          <li class="brand"><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+        </ul>
+      </li>          
+      <li class="cat">
+        <a href="ez_laptop.html?brand=all">Laptops</a>
+        <ul id="subcat2">
+          <li class="brand"><a href="ez_laptop.html?brand=apple">Apple</a></li>
+          <li class="brand"><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+          <li class="brand"><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+          <li class="brand"><a href="ez_laptop.html?brand=asus">Asus</a></li>
+        </ul>
+      </li>
+      <li class="cat">
+        <a href="ez_desktop.html?brand=all">Desktop PCs</a>
+        <ul id="subcat3">
+          <li class="brand"><a href="ez_desktop.html?brand=apple">Apple</a></li>
+          <li class="brand"><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+          <li class="brand"><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+          <li class="brand"><a href="ez_desktop.html?brand=asus">Asus</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <nav id="vertical">   
+    <a href="#" id="navicon"><img src="media/navicon.png" width="40" height="40" id="actualnavicon"/><img src="media/promodollar.png" id="lpgImg" width="40" height="40"/><span id="lpgText">Lowest Price Guaranteed!</span><span id="isoText">ISO 9001:2015</span>
+    <ul id="hiddenMainMenu">
+      <li>
+        <a href="ez_smartphone.html?brand=all" class="cat">Smartphones
+        <ul class="hiddenSubMenu">
+          <li><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+          <li><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+          <li><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+          <li><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+        </ul>
+        </a>
+      </li>
+      <li>
+        <a href="ez_laptop.html?brand=all" class="cat">Laptops
+        <ul class="hiddenSubMenu">
+          <li><a href="ez_laptop.html?brand=apple">Apple</a></li>
+          <li><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+          <li><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+          <li><a href="ez_laptop.html?brand=asus">Asus</a></li>
+        </ul>
+        </a>
+      </li>
+      <li>
+        <a href="ez_desktop.html?brand=all" class="cat">Desktop PCs
+        <ul class="hiddenSubMenu">
+          <li><a href="ez_desktop.html?brand=apple">Apple</a></li>
+          <li><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+          <li><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+          <li><a href="ez_desktop.html?brand=asus">Asus</a></li>
+        </ul>
+        </a>
+      </li>
+      <img src="media/cny.png" width="150" height="90" id="cny"/>
+    </ul>
+    
+    </a>
+  </nav>
+
+  <article class="info">
+    <h2 id="pName">Odyssey OLED G8</h2>
+      <div class="promoTimer">
+            <div id="promoLine">
+              <div id="promoTitle"><b>CHRISTMAS PROMOTION</b><i><br>Free mouse & keyboard</i></div>
+              <img id="promoPic" width="auto" height="100%" src="media/IMG/promoDesktop.png"/>
+            </div>
+          <div id="timerLine">
+              <p id="timer"></p>
+          </div>
+      </div>
+
+  
+
+        <script>
+          var countdown = new Date("Jan 31, 2023 00:00:00").getTime();
+
+          var x = setInterval(function() {
+
+            var now = new Date().getTime();
+  
+            var distance = countdown - now;
+  
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+
+              if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("timer").innerHTML = "Promo Ended";
+            }
+          }, 1000);
+        </script>
+
+        <div class="Buy">
+        
+        <p id="product_price"><span id="ringgit">NOW: RM </span><span id="pPrice">7599</span></p>
+        <p id="oldprice"><span id="product_oldprice">WAS: RM 8499</span></p>
+        
+          
+          <form action="ez_Samsung_Odyssey_OLED_G8.html" method="get">
+            <input type="hidden" id="prodCode" name="prodCode" value="EZ-D-SA1"/>
+            <input type="hidden" id="prodName" name="prodName" value="Odyssey OLED G8"/>
+            <input type="hidden" id="prodPrice" name="prodPrice" value="7599"/>
+            <input id="itemQty" name="prodQuantity" type="number" value="1" min="1" max="99" />
+            <button id="addButton" type="submit" onclick="addItem()">Add To Cart</button>
+          </form>          
+          <p id="product_code">Product Code: <span id="pCode">EZ-D-SA1</span></p>
+        </div>  
+    </article>
+
+    <div class="slideshow">
+      <div class="picBorder">
+        <div class="picDesktop">
+          <img id="picDesktop1" src="media/IMG/Odyssey_OLED_G8(1).jpeg">
+        </div>
+        <div class="picDesktop">
+          <img id="picDesktop2" src="media/IMG/Odyssey_OLED_G8(2).jpeg">
+        </div>
+        <div class="picDesktop">
+          <img id="picDesktop3" src="media/IMG/Odyssey_OLED_G8(3).jpeg">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>    
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+    </div>
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("picDesktop");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+
+    <div class="pInfo">
+      <h3 class="title">Description</h3>
+      <p>First OLED gaming monitor and will be available in an ultra-thin, 34-inch form factor. 175Hz Refresh rate gives you clear images even in fast action scenes. Great For: Gaming, Immersive Viewing, Smart Function and Productivity.
+        </p>
+    </div>
+    <div class="pSpec">
+        <h3 class="title">Specification</h3>
+        <ul id="listSpec">
+            <li><b>Dimensions:</b> 34″ ultrawide format, 21:9 aspect ratio</li>
+            <li><b>Weight:</b> 5.5 kg (kilograms) 12.13 lbs (pounds)</li>
+            <li><b>Processor:</b> Samsung AI Neo Quantum Processor</li>
+            <li><b>Operating system: </b> Windows 10 Home</li>
+            <li><b>Graphics:</b> AMD RX 460 graphics</li>
+        </ul>
+    </div>
+
+    <aside class="revColumn">
+        <div class="reviews">
+            <h2 class="comments">REVIEW</h2>
+            <p>&nbsp;</p>
+            <p  class="comments">Great service, picked up on time, keep me informed at each stage and delivered securely and on time. Great value too.</p>
+            <div class="revBottom">
+                <p><img class="pfp" src="media/IMG/jeff.jpg"></p>
+                <p>&mdash; <strong>Jeff</strong>
+                &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            </div>
+        </div>   
+        <div class="reviews">
+            <h2 class="comments">REVIEW</h2>
+            <p>&nbsp;</p>
+            <p  class="comments">Excellent and professional service. Have used twice and highly recommend - polite delivery boys on each occasion and punctual.</p>
+            <div class="revBottom">
+                <p><img class="pfp" src="media/IMG/profile.jpg"></p>
+                <p>&mdash; <strong>Niel</strong>
+                &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            </div>
+        </div>
+        <div class="reviews">
+            <h2 class="comments">REVIEW</h2>
+            <p>&nbsp;</p>
+            <p  class="comments">A totally brilliant service from start to finish. I wish every experience was as good as you guys. Can't recommend you highly enough.</p>
+            <div class="revBottom">
+                <p><img class="pfp" src="media/IMG/tom.jpg"></p>
+                <p>&mdash; <strong>Tom</strong>
+                &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            </div>
+        </div>
+        </aside>
+   
+        <footer>
+          <div class="footer">
+            <img src="media/logo.jpg" id="footerLogo" alt="Logo Footer" width="170" height="90"/>
+            <h2 id="catchphrase">Making people's lives simpler</h2>
+            <img src="media/iso9001-2015.png" id="ISO" width="200" height="120"/>
+            <ul class="icons">
+                <p id="latestNews">Get the latest news:</p>
+                <li><a href="https://www.facebook.com/people/EZTech/100088570681662/" target="blank"><img src="media/facebook3.png" width="40" height="40"/></a></li>
+                <li><a href="ez_contact_us.html"><img src="media/whatsapp3.png" width="40" height="40"/></a></li>
+                <li><a href="https://twitter.com/EZTech2022"><img src="media/twitter3.png" width="40" height="40"/></a></li>
+            </ul>
+  
+            <div class="footer-end">
+                <p>&copy;EZTech 2022. All rights reserved.
+                <a href="ez_sitemap.html">Sitemap</a>          
+                <a href="ez_device_support_page.html">Device Support</a>
+                <a href="ez_questions_support_page.html">FAQ</a>
+              </p>
+            </div>
+  
+            <div class="more-info">
+                <p>STAY CONNECTED WITH US:</p>
+                <form action="ez_Samsung_Odyssey_OLED_G8.html" method="get">
+                  <input type="email" name="emailAddr" id="emailAddr" required placeholder="Enter your email address" />
+                  <input type="submit" value="Register"/>
+                </form>
+            </div> 
+            </div>
+        </div>
+        </footer>  
+</body>
+<script>
+  var support1 = document.getElementById("ds");
+  support1.onclick = function() {
+    window.location.href = "ez_device_support_page.html";
+  }
+
+  var support2 = document.getElementById("faq");
+  support2.onclick = function() {
+    window.location.href = "ez_questions_support_page.html";
+  }
+  
+  function sendProductDetails() {
+      document.forms[0].onsubmit = function() {
+      if (this.checkValidity()) alert("Item has been added to Shopping Cart")
+        return true;
+      }
+      document.forms[1].onsubmit = function() {
+      if (this.checkValidity()) alert("Registered successfully!\nThank you.");
+        return true;
+      }
+  }
+
+  window.onload = sendProductDetails;
+
+  function addItem()
+  {
+      var itemQty = document.getElementById("itemQty").value;
+      if (itemQty.length == 0) {
+          alert("Please enter the item quantity");
+      } else {
+          var quantity= parseInt(itemQty);
+          if (quantity == 0) {
+              alert("Item quantity cannot be 0");
+          } 
+          else if (quantity < 0) {
+              alert("The item quantity must not be negative");
+          } 
+          else if (quantity > 99) {
+              alert("The item quantity must not be greater than 99");
+          } 
+          else {
+            var currentDate = new Date(); 
+            var time = currentDate.getTime(); 
+            var index = "eztechprod_" + time;
+            var url = window.location.pathname;
+            var filename = url.substring(url.lastIndexOf('/')+1);
+            var prodcode = document.getElementById("pCode").innerHTML;
+            var prodname = document.getElementById("pName").innerHTML;
+            var price = document.getElementById("pPrice").innerHTML;
+
+            var myObj = {
+              "pCode" : prodcode,
+              "pName" : prodname,
+              "pPrice" : price,
+              "itemQty" : itemQty,
+              "link": filename
+            };
+
+            localStorage.setItem(index, JSON.stringify(myObj));
+          }
+      } 
+
+  }
+</script>
+</html>

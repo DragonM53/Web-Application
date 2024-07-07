@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZTech | Delivery form</title>
+    <!--CSS linking page-->
+    <link rel="stylesheet" href="ez_reset.css">
+    <link rel="stylesheet" href="ez_delivery_style.css">
+    <script src="del_java.js" async></script>
+    <link rel="stylesheet" href="media/links for icon/all.min.css">
+    <link rel="icon" href="media/logoicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    
+    <div class="head">
+    <!--<h1><span id="EZ">EZ</span><span id="Tech">Tech</span></h1>-->
+    <img src="media/logo.jpg" alt="eztech">
+    <h2>Making people's lives simpler</h2>
+    </div>
+    
+    <div class="container">
+        <header>Delivery Form</header>
+        <img class="del" src="media/deliveryimage.png" alt="delivery"/>
+        
+        <div class="header">
+        <p>our partners: </p>
+        <img src="media/pos laju.png" alt="pos laju" >
+        <img src="media/fedex.png" alt="fedex" >
+        <img src="media/j&t.png" alt="j&t" >
+        <img src="media/ninjavan.png" alt="ninjavan" >
+        <img src="media/dhl trans.png" alt="dhl" >
+        </div>
+
+        <div class="secure">
+            <p>Your network is secured. <img src="media/secure tick.png" alt="tick" />  </p>
+        </div>
+    
+        <form action="ez_payment.html" name="delivery"  onsubmit="return storeDataCus();" method="GET">
+            <div class="form-first">
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="fullname">Full Name (as per I.C.)</label>
+                            <input class="icon"  id="fullname" type="text" name="name" placeholder= " e.g. Lim Xiao Ming" minlength="5" onkeyup="ltronly()"  required > 
+                            <p id="alert-name">&nbsp;</p>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="ic-num">Identification Number (I.C.)</label>
+                            <input  id="ic-num" name="ic" type="text" pattern="[0-9]{12}" title="12 digit numbers only" placeholder="e.g. 011111221111 (numbers only)"  required>
+
+                        </div>
+
+                        <div class="input-field">
+                            <label>Telephone Number</label>
+                            <input id="telenum" name="teleNum"  type="text" pattern="[0-9]{10}"  placeholder="e.g. 0161112222" title="10 digits numbers only" required>
+
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email Address</label>
+                            <input id="email-add" name="email" type="email" placeholder="e.g. eztech@gmail.com" minlength="8" required>
+
+
+                        </div>
+
+                        <div class="input-field">
+                            <label>Address</label>
+                            <input id="address1" name="addline1" type="text" placeholder="e.g. No.1 Jalan Berjaya"  minlength="10"  required>
+                            <input  id="address2" name="addline2" type="text">
+                            <input  id="address3" name="addline3" type="text">
+
+                        </div>
+
+                            <div class="input-field">
+                                <label>Post Code</label>
+                                <input id="postcode" name="postCode"  type="text" pattern="[0-9]{5}" placeholder="e.g. 52000"  title="5 digit numbers only" required>
+    
+    
+                            </div>
+
+                            <div class="input-field">
+                                <label>State</label>
+                                <select id="state" name="State" required>
+                                    <option value="">&nbsp;</option>
+                                    <option value="Selangor">Selangor</option>
+                                    <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                    <option value="Johor">Johor</option>
+                                    <option value="Pahang">Pahang</option>
+                                    <option value="Terengganu">Terengganu</option>
+                                    <option value="Kelantan">Kelantan</option>
+                                    <option value="Perak">Perak</option>
+                                    <option value="Kedah">Kedah</option>
+                                </select>
+    
+                            </div>
+
+<!--<button class="Btn-nxt" onclick="NextDel()">
+    Next
+    <i class="fa-solid fa-arrow-right"></i>
+</button>-->
+                               <div class="Btn-nxt">
+                                <input type="submit" value="Next"/>
+                               
+                                </div>
+
+                                       <div class="clear-form">
+                                        <input type="reset" value="Clear Form" />
+                                       </div>
+                                       
+                    </div>
+                </div>
+        </form>      
+    </div>
+    <button class="scroll-to-top"><img src="media/up button.png" alt="up"></button>
+    
+
+    <footer>
+        <div class="footer">
+            <!--<h1><span id="EZ">EZ</span><span id="Tech">Tech</span></h1>-->
+            <img src="media/logo.jpg" alt="eztechlogo">
+            <h2>Making people's lives simpler</h2>
+
+            <div class="footer-end">
+                <p>&copyEZTech 2022 all rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+            function preback(){window.history.forward();}
+            setTimeout("preback()",0);
+            window.onunload=function(){null};
+
+function ltronly(){
+       var str= document.getElementById("fullname").value;
+       var namealert= document.getElementById("alert-name");
+       if(!((/^[a-z A-Z]+$/.test(str) ) || str.length==0)){
+            namealert.style.display="block";
+            alert("Warning! letters only.");
+            document.getElementById("fullname").value="";
+       }else{
+        namealert.style.display="none";
+        nameflag=true;
+       }
+      }
+
+
+        function storeDataCus(){
+            var key = "CusDelData";
+            localStorage.removeItem(key);
+            var fullnamecus = document.getElementById("fullname").value;
+            var ic = document.getElementById("ic-num").value;
+            var telenumber = document.getElementById("telenum").value;
+            var email = document.getElementById("email-add").value;
+            var address1 = document.getElementById("address1").value;
+            var address2 = document.getElementById("address2").value;
+            var address3 = document.getElementById("address3").value;
+            var postalcode = document.getElementById("postcode").value;
+            var state = document.getElementById("state").value;
+            var CusDeliDe = {
+                "Full_name" : fullnamecus,
+                "IC_number" : ic,
+                "Telephone_number" : telenumber,
+                "Email_address" : email,
+                "Address_Line1" : address1,
+                "Address_Line2" : address2,
+                "Address_Line3" : address3,
+                "Post_code" : postalcode,
+                "State" : state
+            };
+        localStorage.setItem(key,JSON.stringify(CusDeliDe));
+        return true;
+        }
+
+       
+
+    </script>
+
+    </body>
+</html>

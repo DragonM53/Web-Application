@@ -1,0 +1,1384 @@
+@font-face {
+  font-family: Roboto;
+  src: url('webfonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('webfonts/NotoSans-Regular.ttf') format('truetype');
+}
+*{/*This configures the default padding and margin*/
+    margin: 0;
+   padding: 0;    
+   box-sizing: border-box;
+ }
+ 
+ html {
+  background-attachment: fixed;
+  background-size: contain
+ }
+
+
+ @media only screen and (min-width: 769px) and (max-width: 1024px) {
+ 
+ .currentPage { /*This uses colour & background colour to differentiate the 'current page' navigation button from the 'not current page' navigation buttons.*/
+    background-color: black !important;
+    color: white !important;
+    
+  }
+  
+  .productImage { 
+    position: relative !important;
+    max-width: 16.5em !important; 
+    min-width: 13em !important;
+    max-height: 28em !important;
+    min-height: 23em !important;
+    background-color: white !important;
+    margin: auto !important;
+    margin-bottom: 1% !important;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1.5 16.5em !important
+  }
+
+  
+  
+  .productImage:hover { 
+    transform: translateY(-18px);
+    border: 1px solid black !important;
+    z-index: 2 !important;
+  }
+
+  .productImage:hover div.learnMore {
+    position: absolute !important;
+    box-sizing: border-box !important;
+    top: 0 !important;
+    opacity: 1 !important;  
+    margin: 0 !important;
+    font-family: Roboto !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding-top: 70% !important;
+    font-size: 4vw !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0,0,0,0.3) !important;
+    font-weight: bold !important
+  }
+
+  .desc {
+    margin-top: 1em !important;
+    text-align: center !important;
+    color: black !important;
+    padding: 3px !important;
+    font-size: 1.8vw !important;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important
+  }
+
+  div.learnMore {
+    opacity: 0 !important;
+    border-radius: 10px !important;
+  }
+
+  .separateDesc {
+    margin-top: 5em !important;
+  }
+
+  .startingFrom {
+    font-size: 2.2vw !important
+  }
+
+  .oldprice {
+    font-size: 2.2vw !important;
+    text-decoration: line-through !important;
+  }
+
+  .nowprice {
+    font-weight: bolder !important;
+    font-size: 2.7vw !important;
+  }
+  
+  .banner { 
+    position: relative !important; 
+    width: 90vw !important; 
+    height: 60vh !important;     
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat  !important;
+    margin: 1% auto 3% auto !important;
+    box-sizing: border-box !important;
+  }
+
+  #newproductbox {
+    position: fixed !important;
+    width: 90vw !important;
+    height: 100% !important;
+    text-align: center !important;
+    z-index: 1000000 !important;
+    margin: 0 !important;
+    display: none ;
+    margin-left: auto !important;
+    margin-right: 500px !important
+  }
+
+  #newproductbg {
+    position: fixed !important; 
+    background-color: rgba(0,0,0,0.8) !important; 
+    width: 100% !important; 
+    height: 100% !important; 
+    z-index: -3 !important; 
+    left: 0  !important
+  }
+
+#newProductSection {
+    position: fixed !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    bottom: 1px !important;
+    
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    height: 100% !important;
+    width: 100% !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    z-index: 10000 !important;
+    text-align: left !important;
+    color: black !important;
+    
+
+}
+#newProductDesc {
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    width: 45vw !important;
+    height: 100% !important;
+    border: 3px solid black !important;
+    padding: 20px !important;
+    background-image: url('media/background.gif') !important;
+}
+
+#newProductDesc {
+  line-height: 1.5 !important
+}
+
+#newProductDesc img {
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+    width: 28vw !important;
+    height: 49vh !important
+}
+
+#newProductDesc p{
+    padding: 10px !important
+}
+
+#newProductDesc li {
+  font-size: 1em !important;
+}
+
+#registerForm {
+    width: 45vw !important;
+    height: 100% !important;
+    border: 3px solid black !important;
+    box-sizing: border-box !important;
+    padding: 2vw !important;
+    background-image: url('media/background.gif') !important;
+}
+
+.row {
+  display: flex !important;
+  flex-flow: row wrap !important;
+  margin: 0.2em 0 !important;
+}
+
+.row label {
+  text-align: left !important;
+  padding: 10px !important;
+  width: 20vw !important;
+  font-size: 1em !important
+}
+
+.row input {
+  padding: 10px !important;
+  width: 20vw !important
+}
+
+.row input[type="reset"], .row input[type="submit"] {
+  box-sizing: border-box !important;
+  width: 15vw !important;
+  z-index: 1
+}
+
+.row:nth-of-type(5) input {
+  display: flex !important;
+  flex-direction: row !important;
+  margin: 0.3em auto 0 !important;
+  justify-content: center !important;
+}
+
+form img {
+    position: absolute !important;
+    left: 64% !important;
+    top: 79.33vh !important;
+    width: 150px !important;
+    height: 125px !important;
+    z-index: 0 !important;
+    display: block !important;
+    
+}
+
+h3 {
+    font-size: 1.6em !important;
+    text-align: center !important;
+    margin-top: 1em !important
+}
+
+div#newProductDesc h3 {
+    font-size: 3vw !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+h4 {
+    text-align: center !important;
+    margin-bottom: 0 !important;
+    margin-top: 5px !important;
+    font-size: 3vw !important;
+}
+
+h5 {
+    text-align: center !important;
+    font-size: 1.3em !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+#closeBtn {
+    position: absolute !important;
+    top: 0.5% !important;
+    right: 4.5% !important;
+    font-size: 5vw !important;
+    background-color: red !important;
+    color: white !important;
+    width: 5vw !important;
+    text-align: center !important;
+}
+
+#closeBtn:hover, #closeBtn:focus {
+    color: black !important;
+    cursor: pointer !important;
+}
+
+  #upcomingProdS {
+    box-sizing: border-box !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    position: absolute !important; 
+    top: 0;
+     
+    left: 150% !important;
+    height: 60vh !important;
+    width: 30vw !important;
+    
+    border: 5px solid #7CB9E8 !important
+  }
+
+  #upcomingProdL {
+    box-sizing: border-box !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    position: absolute !important; 
+    top: 0 !important;
+    left: 150% !important; 
+    
+    height: 60vh !important;
+    width: 30vw !important;
+    border: 5px solid #7CB9E8 !important
+  }
+
+  #upcomingProdD {
+    box-sizing: border-box !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    position: absolute !important; 
+    top: 0 !important;
+    left: 150% !important; 
+    
+    height: 60vh !important;
+    width: 30vw !important;
+    
+    border: 5px solid #7CB9E8 !important
+  }
+
+  #date {
+    text-align: center !important;
+    width: 100% !important;
+    font-weight: 800 !important;
+    color: black !important;
+    font-size: 2vw !important;
+    font-style: italic !important;
+    position: relative !important;
+    top: 5px !important
+  }
+
+  #newphone {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    height: 41vh !important;
+    width: 18vw !important
+    
+  }
+
+  #newlaptop {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    right: 0px !important;
+    height: 41vh !important;
+    width: 22vw !important
+  }
+
+  #newdesktop {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    right: 10px !important;
+    height: 37vh !important;
+    width: 19vw !important
+  }
+
+  
+
+  #newprodName {
+    text-align: left !important;
+    width: 30vw !important;
+    font-weight: bold !important;
+    color: black !important;
+    font-size: 2vw !important;
+  }
+
+  #comingSoon {
+    text-align: center !important;
+    width: 30vw !important;
+    font-weight: 800 !important;
+    color: black !important;
+    text-transform: uppercase !important;
+    font-size: 2.2vw !important;
+    position: relative !important;
+    top: 5px !important
+  }
+
+  #Timer {
+    text-align: center !important;
+    width: 200px !important;
+    font-weight: bold !important;
+    color: red !important;
+    font-size: 2vw !important;
+    position: relative !important;
+    top: 8px !important
+  }
+  
+  .bannerLeftCaption { 
+    display: flex !important; /*This configures the container as flex*/
+    flex-direction: column !important; /*Content in this container is laid out vertically*/
+    justify-content: center !important; /*Content is centred horizontally*/
+    position: absolute !important; /*These configure the positioning of the container*/
+    left: 0 !important;
+    top: 0 !important; 
+    width: 40vw !important; /*These configure the width & height of the container*/
+    height: 60vh !important;
+    background-color: rgba(0,0,0,0.6) !important; /*These configure the background colour, opacity and left padding*/
+    padding-left: 1.5em !important;
+  }
+
+  .bannerLeftCaption p {
+    color: white !important;
+    font-weight: bolder !important;
+    font-size: 4.5vw !important;
+    opacity: 1 !important;
+    text-align: left !important;
+  }
+
+  .bannerLeftCaption span#subheading {
+    color: white !important;
+    font-family: 'Segoe UI' !important;
+    font-weight: normal;
+    font-size: 4.5vw !important;
+    line-height: 100% !important;
+  }
+
+  .bannerLeftCaption p#text {
+    color: white !important;
+    font-family: 'Segoe UI' !important;
+    font-weight: normal !important;
+    font-size: 2.3vw !important;
+    line-height: 100% !important;
+    margin-top: 2% !important;
+    padding-right: 1em !important;
+    text-align: left !important
+  }
+
+  #hoverNewProd {
+    position: absolute !important;
+    box-sizing: border-box !important;
+    top: 0 !important;
+    background-color: rgba(0,0,0,0.3) !important;
+    display: none ;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    font-family: Roboto !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding-top: 60% !important;
+    font-size: 4vw !important;
+    font-weight: bold !important;
+    
+  }
+
+  #upcomingProdD:hover #hoverNewProd, #upcomingProdS:hover #hoverNewProd, #upcomingProdL:hover #hoverNewProd {
+    display: block
+  }
+  
+  
+  
+  
+  .imageDesc:hover { 
+      opacity: 0.8 !important;    
+  }
+  
+  .productName { 
+      font-size: 1.8vw !important;
+      text-align: center !important;
+      text-transform: uppercase !important;
+      color: black !important;
+      font-weight: bold !important;
+    }
+  
+    
+       section { display: flex !important; 
+        flex-wrap: wrap; align-content: flex-start !important;
+        flex-grow: 1 !important;
+        font-family: sans-serif;
+        padding-bottom: 0 !important; 
+        margin-bottom: 1.3em !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 0 !important;
+        }
+
+        article {
+          background-color: #E8E8E8 !important;
+          display: flex !important; 
+          flex-wrap: wrap !important; align-content: flex-start !important;
+          flex-grow: 1 !important;
+          max-width: 1200px !important; font-family: sans-serif !important;
+          padding-bottom: 0.1em !important; 
+          margin-bottom: 0 !important;
+          padding-top: 1em !important;
+          width: 100% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          margin-top: 0 !important;
+        }
+        
+}
+
+@media only screen and (min-width: 481px) {
+
+.currentPage { /*This uses colour & background colour to differentiate the 'current page' navigation button from the 'not current page' navigation buttons.*/
+  background-color: black;
+  color: white;
+}
+
+.productImage { 
+  position: relative;
+  max-width: 13em; 
+  min-width: 10em;
+  max-height: 26em;
+  min-height: 20em;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 1%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1.5 13em
+}
+
+
+
+.productImage:hover { 
+  transform: translateY(-18px);
+  transition: 0.5s ease-out;
+  border: 1px solid black;
+  z-index: 2;
+}
+
+
+
+.productImage:hover div.learnMore {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  opacity: 1;  
+  margin: 0;
+  font-family: Roboto;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 70%;
+  font-size: 4vw;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  font-weight: bold
+}
+
+.desc {
+  margin-top: 1em ;
+  text-align: center !important ;
+  color: black ;
+  padding: 3px ;
+  font-size: 1.7vw  ;
+  width: 95% ;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.learnMore {
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.separateDesc {
+  margin-top: 5em;
+}
+
+#startingFrom {
+  font-size: 2.2vw;
+}
+
+.oldprice {
+  font-size: 2.2vw;
+  text-decoration: line-through;
+}
+
+.nowprice {
+  font-weight: bolder;
+  font-size: 2.7vw;
+}
+
+
+
+.banner { 
+  position: relative; 
+  width: 90vw; 
+  height: 45vh;     
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 1% auto 3% auto;
+  box-sizing: border-box;
+}
+
+#newproductbox {
+  position: fixed;
+  width: 90vw;
+  height: 100%;
+  text-align: center;
+  z-index: 1000000;
+  margin: 0;
+  display: none;
+  margin-left: auto;
+  margin-right: 500px 
+}
+
+#newproductbg {
+  position: fixed; 
+  background-color: rgba(0,0,0,0.8); 
+  width: 100%; 
+  height: 100%; 
+  z-index: -3; 
+  left: 0  
+}
+
+#newProductSection {
+  position: fixed;
+  margin-top: 0;
+  margin-bottom: 0;
+  bottom: 1px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 10000;
+  text-align: left;
+  color: black;
+  
+
+}
+#newProductDesc {
+  display: none;
+  
+}
+
+
+#registerForm {
+  width: 50vw;
+  height: 100%;
+  border: 3px solid black;
+  box-sizing: border-box;
+  padding: 2vw;
+  background-image: url('media/background.gif');
+}
+
+.row {
+display: flex;
+flex-flow: row wrap;
+margin: 0.2em auto;
+}
+
+.row label {
+text-align: left;
+padding: 10px;
+padding-left: 0 !important;
+width: 80%;
+font-size: 0.8em;
+
+}
+
+.row :not(input:nth-of-type(5)), .row :not(input:nth-of-type(6)) {
+padding: 10px ;
+margin-left: auto;
+margin-right: auto;
+width: 80%;
+}
+
+.row input[type="reset"], .row input[type="submit"] {
+box-sizing: border-box;
+width: 13vw
+}
+
+.row:nth-of-type(5) input {
+display: flex;
+flex-direction: row;
+margin: 1.3em auto 0;
+justify-content: center;
+}
+
+
+
+form img {
+  display: none;
+}
+
+h3 {
+  font-size: 1.4em;
+  text-align: center;
+  margin-top: 1.7em
+}
+
+div#newProductDesc h3 {
+  font-size: 3vw;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+h4 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 3vw;
+}
+
+h5 {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#closeBtn {
+  position: absolute;
+  top: 0.5%;
+  right: 24.8%;
+  font-size: 40px;
+  background-color: red;
+  color: white;
+  width: 50px;
+  text-align: center;
+}
+
+#closeBtn:hover, #closeBtn:focus {
+  color: black;
+  cursor: pointer;
+}
+
+#upcomingProdS {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute; 
+  top: 0;
+   
+  left: 150%;
+  height: 45vh;
+  width: 30vw;
+  
+  border: 5px solid #7CB9E8
+}
+
+#upcomingProdL {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute; 
+  top: 0;
+  left: 150%; 
+  
+  height: 45vh;
+  width: 30vw;
+  border: 5px solid #7CB9E8
+}
+
+#upcomingProdD {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute; 
+  top: 0;
+  left: 150%; 
+  
+  height: 45vh;
+  width: 30vw;
+  
+  border: 5px solid #7CB9E8
+}
+
+#date {
+  text-align: center;
+  width: 200px;
+  font-weight: 800;
+  color: black;
+  font-size: 2vw;
+  font-style: italic;
+  position: relative;
+  top: 5px
+}
+
+#newphone {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 29vh ;
+  width: 19vw 
+  
+}
+
+#newlaptop {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right: 0px;
+  height: 29vh ;
+  width: 23vw 
+}
+
+#newdesktop {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right: 10px;
+  height: 26vh ;
+  width: 22vw;
+}
+
+
+
+#newprodName {
+  text-align: left;
+  width: 30vw;
+  font-weight: bold;
+  color: black;
+  font-size: 2vw;
+}
+
+#comingSoon {
+  text-align: center;
+  width: 30vw;
+  font-weight: 800;
+  color: black;
+  text-transform: uppercase;
+  font-size: 2.2vw;
+  position: relative;
+  top: 5px
+}
+
+#Timer {
+  text-align: center;
+  width: 200px;
+  font-weight: bold;
+  color: red;
+  font-size: 2vw;
+  position: relative;
+  top: 8px
+}
+
+.bannerLeftCaption { 
+  display: flex; /*This configures the container as flex*/
+  flex-direction: column; /*Content in this container is laid out vertically*/
+  justify-content: center; /*Content is centred horizontally*/
+  position: absolute; /*These configure the positioning of the container*/
+  left: 0;
+  top: 0; 
+  width: 40vw; /*These configure the width & height of the container*/
+  height: 45vh;
+  background-color: rgba(0,0,0,0.6); 
+  padding-left: 0.6em;
+}
+
+.bannerLeftCaption p {
+  color: white;
+  font-weight: bolder;
+  font-size: 4.8vw !important;
+  opacity: 1;
+  text-align: left !important;
+}
+
+.bannerLeftCaption span#subheading {
+  color: white;
+  font-family: 'Segoe UI';
+  font-weight: normal;
+  font-size: 4.5vw;
+  line-height: 100%;
+}
+
+.bannerLeftCaption p#text {
+  color: white;
+  font-family: 'Segoe UI';
+  font-weight: normal;
+  font-size: 2.7vw !important;
+  line-height: 100%;
+  margin-top: 4%;
+  padding-right: 1em;
+  text-align: left !important
+}
+
+#hoverNewProd {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  background-color: rgba(0,0,0,0.3);
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Roboto;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 60%;
+  font-size: 4vw;
+  font-weight: bold;
+  
+}
+
+#upcomingProdD:hover #hoverNewProd, #upcomingProdS:hover #hoverNewProd, #upcomingProdL:hover #hoverNewProd {
+  display: block
+}
+
+.imageDesc:hover { 
+    opacity: 0.8;    
+}
+
+.productName { 
+    font-size: 2vw ;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    color: black !important;
+    font-weight: bold !important;
+  }
+
+  section { display: flex; 
+    flex-wrap: wrap; align-content: flex-start;
+    flex-grow: 1;
+    max-width: 1200px; font-family: sans-serif;
+    padding-bottom: 0; 
+    margin-bottom: 1.3em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    
+    }
+
+    article {
+      background-color: #E8E8E8;
+      display: flex; 
+      flex-wrap: wrap; align-content: flex-start;
+      flex-grow: 1;
+      max-width: 1200px; font-family: sans-serif;
+      padding-bottom: 0.1em; 
+      margin-bottom: 0;
+      padding-top: 1em;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .currentPage { /*This uses colour & background colour to differentiate the 'current page' navigation button from the 'not current page' navigation buttons.*/
+    background-color: black;
+    color: white;
+  }
+  
+  .productImage { 
+    position: relative;
+    max-width: 14em;
+    min-width: 10em;
+    max-height: 23em;
+    min-height: 18em;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1.5 13em
+  }
+  
+  
+  
+  .productImage:hover { 
+    transform: translateY(-18px);
+    transition: 0.5s ease-out;
+    border: 1px solid black;
+    z-index: 2;
+  }
+  
+  
+  
+  .productImage:hover div.learnMore {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    opacity: 1;  
+    margin: 0;
+    font-family: Roboto;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 70%;
+    font-size: 4vw;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    font-weight: bold
+  }
+  
+  .desc {
+    margin-top: 1em !important;
+    text-align: center !important;
+    color: black !important;
+    padding: 3px !important;
+    font-size: 2.6vw ;
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  div.learnMore {
+    opacity: 0;
+    border-radius: 10px;
+  }
+  
+  .separateDesc {
+    margin-top: 5em;
+  }
+  
+  #startingFrom {
+    font-size: 3.2vw;
+  }
+  
+  .oldprice {
+    font-size: 3.2vw;
+    text-decoration: line-through;
+  }
+  
+  .nowprice {
+    font-weight: bolder;
+    font-size: 3.7vw;
+  }
+  
+  
+  
+  .banner { 
+    position: relative; 
+    width: 90vw; 
+    height: 35vh;     
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1% auto 3% auto;
+    box-sizing: border-box;
+  }
+  
+  #newproductbox {
+    position: fixed;
+    width: 90vw;
+    height: 100%;
+    text-align: center;
+    z-index: 1000000;
+    margin: 0;
+    display: none;
+    margin-left: auto;
+    margin-right: 500px 
+  }
+  
+  #newproductbg {
+    position: fixed; 
+    background-color: rgba(0,0,0,0.8); 
+    width: 100%; 
+    height: 100%; 
+    z-index: -3; 
+    left: 0  
+  }
+  
+  #newProductSection {
+    position: fixed;
+    margin-top: 0;
+    margin-bottom: 0;
+    bottom: 1px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 10000;
+    text-align: left;
+    color: black;
+    
+  
+  }
+  #newProductDesc {
+    display: none;
+    
+  }
+  
+  
+  #registerForm {
+    width: 60vw;
+    height: 100%;
+    border: 3px solid black;
+    box-sizing: border-box;
+    padding: 2vw;
+    background-image: url('media/background.gif');
+  }
+  
+  .row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0.2em auto;
+  }
+  
+  .row label {
+  text-align: left;
+  padding: 10px;
+  padding-left: 0;
+  width: 80%;
+  font-size: 0.8em
+  }
+  
+  .row :not(input:nth-of-type(5)), .row :not(input:nth-of-type(6)) {
+  padding: 10px ;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%
+  }
+  
+  .row input[type="reset"], .row input[type="submit"] {
+  box-sizing: border-box;
+  width: 15vw
+  }
+  
+  .row:nth-of-type(5) input {
+  display: flex;
+  flex-direction: row;
+  margin: 1.3em auto 0;
+  justify-content: center;
+  }
+  
+  
+  
+  form img {
+    display: none
+  }
+  
+  h3 {
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 2.2em
+  }
+  
+  div#newProductDesc h3 {
+    font-size: 3vw;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 3vw;
+  }
+  
+  h5 {
+    text-align: center;
+    font-size: 3.3vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #closeBtn {
+    position: absolute;
+    top: 0.5%;
+    right: 19.3%;
+    font-size: 40px;
+    background-color: red;
+    color: white;
+    width: 40px;
+    text-align: center;
+  }
+  
+  #closeBtn:hover, #closeBtn:focus {
+    color: black;
+    cursor: pointer;
+  }
+  
+  #upcomingProdS {
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute; 
+    top: 0;
+     
+    left: 150%;
+    height: 35vh;
+    width: 30vw;
+    
+    border: 5px solid #7CB9E8
+  }
+  
+  #upcomingProdL {
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute; 
+    top: 0;
+    left: 150%; 
+    
+    height: 35vh;
+    width: 30vw;
+    border: 5px solid #7CB9E8
+  }
+  
+  #upcomingProdD {
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute; 
+    top: 0;
+    left: 150%; 
+    
+    height: 35vh;
+    width: 30vw;
+    
+    border: 5px solid #7CB9E8
+  }
+  
+  #date {
+    text-align: center;
+    width: 200px;
+    font-weight: 800;
+    color: black;
+    font-size: 2vw;
+    font-style: italic;
+    position: relative;
+    top: 0px
+  }
+  
+  #newphone {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 22vh ;
+    width: 19vw 
+    
+  }
+  
+  #newlaptop {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    right: 0px;
+    height: 22vh ;
+    width: 23vw 
+  }
+  
+  #newdesktop {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    right: 10px;
+    height: 19vh ;
+    width: 22vw;
+  }
+  
+  
+  
+  #newprodName {
+    text-align: left;
+    width: 30vw;
+    font-weight: bold;
+    color: black;
+    font-size: 2.1vw;
+  }
+  
+  #comingSoon {
+    text-align: center;
+    width: 30vw;
+    font-weight: 800;
+    color: black;
+    text-transform: uppercase;
+    font-size: 2.2vw;
+    position: relative;
+    top: 0px
+  }
+  
+  #Timer {
+    text-align: center;
+    width: 200px;
+    font-weight: bold;
+    color: red;
+    font-size: 2vw;
+    position: relative;
+    top: 0px
+  }
+  
+  .bannerLeftCaption { 
+    display: flex; /*This configures the container as flex*/
+    flex-direction: column; /*Content in this container is laid out vertically*/
+    justify-content: center; /*Content is centred horizontally*/
+    position: absolute; /*These configure the positioning of the container*/
+    left: 0;
+    top: 0; 
+    width: 40vw; /*These configure the width & height of the container*/
+    height: 35vh;
+    background-color: rgba(0,0,0,0.6); 
+    padding-left: 0.9em;
+  }
+  
+  .bannerLeftCaption p {
+    color: white;
+    font-weight: bolder;
+    font-size: 7vw !important;
+    opacity: 1;
+    text-align: left !important;
+  }
+  
+  .bannerLeftCaption span#subheading {
+    color: white;
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    font-size: 4vw;
+    line-height: 100%;
+  }
+  
+  .bannerLeftCaption p#text {
+    color: white;
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    font-size: 2.9vw !important;
+    line-height: 100%;
+    margin-top: 4%;
+    padding-right: 1em;
+    text-align: left !important
+  }
+  
+  #hoverNewProd {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Roboto;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 60%;
+    font-size: 4vw;
+    font-weight: bold;
+    
+  }
+  
+  #upcomingProdD:hover #hoverNewProd, #upcomingProdS:hover #hoverNewProd, #upcomingProdL:hover #hoverNewProd {
+    display: block
+  }
+  
+  .imageDesc:hover { 
+      opacity: 0.8;    
+  }
+  
+  .productName { 
+      font-size: 3vw !important;
+      text-align: center !important;
+      text-transform: uppercase !important;
+      color: black !important;
+      font-weight: bold !important;
+    }
+  
+    section { display: flex; 
+      flex-wrap: wrap; align-content: flex-start;
+      flex-grow: 1;
+      max-width: 1200px; font-family: sans-serif;
+      padding-bottom: 0; 
+      margin-bottom: 3em;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      }
+  
+      article {
+        background-color: #E8E8E8;
+        display: flex; 
+        flex-wrap: wrap; align-content: flex-start;
+        flex-grow: 1;
+        max-width: 1200px; font-family: sans-serif;
+        padding-bottom: 0.1em; 
+        margin-bottom: 0;
+        padding-top: 1em;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+      }
+ 
+}

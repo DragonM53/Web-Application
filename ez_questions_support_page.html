@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>EZTech | Frequently Asked Questions</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="media/logoicon.ico" type="image/x-icon"> 
+        <link rel="stylesheet" href="ez_reset.css"/>
+        <link rel="stylesheet" href="ez_base.css"/> 
+        <link href="ez_questions_support_page.css" rel="stylesheet"/>
+    </head>
+    <body>
+      <header>
+        <a href="ez_index.html"><img src="media/logo.jpg" alt="Logo" id="ezlogo" /></a>
+      <div class="top-buttons">
+        <a class="home-button" href="ez_index.html"><span class="buttontxt">Home</span></a>
+        <a class="aboutus-button" href="ez_about_us.html"><span class="buttontxt">About Us</span></a>
+        <a class="contactus-button" href="ez_contact_us.html"><span class="buttontxt">Contact Us</span></a>
+        <a class="promotion-button" href="ez_promotions.html"><span class="buttontxt">Promotions</span></a>
+        <a class="cart-button" href="ez_shopcart.html"><span class="buttontxt">Cart</span></a>
+        <a class="support-button">
+          <span class="buttontxt">Support</span>
+          <ul id="support-options">
+            <li id="ds">Device Support</li>
+            <li id="faq">FAQs</li>
+          </ul>
+        </a>
+        <button type="submit" onclick="showsearchbar()" class="mySearch">
+          <img src="media\search.png" width="30" class="Btn" id="myBtn">
+        </button>
+        <div class="search">
+          <script>                
+              function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('myInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName('li');
+              
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+              function showsearchbar() {
+                  var modal = document.getElementById("myModal");
+                  var btn = document.getElementById("myBtn");
+                  var span = document.getElementsByClassName("close")[0];
+                  
+                  document.getElementById("myModal").style.display = "block";
+                  
+                  span.onclick = function() {
+                  modal.style.display = "none";
+                  }
+  
+                  window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                      }
+                  }
+              }
+          </script>
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products.."><i class="fa fa-search"></i></input>
+                  <ul id="myUL">
+                    <li><a href="ez_desktop.html">Desktop PCs</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_imac512GB.html">IMAC 24" 512 GB Storage</a></li>
+                        <li><a href="ez_apple_imac256GB.html">IMAC 24" 256 GB Storage</a></li>
+                        <li><a href="ez_Samsung_ArtPC_PULSE.html">Samsung ArtPc Pulse</a></li>
+                        <li><a href="ez_Samsung_Odyssey_OLED_G8.html">Odyssey OLED G8</a></li>
+                        <li><a href="ez_huawei_matestation_x.html">Huawei Matestation X</a></li>
+                        <li><a href="ez_huawei_matestation_s.html">Huawei Matestation S</a</li>
+                        <li><a href="ez_ASUS_V241.html">Asus V241</a></li>
+                        <li><a href="ez_ASUS_ZenAio.html">Asus Zen AIO 24 A5401</a></li>
+                    </ul>
+                    <li><a href="ez_smartphone.html">Smartphone</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_iphone14plus.html">Iphone 14 Plus</a></li>
+                        <li><a href="ez_apple_iphone14promax.html">Iphone 14 Pro Max</a></li>
+                        <li><a href="ez_Samsung_Galaxy_A53_5G.html">Samsung A53 5G</a></li>
+                        <li><a href="ez_Samsung_Galaxy_A73_5G.html">Samsung A73 5G</a></li>
+                        <li><a href="ez_huawei_nova_10.html">Huawei Nova 10</a></li>
+                        <li><a href="ez_huawei_mate_50_pro.html">Huawei Mate 50 Pro</a></li>
+                        <li><a href="ez_ASUS_Zenfone8.html">Zenfone 8</a></li>
+                        <li><a href="ez_ASUS_Zenfone9.html">Zenfone 9</a></li>
+                    </ul>
+                    <li><a href="ez_laptop.html">Laptop</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_macbookair.html">Macbook Air</a></li>
+                        <li><a href="ez_apple_macbookpro.html">Macbook Pro 14"</a></li>
+                        <li><a href="ez_Samsung_Galaxy_Book2_pro_360.html">Galaxy Book 2 Pro 360</a></li>
+                        <li><a href="ez_Samsung_Galaxy_Book2_pro.html">Galaxy Book 2</a></li>
+                        <li><a href="ez_huawei_matebook_d14.html">Huawei Matebook D14</a></li>
+                        <li><a href="ez_huawei_matebook_xpro.html">Huawei Matebook XPRO</a></li>
+                        <li><a href="ez_ASUS_ExpertBook14Flip.html">Expertbook B7 Flip</a></li>
+                        <li><a href="ez_ASUS_Zeenbook17Fold.html">Zenbook 17 Fold OLED</a></li>
+                    </ul>
+                </ul>
+              </div>
+        </div>
+      </div>
+      </div>
+      </header>   
+      <nav id="horizontal">
+        <ul>
+          <li class="cat">
+            <a href="ez_smartphone.html?brand=all" >Smartphones</a>
+            <ul id="subcat1">
+              <li class="brand"><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>          
+          <li class="cat">
+            <a href="ez_laptop.html?brand=all">Laptops</a>
+            <ul id="subcat2">
+              <li class="brand"><a href="ez_laptop.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>
+          <li class="cat">
+            <a href="ez_desktop.html?brand=all">Desktop PCs</a>
+            <ul id="subcat3">
+              <li class="brand"><a href="ez_desktop.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav id="vertical">   
+        <a href="#" id="navicon"><img src="media/navicon.png" width="40" height="40" id="actualnavicon"/><img src="media/promodollar.png" id="lpgImg" width="40" height="40"/><span id="lpgText">Lowest Price Guaranteed!</span><span id="isoText">ISO 9001:2015</span>
+        <ul id="hiddenMainMenu">
+          <li>
+            <a href="ez_smartphone.html?brand=all" class="cat">Smartphones
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+              <li><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <li>
+            <a href="ez_laptop.html?brand=all" class="cat">Laptops
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_laptop.html?brand=apple">Apple</a></li>
+              <li><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_laptop.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <li>
+            <a href="ez_desktop.html?brand=all" class="cat">Desktop PCs
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_desktop.html?brand=apple">Apple</a></li>
+              <li><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_desktop.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <img src="media/cny.png" width="150" height="90" id="cny"/>
+        </ul>
+        
+        </a>
+      </nav>
+        <h2>Frequently Asked Questions</h2>
+        <article>
+        <p class="subHead">e-Shop</p>
+        <p class="seperator"> </p>
+          <button type="button" class="collapsible">1. Do you have the items in stock?</button>
+          <div class="content">
+            <p>Yes, if the item can be selected in the product catalog, the items are in stock and can be purchased from our website.</p>
+          </div>
+          <button type="button" class="collapsible">2. Is it possible to check the product before buying?</button>
+          <div class="content">
+            <p>You are welcome to see the specific item in out store before purchasing. If you’re buying the product from our website, we cannot guarantee it will be the same exact item from our store. In this case, there are warranty for every item purchased. Item can me returned or replaced if arrived faulty or broke under the warranty period.</p>
+          </div>
+          <button type="button" class="collapsible">3. When will the item arrive?
+          </button>
+          <div class="content">
+            <p>Items will be arriving between 4-12 days depending on your location.The average shipping time for west malaysia is 5 days while the average shipping time for east malaysia is 10 days.</p>
+          </div>
+
+
+          <p class="subHead">Shipping and payment</p>
+          <p class="seperator"> </p>
+          <button type="button" class="collapsible">1. When can I know about my delivery's expected arrival date and time ?
+          </button>
+          <div class="content">
+            <p>Items are shipped by our partnership by land or boat. We ensure the safety of your product. Arrival time varies on your location.</p>
+          </div>
+          <button type="button" class="collapsible">2. What are the methods of payment ?</button>
+          <div class="content">
+            <p>Our payment method can be paid through using credit-card or e-wallet of your choice. </p>
+          </div>
+          <button type="button" class="collapsible">3. What happens if my devices did not come on time, given in the stipulated date and time ?</button>
+          <div class="content">
+            <p>We are sorry for the inconvenience caused. We will try our best to ship your devices as soon as possible.</p>
+          </div>
+          <button type="button" class="collapsible">4. Can we have a refund if the devices did not suit our needs ?</button>
+          <div class="content">
+            <p>You have to contact our dedicated support team for this issue.</p>
+          </div>
+          <button type="button" class="collapsible">5. Can I change my delivery address, once the payment has been successfully processed ?</button>
+          <div class="content">
+            <p>Unfortunately,you can’t change the delivery address once the payment has been processed.For this matter, you can contact our support team for this related matter.</p>
+          </div>
+          <button type="button" class="collapsible">6. What carrier do EZTech use for transporting our devices ?
+          </button>
+          <div style="margin-bottom: 20px;"class="content">
+            <p>EZTech has partnered with 5 kinds of transportation companies. Which consist of Poslaju, Fedex, DHL, Ninjavan and J&T express.</p>
+          </div>
+        </article>
+      </body>
+      <footer>
+        <div class="footer">
+          <img src="media/logo.jpg" id="footerLogo" alt="Logo Footer" width="170" height="90"/>
+          <h2 id="catchphrase">Making people's lives simpler</h2>
+          <img src="media/iso9001-2015.png" id="ISO" width="200" height="120"/>
+          <ul class="icons">
+              <p id="latestNews">Get the latest news:</p>
+              <li><a href="https://www.facebook.com/people/EZTech/100088570681662/" target="blank"><img src="media/facebook3.png" width="40" height="40"/></a></li>
+              <li><a href="ez_contact_us.html"><img src="media/whatsapp3.png" width="40" height="40"/></a></li>
+              <li><a href="https://twitter.com/EZTech2022"><img src="media/twitter3.png" width="40" height="40"/></a></li>
+          </ul>
+
+          <div class="footer-end">
+              <p>&copy;EZTech 2022. All rights reserved.
+              <a href="ez_sitemap.html">Sitemap</a>          
+              <a href="ez_device_support_page.html">Device Support</a>
+              <a href="ez_questions_support_page.html">FAQ</a>
+            </p>
+          </div>
+
+          <div class="more-info">
+              <p>STAY CONNECTED WITH US:</p>
+              <form action="ez_questions_support_page.html" method="get">
+                <input type="email" name="emailAddr" id="emailAddr" required placeholder="Enter your email address" />
+                <input type="submit" value="Register"/>
+              </form>
+          </div> 
+          </div>
+      </div>
+      </footer>   
+      <script>
+        var support1 = document.getElementById("ds");
+        support1.onclick = function() {
+          window.location.href = "ez_device_support_page.html";
+        }
+
+        var support2 = document.getElementById("faq");
+        support2.onclick = function() {
+          window.location.href = "ez_questions_support_page.html";
+        }
+        
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+      </script>
+
+</html>

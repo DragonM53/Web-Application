@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: Roboto;
+  src: url('webfonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('webfonts/NotoSans-Regular.ttf') format('truetype');
+}
+
+*{/*This configures the default padding and margin*/
+  margin: 0;
+ padding: 0;    
+ box-sizing: border-box;
+}
+
+html {
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+body {
+  background-color: skyblue !important;
+}
+
+div.scroll {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+/*sitemap*/
+.sitemap_container h1 {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin-top: -30px;
+  font-family: cursive;
+  margin-bottom: 10px;
+}
+
+.sitemap_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  margin-top: 5%;
+  margin-bottom: 15%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sitemap1 {
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 700px;
+  height: 500px;
+  overflow: auto;
+}
+div.scrollmenu {
+  margin-top: -100px;
+  margin-left: 10%;
+  margin-bottom: 100px;
+  width: 70%;
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  margin-left: 10em;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+/*End of sitemap*/
+
+  }
+  
+  @media only screen and (min-width: 481px) and (max-width: 770px){
+
+/*sitemap*/
+.sitemap_container h1 {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin-top: -20px;
+  font-family: cursive;
+  margin-bottom: 10px;
+}
+
+.sitemap_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  margin-top: 5%;
+  margin-bottom: 15%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sitemap1 {
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 500px;
+  height: 400px;
+  background-color: orange;
+  overflow: auto;
+}
+div.scrollmenu {
+  margin-top: -70px;
+  margin-left: 10%;
+  margin-bottom: 100px;
+  width: 70%;
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  margin-left: 7em;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+/*End of sitemap*/
+}
+  
+  @media only screen and (max-width: 480px) {
+
+/*sitemap*/
+.sitemap_container h1 {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin-top: -15px;
+  font-family: cursive;
+  margin-bottom: 10px;
+}
+
+.sitemap_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  margin-top: 5%;
+  margin-bottom: 15%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sitemap1 {
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 400px;
+  height: 300px;
+  background-color: orange;
+  overflow: auto;
+}
+
+div.scrollmenu {
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-bottom: 100px;
+  width: 80%;
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+/*End of sitemap*/    
+
+  }

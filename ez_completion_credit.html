@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EZTech | Completion page</title>
+        <link rel="stylesheet" href="ez_reset.css">
+        <link rel="stylesheet" href="ez_base.css" >
+        <link rel="stylesheet" href="ez_completionstyle.css">
+        <link rel="icon" href="media/logoicon.ico" type="image/x-icon">
+    </head>
+    
+    <body>
+
+      <header>
+        <a href="ez_index.html"><img src="media/logo.jpg" alt="Logo" id="ezlogo" /></a>
+      <div class="top-buttons">
+        <a class="home-button" href="ez_index.html"><span class="buttontxt">Home</span></a>
+        <a class="aboutus-button" href="ez_about_us.html"><span class="buttontxt">About Us</span></a>
+        <a class="contactus-button" href="ez_contact_us.html"><span class="buttontxt">Contact Us</span></a>
+        <a class="promotion-button" href="ez_promotions.html"><span class="buttontxt">Promotions</span></a>
+        <a class="cart-button" href="ez_shopcart.html"><span class="buttontxt">Cart</span></a>
+        <a class="support-button">
+          <span class="buttontxt">Support</span>
+          <ul id="support-options">
+            <li id="ds">Device Support</li>
+            <li id="faq">FAQs</li>
+          </ul>
+        </a>
+        <button type="submit" onclick="showsearchbar()" class="mySearch">
+          <img src="media\search.png" width="30" class="Btn" id="myBtn">
+        </button>
+        <div class="search">
+          <script>                
+              function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('myInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName('li');
+              
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+              function showsearchbar() {
+                  var modal = document.getElementById("myModal");
+                  var btn = document.getElementById("myBtn");
+                  var span = document.getElementsByClassName("close")[0];
+                  
+                  document.getElementById("myModal").style.display = "block";
+                  
+                  span.onclick = function() {
+                  modal.style.display = "none";
+                  }
+  
+                  window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                      }
+                  }
+              }
+          </script>
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products.."><i class="fa fa-search"></i></input>
+                  <ul id="myUL">
+                      <li><a href="ez_desktop.html">Desktop PCs</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_imac512GB.html">IMAC 24" 512 GB Storage</a></li>
+                          <li><a href="ez_apple_imac256GB.html">IMAC 24" 256 GB Storage</a></li>
+                          <li><a href="ez_Samsung_ArtPC_PULSE.html">Samsung ArtPc Pulse</a></li>
+                          <li><a href="ez_Samsung_Odyssey_OLED_G8.html">Odyssey OLED G8</a></li>
+                          <li><a href="ez_huawei_matestation_x.html">Huawei Matestation X</a></li>
+                          <li><a href="ez_huawei_matestation_s.html">Huawei Matestation S</a</li>
+                          <li><a href="ez_ASUS_V241.html">Asus V241</a></li>
+                          <li><a href="ez_ASUS_ZenAio.html">Asus Zen AIO 24 A5401</a></li>
+                      </ul>
+                      <li><a href="ez_smartphone.html">Smartphone</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_iphone14plus.html">Iphone 14 Plus</a></li>
+                          <li><a href="ez_apple_iphone14promax.html">Iphone 14 Pro Max</a></li>
+                          <li><a href="ez_Samsung_Galaxy_A53_5G.html">Samsung A53 5G</a></li>
+                          <li><a href="ez_Samsung_Galaxy_A73_5G.html">Samsung A73 5G</a></li>
+                          <li><a href="ez_huawei_nova_10.html">Huawei Nova 10</a></li>
+                          <li><a href="ez_huawei_mate_50_pro.html">Huawei Mate 50 Pro</a></li>
+                          <li><a href="ez_ASUS_Zenfone8.html">Zenfone 8</a></li>
+                          <li><a href="ez_ASUS_Zenfone9.html">Zenfone 9</a></li>
+                      </ul>
+                      <li><a href="ez_laptop.html">Laptop</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_macbookair.html">Macbook Air</a></li>
+                          <li><a href="ez_apple_macbookpro.html">Macbook Pro 14"</a></li>
+                          <li><a href="ez_Samsung_Galaxy_Book2_pro_360.html">Galaxy Book 2 Pro 360</a></li>
+                          <li><a href="ez_Samsung_Galaxy_Book2_pro.html">Galaxy Book 2</a></li>
+                          <li><a href="ez_huawei_matebook_d14.html">Huawei Matebook D14</a></li>
+                          <li><a href="ez_huawei_matebook_xpro.html">Huawei Matebook XPRO</a></li>
+                          <li><a href="ez_ASUS_ExpertBook14Flip.html">Expertbook B7 Flip</a></li>
+                          <li><a href="ez_ASUS_Zeenbook17Fold.html">Zenbook 17 Fold OLED</a></li>
+                      </ul>
+                  </ul>
+              </div>
+        </div>
+      </div>
+      </div>
+      </header>   
+      <nav id="horizontal">
+        <ul>
+          <li class="cat">
+            <a href="ez_smartphone.html?brand=all" >Smartphones</a>
+            <ul id="subcat1">
+              <li class="brand"><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>          
+          <li class="cat">
+            <a href="ez_laptop.html?brand=all">Laptops</a>
+            <ul id="subcat2">
+              <li class="brand"><a href="ez_laptop.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>
+          <li class="cat">
+            <a href="ez_desktop.html?brand=all">Desktop PCs</a>
+            <ul id="subcat3">
+              <li class="brand"><a href="ez_desktop.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav id="vertical">   
+        <a href="#" id="navicon"><img src="media/navicon.png" width="40" height="40" id="actualnavicon"/><img src="media/promodollar.png" id="lpgImg" width="40" height="40"/><span id="lpgText">Lowest Price Guaranteed!</span><span id="isoText">ISO 9001:2015</span>
+        <ul id="hiddenMainMenu">
+          <li>
+            <a href="ez_smartphone.html?brand=all" class="cat">Smartphones
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+              <li><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <li>
+            <a href="ez_laptop.html?brand=all" class="cat">Laptops
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_laptop.html?brand=apple">Apple</a></li>
+              <li><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_laptop.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <li>
+            <a href="ez_desktop.html?brand=all" class="cat">Desktop PCs
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_desktop.html?brand=apple">Apple</a></li>
+              <li><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_desktop.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <img src="media/cny.png" width="150" height="90" id="cny"/>
+        </ul>
+        
+        </a>
+      </nav>
+      
+             
+             <div class="Thks" id="thks" style="visibility:hidden;">
+              <span class="msg">Successful Payment! Thank you purchasing with EZTech.</span>
+             </div>
+
+             <div class="receipt">
+              <p class="word">Receipt</p>
+              <h1>Successful paid on <span id="DT"></span></h1>
+             <div class="cusdetials">
+                      <table>
+                        <colgroup>  
+                          <col class="dataCols" span="2" />
+                          </colgroup>
+
+                          <tr>
+                            <td colspan="2" id="title" > <b>Amount Paid</b></td>
+                          </tr>
+
+                          <tr>
+                            <th>Successfully Paid</th>
+                            <td>RM<span id="totalamount"></span></td>
+                          </tr>
+
+                          <tr >
+                            <td colspan="2" id="title" > <b>Delivery Details</b></td>
+                          </tr>
+
+                        <tr>
+                          <th>Name</th>
+                          <td><span id="FullName"></span></td>
+                        </tr>
+
+                        <tr style="border: 1px solid black;">
+                          <th>IC Number</th>
+                          <td><span colspan="3" id="IC_Num"></span></td>
+                        </tr>
+
+                        <tr style="border: 1px solid black;">
+                          <th>Email Address</th>
+                          <td><span colspan="3" id="Email_Address"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>Telephone Number</th>
+                          <td><span colspan="3" id="custelenum"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>Address Line 1</th>
+                          <td><span colspan="3" id="address1"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>Address Line 2</th>
+                          <td><span colspane="3" id="address2"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>Address Line 3</th>
+                          <td><span colspan="3" id="address3"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>Poster Code</th>
+                          <td><span colspan="3" id="postcode"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>State</th>
+                          <td><span colspan="3" id="state"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>Will be delivered within</th>
+                          <td><span colspan="3" id="EDD">5 days</span></td>
+                        </tr>
+                        
+                      </table>
+                    </div>
+
+
+                     <table id="credit">
+                      <colgroup>  
+                        <col class="dataCols" span="2" />
+                        </colgroup>
+
+                        <tr >
+                          <td colspan="2" id="title" > <b>Payment Details using Credit-Card</b></td>
+                        </tr>
+
+                        <tr>
+                          <th>Name</th>
+                          <td><span id="Pay_Name"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>Bank</th>
+                          <td><span id="bank"></span></td>
+                        </tr>
+
+                        <tr>
+                          <th>Card Type</th>
+                          <td><span id="Card_Type"></span></td>
+                        </tr>
+
+                     </table>
+
+             </div>
+
+             <div class="productdetails">
+              <table id="prodel" class="center">
+                <thead>
+                  <th style="display:none">Key</th>
+                  <th style="text-align:left; height:70px">Product Code</th>
+                  <th style="text-align:left; height:70px">Product Name</th>
+                  <th style="text-align:right; height:70px">Price (RM)</th>
+                  <th style="text-align:right; height:70px">Quantity</th>
+                  <th style="text-align:right; height:70px">Line Total (RM)</th>
+                </thead>
+                <tbody id="orderdets_Body"></tbody>
+              </table>
+             
+
+             <button type="button" id="printR" onclick="window.print();" class="print">Print Receipt</button>
+              </div>
+
+
+             <div class="done">
+              <P>Once you are done reading and comfirming your information, Please click on the COMPLETE button to go back to the home page!</P>
+
+              <button class="comp" type="button" onclick="clearLSData()">Complete</button>
+              </div>
+             
+              <footer>
+                <div class="footer">
+                  <img src="media/logo.jpg" id="footerLogo" alt="Logo Footer" width="170" height="90"/>
+                  <h2 id="catchphrase">Making people's lives simpler</h2>
+                  <img src="media/iso9001-2015.png" id="ISO" width="200" height="120"/>
+                  <ul class="icons">
+                    <p id="latestNews">Get the latest news:</p>
+                    <li><a href="https://www.facebook.com/people/EZTech/100088570681662/" target="blank"><img src="media/facebook3.png" width="40" height="40"/></a></li>
+                    <li><a href="ez_contact_us.html"><img src="media/whatsapp3.png" width="40" height="40"/></a></li>
+                    <li><a href="https://twitter.com/EZTech2022"><img src="media/twitter3.png" width="40" height="40"/></a></li>
+                  </ul>
+              
+                  <div class="footer-end">
+                    <p>&copy;EZTech 2022. All rights reserved.
+                    <a href="ez_sitemap.html">Sitemap</a>          
+                    <a href="ez_device_support_page.html">Device Support</a>
+                    <a href="ez_questions_support_page.html">FAQ</a>
+                    </p>
+                  </div>
+              
+                  <div class="more-info">
+                    <p>STAY CONNECTED WITH US:</p>
+                    <form action="ez_completion_credit.html" method="get">
+                      <input type="email" name="emailAddr" id="emailAddr" required placeholder="Enter your email address" />
+                      <input type="submit" value="Register"/>
+                    </form>
+                  </div> 
+                  </div>
+                </div>
+              </footer>  
+   
+               <!--loading page-->
+             <div class="loadingpage">
+              <button id="loadingW"><span>Click to continue!!!</span></button>
+             </div>
+   
+             <!--microsoft edge-->
+           <audio id="playAudio">
+             <source src="media/own_audio.mpeg" type="audio/mp3">
+         </audio>
+   
+
+         <script>
+          var support1 = document.getElementById("ds");
+          support1.onclick = function() {
+            window.location.href = "ez_device_support_page.html";
+          }
+
+          var support2 = document.getElementById("faq");
+          support2.onclick = function() {
+            window.location.href = "ez_questions_support_page.html";
+          }
+            function preback(){window.history.forward();}
+            setTimeout("preback()",0);
+            window.onunload=function(){null};
+
+            function ltronly(){
+            var str= document.getElementById("fullname").value;
+            var namealert= document.getElementById("alert-name");
+            if(!((/^[a-z A-Z]+$/.test(str) ) || str.length==0)){
+            namealert.style.display="block";
+            alert("Warning! letters only.");
+            document.getElementById("fullname").value="";
+            }else{
+            namealert.style.display="none";
+            nameflag=true;
+            }
+            }
+
+            const loadingz= document.getElementById("loadingW");
+              window.addEventListener("load", () =>{
+                loadingz.addEventListener("click", Loading);  
+             })
+
+             function Loading(){
+              const loading = document.querySelector(".loadingpage"); 
+              loading.classList.add("loadingpage-hidden");
+              loading.addEventListener("transitionend", () =>{
+              //document.body.removeChild("loadingpage"); dont open
+              loading.classList.remove("loadingpage");
+             })
+             setTimeout(function(){
+              document.getElementById("playAudio").play();
+             }, 2500);
+             }
+
+
+
+
+           //delivery address extract from HTML local storage
+           function custdelidet(){
+              var cusdelLS= localStorage.getItem("CusDelData");  //get information from local storage from key
+              var cusdelobj= JSON.parse(cusdelLS);  //convert string into object item.
+
+              var custfullname= document.getElementById("FullName");
+              custfullname.innerHTML = cusdelobj.Full_name;
+
+              var ic_num=document.getElementById("IC_Num");
+              ic_num.innerHTML = cusdelobj.IC_number;
+
+              var cus_email= document.getElementById("Email_Address");
+              cus_email.innerHTML = cusdelobj.Email_address;
+
+              var telephone_num = document.getElementById("custelenum");
+              telephone_num.innerHTML = cusdelobj.Telephone_number;
+
+              var addressline1 = document.getElementById("address1");
+              addressline1.innerHTML = cusdelobj.Address_Line1;
+
+              var addressline2 = document.getElementById("address2");
+              addressline2.innerHTML = cusdelobj.Address_Line2;
+
+              var addressline3 = document.getElementById("address3");
+              addressline3.innerHTML = cusdelobj.Address_Line3;
+
+              var postalcode = document.getElementById("postcode");
+              postalcode.innerHTML = cusdelobj.Post_code;
+
+              var state = document.getElementById("state");
+              state.innerHTML = cusdelobj.State;
+              
+           }
+
+
+
+           //To extract data from html local storage payment (credit-card)
+           function payment_credit_section(){
+            var paycreLS = localStorage.getItem("credit_card_payment");
+
+            var paycreobj = JSON.parse(paycreLS);
+
+            var pay_cre_name = document.getElementById("Pay_Name");
+            pay_cre_name.innerHTML = paycreobj.Fulln;
+
+            var bank_type = document.getElementById("bank");
+            bank_type.innerHTML = paycreobj.Bank;
+
+            var card_type = document.getElementById("Card_Type");
+            card_type.innerHTML = paycreobj.Card_type;
+
+            var datetime = localStorage.getItem("Date");
+            document.getElementById("DT").innerHTML = datetime;
+           }
+         
+           function getProTotal() {
+                var LSProductTotal = localStorage.getItem("finalordertotal");
+                var tolamt = document.getElementById("totalamount");
+                tolamt.innerHTML = LSProductTotal;
+            }
+
+            function getorderdel(){
+              var shopcartBody = document.getElementById("orderdets_Body"); //Locate the Table Body element.
+				//Retrieve all local storage items
+		        for (var i = 0; i < localStorage.length; i++) {
+		            var key = localStorage.key(i);
+		            if (key.substr(0, 10) == "eztechprod") { //Select only those whose key contains the "wetresprod" prefix as these are Order Items.
+		                var value = localStorage.getItem(key); //Store the selected local storage item (Order Item) contents in variable "value".
+				        var proObj = JSON.parse(value); //Convert contents from String to Object 
+		                var tr = document.createElement('TR'); //Create a Table Row element in the DOM
+		                orderdets_Body.appendChild(tr); //Make the Table Row element a child of the Table Body
+						//For each field in the Order Item, create a Table Cell element to hold its value.
+				        for (var j=0; j < 5; j++){
+				            var td = document.createElement('TD'); //Create a Table Cell element 
+				            td.width='75';
+					         if (j == 0) { //Product Code
+						        td.style.textAlign = "left";
+                    td.setAttribute("data-label", "Product Code")
+					            td.appendChild(document.createTextNode(proObj.pCode)); //Make it a child of the Cell
+					        } else if (j == 1) { //Product Name
+						        td.style.textAlign = "left";
+                    td.setAttribute("data-label", "Product Name")
+					            td.appendChild(document.createTextNode(proObj.pName)); //Make it a child of the Cell			 
+					        } else if (j == 2) { //Price
+						        td.style.textAlign = "right";
+                    td.setAttribute("data-label", "Price")
+						        td.appendChild(document.createTextNode(proObj.pPrice));	//Make it a child of the Cell
+					        } else if (j == 3) { //Quantity
+						        td.style.textAlign = "right";
+                    td.setAttribute("data-label", "Quantity")
+						        td.appendChild(document.createTextNode(proObj.itemQty)); //Make it a child of the Cell
+					        } else if (j == 4){ //line total
+                    var subTTL = parseFloat(proObj.pPrice) * parseFloat(proObj.itemQty);
+						        var subTTLStr = subTTL.toString() + ".00";
+						        td.style.textAlign = "right";
+						        td.setAttribute("data-label", "Line Total (RM)")
+						        td.appendChild(document.createTextNode(subTTLStr));
+
+                  }
+				            tr.appendChild(td); //Make the Table Cell a child of the Table Row		 
+				        }
+						//After each Order Item have been retrieved from local stogae and displayed,
+				        shopcartBody.appendChild(tr); //make the Table Row a child of the Table Body
+	                }
+		        } 
+		    
+         }
+
+
+
+           function clearLSData(){
+            localStorage.clear();
+            window.location.replace("ez_index.html");
+           }
+
+           function init(){
+            document.forms[0].onsubmit = function() {
+        	  if (this.checkValidity()) alert("Registered successfully!\nThank you.");
+          		return true;
+            }
+            custdelidet();
+            payment_credit_section();
+            getProTotal();
+            getorderdel();
+
+            
+           }
+
+           window.onload= init;
+
+           function showmsg(){
+              document.getElementById("thks").style.visibility="visible";
+           }
+           setTimeout("showmsg()", 3000);
+           
+        </script>
+</body>
+ 
+</html>
+   

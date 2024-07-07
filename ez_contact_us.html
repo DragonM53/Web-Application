@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset = "utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="ez_reset.css" rel="stylesheet" >
+    <link rel="stylesheet" href="ez_base.css"/>
+    <link href = "ez_contact_us.css" rel = "stylesheet" />  
+    <script src="ez_contact_us.js"></script>
+    <link rel="icon" href="media/logoicon.ico" type="image/x-icon">
+    <title>EZTech | Contact us</title>
+</head>
+
+<body>
+    <header>
+      <a href="ez_index.html"><img src="media/logo.jpg" alt="Logo" id="ezlogo" /></a>
+      <div class="top-buttons">
+        <a class="home-button" href="ez_index.html"><span class="buttontxt">Home</span></a>
+        <a class="aboutus-button" href="ez_about_us.html"><span class="buttontxt">About Us</span></a>
+        <a class="contactus-button" href="ez_contact_us.html"><span class="buttontxt">Contact Us</span></a>
+        <a class="promotion-button" href="ez_promotions.html"><span class="buttontxt">Promotions</span></a>
+        <a class="cart-button" href="ez_shopcart.html"><span class="buttontxt">Cart</span></a>
+        <a class="support-button">
+          <span class="buttontxt">Support</span>
+          <ul id="support-options">
+            <li id="ds">Device Support</li>
+            <li id="faq">FAQs</li>
+          </ul>
+        </a>
+        <button type="submit" onclick="showsearchbar()" class="mySearch">
+          <img src="media\search.png" width="30" class="Btn" id="myBtn">
+        </button>
+        <div class="search">
+          <script>                
+              function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('myInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName('li');
+              
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+              function showsearchbar() {
+                  var modal = document.getElementById("myModal");
+                  var btn = document.getElementById("myBtn");
+                  var span = document.getElementsByClassName("close")[0];
+                  
+                  document.getElementById("myModal").style.display = "block";
+                  
+                  span.onclick = function() {
+                  modal.style.display = "none";
+                  }
+  
+                  window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                      }
+                  }
+              }
+          </script>
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products.."><i class="fa fa-search"></i></input>
+                  <ul id="myUL">
+                      <li><a href="#">Desktop PCs</a></li>
+                      <ul id="myUL">
+                          <li><a href="#">IMAC 24" 512 GB Storage</a></li>
+                          <li><a href="#">IMAC 24" 256 GB Storage</a></li>
+                          <li><a href="#">Samsung ArtPc Pulse</a></li>
+                          <li><a href="#">Odyssey OLED G8</a></li>
+                          <li><a href="#">Huawei Matestation X</a></li>
+                          <li><a href="#">Huawei Matestation S</a</li>
+                          <li><a href="#">Asus V241</a></li>
+                          <li><a href="#">Asus Zen AIO 24 A5401</a></li>
+                      </ul>
+                      <li><a href="#">Smartphone</a></li>
+                      <ul id="myUL">
+                          <li><a href="#">Iphone 14 Plus</a></li>
+                          <li><a href="#">Iphone 14 Pro Max</a></li>
+                          <li><a href="#">Samsung A53 5G</a></li>
+                          <li><a href="#">Samsung A73 5G</a></li>
+                          <li><a href="#">Huawei Nova 10</a></li>
+                          <li><a href="#">Huawei Mate 50 Pro</a></li>
+                          <li><a href="#">Zenfone 8</a></li>
+                          <li><a href="#">Zenfone 9</a></li>
+                      </ul>
+                      <li><a href="#">Laptop</a></li>
+                      <ul id="myUL">
+                          <li><a href="#">Macbook Air</a></li>
+                          <li><a href="#">Macbook Pro 14"</a></li>
+                          <li><a href="#">Galaxy Book 2 Pro 360</a></li>
+                          <li><a href="#">Galaxy Book 2</a></li>
+                          <li><a href="#">Huawei Matebook D14</a></li>
+                          <li><a href="#">Huawei Matebook XPRO</a></li>
+                          <li><a href="#">Expertbook B7 Flip</a></li>
+                          <li><a href="#">Zenbook 17 Fold OLED</a></li>
+                      </ul>
+                  </ul>
+              </div>
+        </div>
+      </div>
+      </div>
+    </header>   
+    <nav id="horizontal">
+      <ul>
+        <li class="cat">
+          <a href="ez_smartphone.html?brand=all" >Smartphones</a>
+          <ul id="subcat1">
+            <li class="brand"><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+            <li class="brand"><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+            <li class="brand"><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+            <li class="brand"><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+          </ul>
+        </li>          
+        <li class="cat">
+          <a href="ez_laptop.html?brand=all">Laptops</a>
+          <ul id="subcat2">
+            <li class="brand"><a href="ez_laptop.html?brand=apple">Apple</a></li>
+            <li class="brand"><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+            <li class="brand"><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+            <li class="brand"><a href="ez_laptop.html?brand=asus">Asus</a></li>
+          </ul>
+        </li>
+        <li class="cat">
+          <a href="ez_desktop.html?brand=all">Desktop PCs</a>
+          <ul id="subcat3">
+            <li class="brand"><a href="ez_desktop.html?brand=apple">Apple</a></li>
+            <li class="brand"><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+            <li class="brand"><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+            <li class="brand"><a href="ez_desktop.html?brand=asus">Asus</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <nav id="vertical">   
+      <a href="#" id="navicon"><img src="media/navicon.png" width="40" height="40" id="actualnavicon"/><img src="media/promodollar.png" id="lpgImg" width="40" height="40"/><span id="lpgText">Lowest Price Guaranteed!</span><span id="isoText">ISO 9001:2015</span>
+      <ul id="hiddenMainMenu">
+        <li>
+          <a href="ez_smartphone.html?brand=all" class="cat">Smartphones
+          <ul class="hiddenSubMenu">
+            <li><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+            <li><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+            <li><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+            <li><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+          </ul>
+          </a>
+        </li>
+        <li>
+          <a href="ez_laptop.html?brand=all" class="cat">Laptops
+          <ul class="hiddenSubMenu">
+            <li><a href="ez_laptop.html?brand=apple">Apple</a></li>
+            <li><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+            <li><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+            <li><a href="ez_laptop.html?brand=asus">Asus</a></li>
+          </ul>
+          </a>
+        </li>
+        <li>
+          <a href="ez_desktop.html?brand=all" class="cat">Desktop PCs
+          <ul class="hiddenSubMenu">
+            <li><a href="ez_desktop.html?brand=apple">Apple</a></li>
+            <li><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+            <li><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+            <li><a href="ez_desktop.html?brand=asus">Asus</a></li>
+          </ul>
+          </a>
+        </li>
+        <img src="media/cny.png" width="150" height="90" id="cny"/>
+      </ul>
+      
+      </a>
+    </nav>
+      <address>
+        <div class="phone">
+          <h2>Call us :</h2>
+        </div>
+        <div class="phone_number">
+          <h3><a href="tel:+60162409657">016-240 9657 </a></h3>
+        </div>
+        <div class="email">
+          <h2>Email : </h2>
+        </div>
+        <div class="email_address">
+          <h3><a href="mailto:eztech@example.com">eztech@gmail.com</a></h3>
+        </div>   
+      </address>
+    <!--/header-->
+    
+    <!--contact us-->
+    <aside>
+      <div>
+        <div class="main_container">
+            <div class="wrapper">                   
+              <h4>Whatsapp Contact us</h4>
+                <div id="error_message"></div>            
+                
+                <form action="" id="myform" onsubmit="return validate()" method="get">
+                    <div class="input_field">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="Name" name="name" id="name">
+                    </div>
+        
+                    <div class="input_field">
+                        <label for="phone">Phone</label>
+                        <input type="text" placeholder="Phone" name="phone number" id="phone">
+                    </div>
+        
+                    <div class="input_field">
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="Email" name="email" id="email">
+                    </div>
+        
+                    <div class="input_field">
+                        <label for="message">Message</label>
+                        <textarea placeholder="Message" name="message" id="message"></textarea>
+                    </div>
+                    <div class="btn">
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>                
+        
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.9875933523837!2d101.66233429567312!3d3.1470193615131183!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49a9f4081793%3A0x1d8d935b3a0a77d!2sMenara%20Millennium!5e0!3m2!1sen!2smy!4v1671108817006!5m2!1sen!2smy" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </aside>
+    <!--/phone and email-->
+
+    <!--footer-->
+    <footer>
+      <div class="footer">
+        <img src="media/logo.jpg" id="footerLogo" alt="Logo Footer" width="170" height="90"/>
+        <h2 id="catchphrase">Making people's lives simpler</h2>
+        <img src="media/iso9001-2015.png" id="ISO" width="200" height="120"/>
+        <ul class="icons">
+            <p id="latestNews">Get the latest news:</p>
+            <li><a href="https://www.facebook.com/people/EZTech/100088570681662/" target="blank"><img src="media/facebook3.png" width="40" height="40"/></a></li>
+            <li><a href="ez_contact_us.html"><img src="media/whatsapp3.png" width="40" height="40"/></a></li>
+            <li><a href="https://twitter.com/EZTech2022"><img src="media/twitter3.png" width="40" height="40"/></a></li>
+        </ul>
+
+        <div class="footer-end">
+            <p>&copy;EZTech 2022. All rights reserved.
+            <a href="ez_sitemap.html">Sitemap</a>          
+            <a href="ez_device_support_page.html">Device Support</a>
+            <a href="ez_questions_support_page.html">FAQ</a>
+          </p>
+        </div>
+
+        <div class="more-info">
+            <p>STAY CONNECTED WITH US:</p>
+            <form action="ez_contact_us.html" method="get">
+              <input type="email" name="emailAddr" id="emailAddr" required placeholder="Enter your email address" />
+              <input type="submit" value="Register"/>
+            </form>
+        </div> 
+        </div>
+    </div>
+    </footer>     
+  <!--/footer-->    
+  </body>
+  <script>
+    var support1 = document.getElementById("ds");
+      support1.onclick = function() {
+        window.location.href = "ez_device_support_page.html";
+      }
+
+      var support2 = document.getElementById("faq");
+      support2.onclick = function() {
+        window.location.href = "ez_questions_support_page.html";
+      }
+  </script>
+</html>  

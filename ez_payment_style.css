@@ -1,0 +1,521 @@
+@font-face {
+    font-family: Roboto;
+    src: url('webfonts/Roboto-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('webfonts/NotoSans-Regular.ttf') format('truetype');
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roberto;
+    position: relative;
+}
+
+html{
+    height: -webkit-fill-available;
+}
+
+body{
+    min-height: 100vh;
+    background-color: white;
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1024px;
+    min-width: 360px; 
+    overflow-x: hidden;
+    height:  -webkit-fill-available;
+}
+
+.write h3{
+    position: absolute;
+    top: 20%;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Noto Sans';
+    
+}
+
+.write h2{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5vw;
+}
+
+.write .ewlt{
+    position: absolute;
+    margin-top: 15%;    
+}
+
+.write .visa {
+    color: red;
+    font-family: 'Noto Sans'
+}
+
+.write .master{
+    color: red;
+    font-family: 'Noto Sans'
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 170px;
+}
+
+.head h2{
+    position: relative;
+    bottom: -8px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Verdana;
+}
+
+.head img{
+    width: 190px;
+}
+
+.container{
+    background-color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .pytimage{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20%;
+}
+
+.pytimage img{
+    width: 200px;
+}
+
+
+.container h1{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+}
+
+.container .pay{
+    margin-top: 5%;
+}
+
+.container h2{
+    font-size: 30px;
+    margin-top: 5%;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+}
+
+.container .pay-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-top: 10%;
+}
+
+
+
+.container .pay-option button{
+    display: block;
+    margin-right: 20px; 
+    margin-left: 10px;
+    width: 150px;
+    min-width: 120px;
+    height: 50px;
+    min-height: 30px;
+    background: linear-gradient(green,darkgreen);
+    color: #fff;
+    top: -10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.container .pay-option button:hover{
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px black;
+}
+
+.accpayty{
+    margin-top: -5%;
+}
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height:200px;
+    margin-top: auto;
+}
+
+.footer img{
+   width: 190px;
+}
+
+.footer h2{
+    position: relative;
+    bottom: -8px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Verdana;
+}
+
+.footer-end p{
+    display: flex;
+    color: white;
+    position: relative;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-family: Verdana;
+}
+
+
+
+@media only screen and (min-width: 360px){
+
+    .container h1{
+        font-size: 25px;
+    }
+
+    .container h2{
+        font-size: 18px;
+    }
+
+    .credit-card form .inputBox span{
+        font-size: 13px;
+    }
+
+    .credit-card form{
+        margin-right: 6%;
+        margin-left: 5%;
+    }
+
+    .credit-card form .flexbox{
+        display: flex;
+        gap: 5px
+    }
+
+    .credit-card h1{
+        font-size: 20px;
+    }
+
+    .e-wallet h1{
+        font-size: 20px;
+    }
+
+    .container .pay-option button{
+        width: 100px;
+        font-size: 18px;
+    }
+
+    .head{
+        height: 120px;
+    }
+
+    .head img{
+        width: 100px;
+    }
+
+    .footer{
+        height: 120px;
+        margin-bottom: 0%;
+    }
+
+    .footer img{
+        width: 100px;
+    }
+
+   .e-wallet form .input-field{
+    padding-left: -5%;
+   }
+
+   .e-wallet form .input-field input, .e-wallet form .input-field select{
+    width: 290px;
+   }
+
+   .e-wallet form{
+   width: 300px;
+   }
+
+}
+
+
+@media only screen and (max-width: 540px){
+    .footer{
+        margin-bottom: 0%;
+    }
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px){
+
+    .container h1{
+        font-size: 40px;
+    }
+
+    .e-wallet h1{
+        font-size: 40px;
+    }
+
+    .container h2{
+        font-size: 30px;
+    }
+    .credit-card form .inputBox span{
+        font-size: 1em;
+    }
+
+    .credit-card h1{
+        font-size: 40px;
+    }
+
+    .container .pay-option button{
+        width: 150px;
+        font-size: 20px;
+    }
+
+    .container .pay-option h3{
+        font-size: 25px;
+    }
+
+    .head{
+        height: 170px;
+    }
+
+
+    .head img{
+        width: 190px;
+    }
+
+    .footer{
+        height: 200px;
+    }
+
+    .footer img{
+        width: 190px;
+    }
+
+    .e-wallet form .input-field input, .e-wallet form .input-field select{
+        width: 530px;
+       }
+    
+       .e-wallet form{
+       width: 600px;
+       }   
+
+       .write .ewlt{
+        margin-top: 12%;
+       }
+}
+
+@media only screen and (max-width: 900px){
+    .container .pytimage img{
+        width: 150px;
+    }
+
+    .container .pytimage{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 670px){
+    .container .pytimage img{
+        width: 120px;
+    }
+
+    .container .pytimage{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .write .credit{
+        font-size: 15px;
+    }
+
+
+    .write .ewlt{
+        margin-top: 20%;
+        font-size: 15px;
+    }
+
+    .footer{
+        margin-top: -7%;
+    }
+
+}
+
+@media only screen and (max-width: 740px){
+    .write .ewlt{
+        margin-top: 15%;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    .container .pytimage img{
+        width: 100px;
+    }
+
+    .container .pytimage{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .footer{
+        margin-top: -15px;
+    }
+
+}
+
+@media only screen and (max-width: 480px){
+    .container .pytimage img{
+        width: 90px;
+    }
+
+    .container .pytimage{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .head h2{
+        font-size: 3.5vw;
+    }
+
+    .footer h2{
+        font-size: 3.5vw;
+    }
+
+    .footer p{
+        font-size: 3.5vw;
+    }
+
+
+
+    .write{
+        font-size: 3.5vw;
+    }
+
+    .write h2{
+        font-size: 3.5vw;
+    }
+
+
+    .write .ewlt{
+        margin-top: 15%;
+    }
+}
+
+@media only screen and (max-width: 373px){
+     .write .ewlt{
+        margin-top: 15%;
+    }
+}
+
+@media only screen and (max-width: 377px){
+   .container .write .ewlt{
+        margin-top: 25%;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px){
+    .write .ewlt{
+        margin-top: 15%;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .write h2{
+        font-size: 3.5vw;
+    }
+    
+}
+
+@media only screen and (max-width:430px){
+    .write .ewlt{
+        margin-top: 17%;
+    }
+
+    .write h2{
+        font-size: 3.5vw;
+    }
+}
+
+@media only screen and (max-width:360px){
+    .head img{
+        width: 100px;
+    }
+
+    .head{
+        height: 120px;
+    }
+
+    .footer{
+        height: 120px;
+    }
+
+    .footer img{
+        width: 100px;
+    }
+
+    .container h1{
+        font-size: 20px;
+    }
+
+    .container .pytimage{
+        margin-left: -10%;
+    }
+   
+    .container .pay-option h3{
+        font-size: 16px;
+    }
+
+    .container .pay-option{
+        margin: 5%;
+    }
+
+    .container .write{
+        margin-left: -4%;
+    }
+
+    .write .ewlt{
+        margin-top: 5%;
+    }
+}

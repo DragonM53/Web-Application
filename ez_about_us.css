@@ -1,0 +1,1149 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: Roboto;
+  src: url('webfonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('webfonts/NotoSans-Regular.ttf') format('truetype');
+}
+
+*{/*This configures the default padding and margin*/
+  margin: 0;
+ padding: 0;    
+ box-sizing: border-box;
+}
+
+html {
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+body {
+  background-color: skyblue !important;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    /*leader*/
+    .leader_container {
+        margin-top: 20px;
+        border: 5px solid rgb(0,191,255);
+        width: 35%;
+        height: 770px;
+        margin-left: 20px;
+        border-radius: 9%;
+        background-color: rgb(225,255,255);
+        perspective: 1000;
+    }
+
+    .flip-container:hover .leader, .flip-container.hover .leader {
+        transform: rotateY(180deg);
+    }
+    .flip-container, .leader_front, .leader_back {
+        width: 100%;
+        height: 600px;
+    }
+    .leader {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .leader2 {
+        border-radius: 8%;
+        opacity: 0.8;
+        width: 100%;
+    }
+    .leader3 {
+        margin-top: 30px;;
+    }
+    .leader_front {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+    .leader_back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        transform: rotateY(180deg);
+    }
+    .leader_opacity{
+        opacity:0.2;
+        filter:alpha(opacity=100); 
+    }
+    h1{
+        position:absolute;
+        top: 190px;
+        width: 100%;
+        font-size: 50px;
+        color: rgb(225,255,255);
+        font-family: "Lucida Handwriting";
+        letter-spacing: 6px;
+    }
+    aside h2{
+        position:absolute;
+        top: -12px;
+        width: 100%;
+        font-size: 1.5em;
+        color: rgb(64,64,64);
+        text-align: center;
+        font-family: "Lucida Handwriting";
+    }
+    .leader_introduction {
+        position:absolute;
+        top: 200px;
+        padding-left: 8%;
+        padding-right: 5%;
+        width: 100%;
+        color: rgb(63 63 63);
+        font-family: sans-serif;
+        text-align:justify;
+        font-size: 1em;
+    }
+    /*end leader*/
+
+    /*philosophy*/
+    .philosophy_container {
+      float: right;
+      margin-top: -750px;
+      margin-right: 5%;
+      border:5px solid rgb(0,191,255);
+      border-radius: 8%;
+      width: 50%;
+      height: 360px;
+  }
+  .philosophy_container h3{
+      font-size: 3em;
+      color: rgb(225,255,255);
+      margin-top: 0%;
+      margin-right: 0%;
+      font-family: "Lucida Handwriting";
+      text-align: center;
+      background-color: #4682B4;
+      height: 350px; 
+      border-radius: 7%;
+      padding-top: 30%;
+      display: inline-block;
+      width: 100%;
+  }
+  .philosophy_container h4 {
+      font-size: 2em;
+      color: rgb(63 63 63);
+      margin-top: 0%;
+      margin-right: 50px;
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #87CEFA;
+      height: 350px; 
+      width: 100%;
+      border-radius: 7%;
+      padding-top: 20%;
+      padding-left: 10%;
+      padding-right: 10%;
+  }
+  .philosophy_front {
+      margin-top: -350px;
+      font-family: "Comic Sans MS";
+  }
+  .philosophy_front:hover {
+      opacity: 0;
+  }
+
+  /*end philosophy*/
+
+  /*logo*/
+  .logo_container {
+    float: right;
+    margin-top: -370px;
+    margin-right: 5%;
+    border:5px solid rgb(0,191,255);
+    border-radius: 8%;
+    width: 50%;
+    height: 360px;
+  }
+  .logo_container h3{
+    font-size: 3em;
+    color: rgb(225,255,255);
+    margin-top: 0%;
+    margin-right: 0%;
+    font-family: "Lucida Handwriting";
+    text-align: center;
+    background-color: #4682B4;
+    height: 350px; 
+    border-radius: 7%;
+    padding-top: 35%;
+    display: inline-block;
+    width: 100%;
+}
+.logo_container h4 {
+    font-size: 2em;
+    color: rgb(63 63 63);
+    margin-top: 0%;
+    margin-right: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #87CEFA;
+    height: 350px; 
+    width: 100%;
+    border-radius: 7%;
+    padding-top: 12%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+  .logo_front:hover {
+      opacity: 0;
+  }
+  .logo_front {
+      margin-top: -350px;
+      font-family: "Comic Sans MS";
+  }
+  /*end logo*/
+    .picture {
+        height: 300px;
+        width: 50%;
+        float: left;
+        margin-top: 100px;
+        opacity: 0.8;
+    }
+    /*Location*/
+    .location_container {
+        float: right;
+        background-color: rgb(225,255,255);
+        border:3px solid rgb(0,139,139);
+        padding-bottom: 1em;
+        padding-top: 0.5em;
+        margin-left: 2%;
+        width: 100%;
+        height: 220px;
+        max-width: 95%;
+    }
+    .location_container iframe {
+        float: left;
+        padding-left: 20px;
+        margin-top: -30px;   
+    }
+    .location_container h5{
+        color: rgb(63 63 63);
+        font-family: "Lucida Handwriting";
+        font-size: 30px;
+        padding-left: 240px; 
+        margin-top: 2px;
+    }
+    .location_container h6{
+        color: #808080;
+        font-family: sans-serif;
+        font-size: 20px;
+        padding-left: 450px; 
+        margin-top: 20px;
+        padding-right: 60px;
+        text-align: justify;
+    }
+    /*End Location*/
+
+    /*Partner Company*/
+    .partner_container {
+        float: right;
+        background-color: rgb(225,255,255);
+        border:3px solid rgb(0,139,139);
+        padding-bottom: 1em;
+        padding-top: 0.5em;
+        margin-left: 3%;
+        width: 40%;
+        height: 230px;
+    }
+    .partner_container h5 {
+        color: rgb(63 63 63);
+        font-family: "Lucida Handwriting";
+        font-size: 30px;
+        padding-left: 0px; 
+        margin-top: -1px;
+        margin-bottom: 3%;
+    }
+    .partner_container img {
+        width: 100px;
+        height: 70px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    /*End Partner Company*/
+
+    /*Service Provide*/
+    .product_container {
+        float: right;
+        background-color: rgb(225,255,255);
+        border:3px solid rgb(0,139,139);
+        padding-bottom: 1em;
+        padding-top: 0.5em;
+        width: 52%;
+        height: 230px;
+    }
+    .product_container h5 {
+        color: rgb(63 63 63);
+        font-family: "Lucida Handwriting";
+        font-size: 30px;
+        padding-left: 0px; 
+        margin-top: -1px;
+        margin-bottom: 20px;
+    }
+    .product_container img {
+        width: 160px;
+        height: 70px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    /*End Service Provide*/
+
+
+}
+
+@media only screen and (min-width: 481px) {
+
+    /*leader*/
+    .leader_container {
+      margin-top: 20px;
+      border: 5px solid rgb(0,191,255);
+      width: 35%;
+      height: 770px;
+      margin-left: 20px;
+      border-radius: 9%;
+      background-color: rgb(225,255,255);
+      perspective: 1000;
+  }
+
+  .flip-container:hover .leader, .flip-container.hover .leader {
+      transform: rotateY(180deg);
+  }
+  .flip-container, .leader_front, .leader_back {
+      width: 100%;
+      height: 600px;
+  }
+  .leader {
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+  }
+  .leader2 {
+      border-radius: 8%;
+      opacity: 0.8;
+      width: 100%;
+  }
+  .leader3 {
+      margin-top: 30px;
+      width: 80%;
+  }
+  .leader_front {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+  }
+  .leader_back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      transform: rotateY(180deg);
+  }
+  .leader_opacity{
+      opacity:0.2;
+      filter:alpha(opacity=100); 
+  }
+  h1{
+      position:absolute;
+      top: 190px;
+      width: 100%;
+      font-size: 43px;
+      color: rgb(225,255,255);
+      font-family: "Lucida Handwriting";
+      letter-spacing: 6px;
+  }
+  aside h2{
+      position:absolute;
+      top: -12px;
+      width: 100%;
+      font-size: 1.3em;
+      color: rgb(64,64,64);
+      text-align: center;
+      font-family: "Lucida Handwriting";
+  }
+  .leader_introduction {
+      position:absolute;
+      top: 160px;
+      padding-left: 8%;
+      padding-right: 5%;
+      padding-top: 20%;
+      width: 100%;
+      color: rgb(63 63 63);
+      font-family: sans-serif;
+      text-align:justify;
+      font-size: 1em;
+  }
+  /*end leader*/
+
+  /*philosophy*/
+  .philosophy_container {
+    float: right;
+    margin-top: -750px;
+    margin-right: 5%;
+    border:5px solid rgb(0,191,255);
+    border-radius: 8%;
+    width: 50%;
+    height: 360px;
+}
+.philosophy_container h3{
+    font-size: 3em;
+    color: rgb(225,255,255);
+    margin-top: 0%;
+    margin-right: 0%;
+    font-family: "Lucida Handwriting";
+    text-align: center;
+    background-color: #4682B4;
+    height: 350px; 
+    border-radius: 7%;
+    padding-top: 30%;
+    display: inline-block;
+    width: 100%;
+}
+.philosophy_container h4 {
+    font-size: 2em;
+    color: rgb(63 63 63);
+    margin-top: 0%;
+    margin-right: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #87CEFA;
+    height: 350px; 
+    width: 100%;
+    border-radius: 7%;
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.philosophy_front {
+    margin-top: -350px;
+    font-family: "Comic Sans MS";
+}
+.philosophy_front:hover {
+    opacity: 0;
+}
+
+/*end philosophy*/
+
+/*logo*/
+.logo_container {
+  float: right;
+  margin-top: -370px;
+  margin-right: 5%;
+  border:5px solid rgb(0,191,255);
+  border-radius: 8%;
+  width: 50%;
+  height: 360px;
+}
+.logo_container h3{
+  font-size: 3em;
+  color: rgb(225,255,255);
+  margin-top: 0%;
+  margin-right: 0%;
+  font-family: "Lucida Handwriting";
+  text-align: center;
+  background-color: #4682B4;
+  height: 350px; 
+  border-radius: 7%;
+  padding-top: 35%;
+  display: inline-block;
+  width: 100%;
+}
+.logo_container h4 {
+  font-size: 2em;
+  color: rgb(63 63 63);
+  margin-top: 0%;
+  margin-right: 50px;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #87CEFA;
+  height: 350px; 
+  width: 100%;
+  border-radius: 7%;
+  padding-top: 12%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.logo_front:hover {
+    opacity: 0;
+}
+.logo_front {
+    margin-top: -350px;
+    font-family: "Comic Sans MS";
+}
+/*end logo*/
+  .picture {
+      height: 300px;
+      width: 50%;
+      float: left;
+      margin-top: 100px;
+      opacity: 0.8;
+  }
+  /*Location*/
+  .location_container {
+      float: left;
+      margin-top: 20px;
+      background-color: rgb(225,255,255);
+      border:3px solid rgb(0,139,139);
+      padding-bottom: 1em;
+      padding-top: 0.5em;
+      margin-left: 2%;
+      width: 100%;
+      height: 100%;
+      max-width: 95%;
+  }
+  .location_container iframe {
+      float: left;
+      padding-left: 5%;
+      margin-top: -2%; 
+      width: 55%;  
+  }
+  .location_container h5{
+      color: rgb(63 63 63);
+      font-family: "Lucida Handwriting";
+      font-size: 30px;
+      padding-left: 55%; 
+      margin-top: 2px;
+  }
+  .location_container h6{
+        color: #808080;
+        font-family: sans-serif;
+        margin-top: 15px;
+        padding-left: 60%;    
+        text-align: justify;
+  }
+  /*End Location*/
+
+  /*Partner Company*/
+  .partner_container {
+      float: left;
+      margin-top: 30px;
+      background-color: rgb(225,255,255);
+      border:3px solid rgb(0,139,139);
+      padding-bottom: 1em;
+      padding-top: 0.5em;
+      margin-left: 20px;
+      width: 45%;
+      height: 230px;
+      margin-bottom: 50px;
+  }
+  .partner_container h5 {
+      color: rgb(63 63 63);
+      font-family: "Lucida Handwriting";
+      font-size: 30px;
+      padding-left: 0px; 
+      margin-top: -1px;
+      margin-bottom: 3%;
+  }
+  .partner_container img {
+      width: 100px;
+      height: 70px;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+  }
+  /*End Partner Company*/
+
+  /*Service Provide*/
+  .product_container {
+      float: right;
+      margin-top: 30px;
+      margin-right: 40px;
+      background-color: rgb(225,255,255);
+      border:3px solid rgb(0,139,139);
+      padding-bottom: 1em;
+      padding-top: 0.5em;
+      width: 45%;
+      height: 230px;
+      margin-bottom: 50px;
+  }
+  .product_container h5 {
+      color: rgb(63 63 63);
+      font-family: "Lucida Handwriting";
+      font-size: 30px;
+      padding-left: 0px; 
+      margin-top: -1px;
+      margin-bottom: 20px;
+  }
+  .product_container img {
+      width: 140px;
+      height: 70px;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+  }
+  /*End Service Provide*/
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 770px) {
+      
+  /*leader*/
+      .leader_container {
+        margin-top: 20px;
+        border: 5px solid rgb(0,191,255);
+        width: 60%;
+        height: 770px;
+        margin-left: 20%;
+        border-radius: 9%;
+        background-color: rgb(225,255,255);
+        perspective: 1000;
+    }
+  
+    .flip-container:hover .leader, .flip-container.hover .leader {
+        transform: rotateY(180deg);
+    }
+    .flip-container, .leader_front, .leader_back {
+        width: 96%;
+        height: 600px;
+    }
+    .leader {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+        margin-left: -8.5%;
+    }
+    .leader2 {
+        border-radius: 8%;
+        opacity: 0.8;
+        width: 100%;
+        margin-left: 15.5%;
+    }
+    .leader3 {
+      margin-top: 20%;
+      margin-bottom: 5%;
+
+      width: 70%;
+    }
+    .leader_front {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0%;
+        left: -6.8%;
+        z-index: 2;
+    }
+    .leader_back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 11%;
+        transform: rotateY(180deg);
+    }
+    .leader_opacity{
+        opacity:0.2;
+        filter:alpha(opacity=100); 
+    }
+    h1{
+      position:absolute;
+      top: 190px;
+      margin: 15%;
+      width: 100%;
+      font-size: 50px;
+      color: rgb(225,255,255);
+      font-family: "Lucida Handwriting";
+      letter-spacing: 6px;
+    }
+    aside h2{
+        float: left;
+        margin-left: 17%;
+        margin-top: -10%;
+        font-size: 1.5em;
+        color: rgb(64,64,64);
+        font-family: "Lucida Handwriting";
+    }
+    .leader_introduction {
+        float: left;
+        margin-left: 15%;
+        margin-top: 10%;
+        color: rgb(63 63 63);
+        font-family: sans-serif;
+        text-align:justify;
+        font-size: 1em;
+    }
+    /*end leader*/
+  
+    /*philosophy*/
+    .philosophy_container {
+        float: left;
+        margin-top: 100px;
+        margin-left: 20%;
+        border:5px solid rgb(0,191,255);
+        border-radius: 8%;
+        width: 60%;
+        height: 360px;
+    }
+    .philosophy_container h3{
+        font-size: 2.6em;
+        color: rgb(225,255,255);
+        margin-top: 0%;
+        margin-right: 0%;
+        font-family: "Lucida Handwriting";
+        text-align: center;
+        background-color: #4682B4;
+        height: 350px; 
+        border-radius: 7%;
+        padding-top: 35%;
+        display: inline-block;
+    }
+    .philosophy_container h4 {
+        font-size: 2em;
+        color: rgb(63 63 63);
+        margin-top: 0%;
+        margin-right: 50px;
+        font-family: sans-serif;
+        text-align: center;
+        background-color: #87CEFA;
+        height: 350px; 
+        width: 100%;
+        border-radius: 7%;
+        padding-top: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .philosophy_front {
+        margin-top: -350px;
+        font-family: "Comic Sans MS";
+    }
+    .philosophy_front:hover {
+        opacity: 0;
+    }
+    /*end philosophy*/
+  
+    /*logo*/
+    .logo_container {
+      float: left;
+      margin-top: 100px;
+      margin-left: 20%;
+      border:5px solid rgb(0,191,255);
+      border-radius: 8%;
+      width: 60%;
+      height: 360px;
+    }
+    .logo_container h3{
+      font-size: 3em;
+      color: rgb(225,255,255);
+      margin-top: 0%;
+      margin-right: 0%;
+      font-family: "Lucida Handwriting";
+      text-align: center;
+      background-color: #4682B4;
+      height: 350px; 
+      border-radius: 7%;
+      padding-top: 35%;
+      display: inline-block;
+      width: 100%;
+  }
+  .logo_container h4 {
+      font-size: 1.8em;
+      color: rgb(63 63 63);
+      margin-top: 0%;
+      margin-right: 50px;
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #87CEFA;
+      height: 350px; 
+      width: 100%;
+      border-radius: 7%;
+      padding-top: 10%;
+      padding-left: 10%;
+      padding-right: 10%;
+  }
+    .logo_front:hover {
+        opacity: 0;
+    }
+    .logo_front {
+        margin-top: -350px;
+        font-family: "Comic Sans MS";
+    }
+    /*end logo*/
+    .picture {
+        height: 190px;
+        width: 50%;
+        float: left;
+        margin-top: 100px;
+        opacity: 0.8;
+    }
+    /*Location*/
+    .location_container {
+        margin-top: 10%;
+        background-color: rgb(225,255,255);
+        border:3px solid rgb(0,139,139);
+        padding-top: 0.5em;
+        margin-left: 20%;
+        width: 60%;
+        height: 94%;
+    }
+    .location_container iframe {
+        padding-top: 0px;  
+        height: 300px; 
+        width: 90%;
+        margin-left: 3%;
+    }
+    .location_container h5{
+      color: rgb(63 63 63);
+      font-family: "Lucida Handwriting";
+      font-size: 30px;
+      padding-left: 0px; 
+      margin-top: -1px;
+      margin-bottom: 20px;
+    }
+    .location_container h6{
+        color: #808080;
+        font-family: sans-serif;
+        font-size: 20px;
+        margin-left: -55%;
+        margin-right: 4%;
+        padding-top: 305px;
+        text-align: justify;
+        margin-bottom: 1%;
+    }
+    /*End Location*/
+  
+    /*Partner Company*/
+    .partner_container {      
+        background-color: rgb(225,255,255);
+        border:3px solid rgb(0,139,139);
+        padding-bottom: 1em;
+        padding-top: 0.5em;
+        margin-top: 10%;
+        margin-left: 20%;
+        width: 60%;
+        height: 40%;
+    }
+    .partner_container h5 {
+        color: rgb(63 63 63);
+        font-family: "Lucida Handwriting";
+        font-size: 30px;
+        padding-left: 0px; 
+        margin-top: -1px;
+        margin-bottom: 20px;
+    }
+    .partner_container img {
+        width: 100px;
+        height: 70px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    /*End Partner Company*/
+  
+    /*Service Provide*/
+    .product_container {
+      background-color: rgb(225,255,255);
+      border:3px solid rgb(0,139,139);
+      padding-bottom: 1em;
+      padding-top: 0.5em;
+      margin-top: 10%;
+      margin-right: 20%;
+      margin-bottom: 10%;
+      width: 60%;
+      height: 40%;
+  }
+    .product_container h5 {
+        color: rgb(63 63 63);
+        font-family: "Lucida Handwriting";
+        font-size: 30px;
+        padding-left: 0px; 
+        margin-top: -1px;
+        margin-bottom: 20px;
+    }
+    .product_container img {
+        width: 160px;
+        height: 70px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    /*End Service Provide*/
+  
+  }
+@media only screen and (max-width: 480px) {
+ 
+    /*leader*/
+    .leader_container {
+      margin-top: 20px;
+      border: 5px solid rgb(0,191,255);
+      width: 86.5%;
+      height: 770px;
+      margin-left: 7%;
+      border-radius: 9%;
+      background-color: rgb(225,255,255);
+      perspective: 1000;
+  }
+
+  .flip-container:hover .leader, .flip-container.hover .leader {
+      transform: rotateY(180deg);
+  }
+  .flip-container, .leader_front, .leader_back {
+      width: 96%;
+      height: 600px;
+  }
+  .leader {
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+      margin-left: -8.5%;
+  }
+  .leader2 {
+      border-radius: 8%;
+      opacity: 0.8;
+      width: 100%;
+      margin-left: 15.5%;
+  }
+  .leader3 {
+      margin-top: 0px;
+      margin-left: 0%;
+      width: 90%;
+  }
+  .leader_front {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0%;
+      left: -6.8%;
+      z-index: 2;
+  }
+  .leader_back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 11%;
+      transform: rotateY(180deg);
+  }
+  .leader_opacity{
+      opacity:0.2;
+      filter:alpha(opacity=100); 
+  }
+  h1{
+    position:absolute;
+    top: 190px;
+    margin: 15%;
+    width: 100%;
+    font-size: 47px;
+    color: rgb(225,255,255);
+    font-family: "Lucida Handwriting";
+    letter-spacing: 6px;
+  }
+  aside h2{
+      position:absolute;
+      top: 4%;
+      left: 30%;
+      max-width: 350px;
+      font-size: 1.5em;
+      color: rgb(64,64,64);
+      text-align: center;
+      font-family: "Lucida Handwriting";
+  }
+  .leader_introduction {
+      position:absolute;
+      top: 215px;
+      left: 25%;
+      right: -4%;
+      max-width: 360px;
+      color: rgb(63 63 63);
+      font-family: sans-serif;
+      text-align:justify;
+      font-size: 1em;
+  }
+  /*end leader*/
+
+  /*philosophy*/
+  .philosophy_container {
+      float: left;
+      margin-top: 100px;
+      margin-left: 5%;
+      border:5px solid rgb(0,191,255);
+      border-radius: 8%;
+      width: 90%;
+      height: 360px;
+  }
+  .philosophy_container h3{
+    font-size: 3em;
+    color: rgb(225,255,255);
+    margin-top: 0%;
+    margin-right: 0%;
+    font-family: "Lucida Handwriting";
+    text-align: center;
+    background-color: #4682B4;
+    height: 350px; 
+    border-radius: 7%;
+    padding-top: 30%;
+    display: inline-block;
+    width: 100%;
+  }
+  .philosophy_container h4 {
+    font-size: 180%;
+    color: rgb(63 63 63);
+    margin-top: 0%;
+    margin-right: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #87CEFA;
+    height: 350px; 
+    width: 100%;
+    border-radius: 7%;
+    padding-top: 25%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .philosophy_front {
+      margin-top: -350px;
+      font-family: "Comic Sans MS";
+  }
+  .philosophy_front:hover {
+      opacity: 0;
+  }
+
+  /*end philosophy*/
+
+  /*logo*/
+  .logo_container {
+    float: left;
+    margin-top: 100px;
+    margin-left: 5%;
+    border:5px solid rgb(0,191,255);
+    border-radius: 8%;
+    width: 90%;
+    height: 100%;
+  }
+  .logo_container h3{
+    font-size: 3em;
+    color: rgb(225,255,255);
+    margin-top: 0%;
+    margin-right: 0%;
+    font-family: "Lucida Handwriting";
+    text-align: center;
+    background-color: #4682B4;
+    height: 350px; 
+    border-radius: 7%;
+    padding-top: 45%;
+    display: inline-block;
+    width: 100%;
+}
+.logo_container h4 {
+    font-size: 180%;
+    color: rgb(63 63 63);
+    margin-top: 0%;
+    margin-right: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #87CEFA;
+    height: 350px; 
+    width: 100%;
+    border-radius: 7%;
+    padding-top: 12%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+  .logo_front:hover {
+      opacity: 0;
+  }
+  .logo_front {
+      margin-top: -350px;
+      font-family: "Comic Sans MS";
+  }
+  /*end logo*/
+  .picture {
+      height: 190px;
+      width: 50%;
+      float: left;
+      margin-top: 100px;
+      opacity: 0.8;
+  }
+  /*Location*/
+  .location_container {
+      float: left;
+      margin-top: 10%;
+      background-color: rgb(225,255,255);
+      border:3px solid rgb(0,139,139);
+      padding-top: 0.5em;
+      margin-left: 7%;
+      width: 90%;
+      height: 100%;
+  }
+  .location_container iframe {
+      padding-top: 20px;  
+      height: 300px; 
+      width: 90%;
+  }
+  .location_container h5{
+      color: rgb(63 63 63);
+      font-family: "Lucida Handwriting";
+      font-size: 30px; 
+  }
+  .location_container h6{
+      color: #808080;
+      font-family: sans-serif;
+      font-size: 20px;
+      padding-top: 20px;
+      padding-left: 5%;
+      padding-right: 5%;
+      text-align: justify;
+      margin-bottom: 3%;
+  }
+  /*End Location*/
+
+  /*Partner Company*/
+  .partner_container {
+      float: left;
+      margin-top: 10%;
+      background-color: rgb(225,255,255);
+      border:3px solid rgb(0,139,139);
+      padding-bottom: 1em;
+      padding-top: 0.5em;
+      margin-left: 7%;
+      width: 90%;
+      height: 100%;
+  }
+  .partner_container h5 {
+      color: rgb(63 63 63);
+      font-family: "Lucida Handwriting";
+      font-size: 30px;
+      padding-left: 0px; 
+      margin-top: -1px;
+      margin-bottom: 20px;
+  }
+  .partner_container img {
+      width: 100px;
+      height: 70px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+  }
+  /*End Partner Company*/
+
+  /*Service Provide*/
+  .product_container {
+    float: left;
+    margin-top: 10%;
+    background-color: rgb(225,255,255);
+    border:3px solid rgb(0,139,139);
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+    padding-left: 1%;
+    margin-left: 7%;
+    width: 90%;
+    height: 100%;
+    margin-bottom: 10%;
+  }
+  .product_container h5 {
+      color: rgb(63 63 63);
+      font-family: "Lucida Handwriting";
+      font-size: 30px;
+      padding-left: 0px; 
+      margin-top: -1px;
+      margin-bottom: 20px;
+  }
+  .product_container img {
+      width: 150px;
+      height: 60px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+  }
+  /*End Service Provide*/
+
+}
+

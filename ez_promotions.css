@@ -1,0 +1,485 @@
+@media only screen and (min-width: 700px) {
+    article {
+        margin:20px;
+        height: auto;
+    }
+    #promoTitle {
+        background-color: lightgrey;
+        color: black;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 150%;
+        margin-bottom: 20px;
+    }
+    #bestprice {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        border: solid hidden;
+        background-color: rgb(109, 109, 109);
+        font-size: 120%;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    #PromoDesc {
+        text-align: center;
+        padding: 10px;
+    }
+    #bestpricePic {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+
+
+    article > p {
+        color: black;
+        border: solid hidden;
+        background-color: rgb(207, 231, 255);
+        border-radius: 20px;
+        width: 90%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px 5px 5px 20px;
+        font-size: 30px;
+        align-items: cent;
+    }
+
+    /*Christmas Banner*/
+    #christmasBanner {
+        width: 90%;
+        padding: 1%;
+        height: auto;
+        background: url(media/IMG/christmasBanner.png);
+        background-size: cover;
+        border: solid hidden;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    #bannerTitle {
+        font-size: 170%;
+        margin: 1%;
+    }
+
+    #picPhone {
+        width: 80%;
+        height: auto;
+    }
+
+    #picDesktop {
+        width: 100%;
+        height: 180%;
+    }
+
+    #picLaptop {
+        width: 80%;
+        height: auto;
+    }
+    .Hover {
+        opacity: 0;
+        margin:1%;
+        color: white;
+        font-weight: bold;
+        font-size:130%;
+    }
+    .Box {
+        transition: margin 0.2s ease-in-out;
+    }
+    .Box:hover + .Hover {
+        opacity: 1;
+    }
+    #picPhone:hover {
+        animation: shake 0.7s;
+    }
+
+    #picDesktop:hover {
+        animation: shake 0.7s;
+    }
+
+    #picLaptop:hover {
+        animation: shake 0.7s;
+    }
+    
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+
+    #promoLine {
+        display: flex;
+        width: 100%;
+        border: solid hidden;
+        align-items: center;
+    }
+
+    #timer {
+        font-size:150%;
+        letter-spacing: 1.2px;
+    }
+
+    /*New Product*/
+    #newProduct {
+        background-color:rgb(163, 209, 255);
+        width: 90%;
+        display: flex;
+        padding: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+    }
+
+    #newProdpic{
+        width: 40%;
+        border: solid hidden;
+        margin-right: 5%;
+    }
+
+    #newProdright > h2 {
+        font-size: 150%;
+        color: white;
+        letter-spacing: 1.2px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    article {
+        margin:20px;
+        height: auto;
+    }
+    #promoTitle {
+        background-color: lightgrey;
+        color: black;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 150%;
+        margin-bottom: 20px;
+    }
+    #bestprice {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        border: solid hidden;
+        background-color: rgb(109, 109, 109);
+        font-size: 80%;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    #PromoDesc {
+        text-align: center;
+        padding: 10px;
+    }
+    #bestpricePic {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+
+
+    article > p {
+        color: black;
+        border: solid hidden;
+        background-color: rgb(207, 231, 255);
+        border-radius: 20px;
+        width: 90%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px 5px 5px 20px;
+        font-size: 30px;
+        align-items: cent;
+    }
+
+    /*Christmas Banner*/
+    #christmasBanner {
+        width: 90%;
+        padding: 1%;
+        height: auto;
+        background: url(media/IMG/christmasBanner.png);
+        background-size: cover;
+        border: solid hidden;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    #bannerTitle {
+        font-size: 120%;
+        margin: 1%;
+    }
+
+    #picPhone {
+        width: 80%;
+        height: auto;
+    }
+
+    #picDesktop {
+        width: 100%;
+        height: 180%;
+    }
+
+    #picLaptop {
+        width: 80%;
+        height: auto;
+    }
+    .Hover {
+        opacity: 0;
+        margin:0.5%;
+        color: white;
+        font-weight: bold;
+        font-size:100%;
+    }
+    .Box {
+        transition: margin 0.2s ease-in-out;
+    }
+    .Box:hover + .Hover {
+        opacity: 1;
+    }
+    #picPhone:hover {
+        animation: shake 0.7s;
+    }
+
+    #picDesktop:hover {
+        animation: shake 0.7s;
+    }
+
+    #picLaptop:hover {
+        animation: shake 0.7s;
+    }
+    
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+
+    #promoLine {
+        display: flex;
+        width: 100%;
+        border: solid hidden;
+        align-items: center;
+    }
+
+    #timer {
+        font-size:100%;
+        letter-spacing: 1.2px;
+    }
+
+    /*New Product*/
+    #newProduct {
+        background-color:rgb(163, 209, 255);
+        width: 90%;
+        display: flex;
+        padding: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+    }
+
+    #newProdpic{
+        width: 40%;
+        border: solid hidden;
+        margin-right: 5%;
+    }
+
+    #newProdright > h2 {
+        font-size: 120%;
+        color: white;
+        letter-spacing: 1.2px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    article {
+        margin:20px;
+        height: auto;
+    }
+    #promoTitle {
+        background-color: lightgrey;
+        color: black;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 100%;
+        margin-bottom: 20px;
+    }
+    #bestprice {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        border: solid hidden;
+        background-color: rgb(109, 109, 109);
+        font-size: 60%;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    #PromoDesc {
+        text-align: center;
+        padding: 10px;
+    }
+    #bestpricePic {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+
+
+    article > p {
+        color: black;
+        border: solid hidden;
+        background-color: rgb(207, 231, 255);
+        border-radius: 20px;
+        width: 90%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px 5px 5px 20px;
+        font-size: 30px;
+        align-items: cent;
+    }
+
+    /*Christmas Banner*/
+    #christmasBanner {
+        width: 90%;
+        padding: 1%;
+        height: auto;
+        background: url(media/IMG/christmasBanner.png);
+        background-size: cover;
+        border: solid hidden;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    #bannerTitle {
+        font-size: 80%;
+        margin: 1%;
+    }
+
+    #picPhone {
+        width: 80%;
+        height: auto;
+    }
+
+    #picDesktop {
+        width: 100%;
+        height: 180%;
+    }
+
+    #picLaptop {
+        width: 80%;
+        height: auto;
+    }
+    .Hover {
+        opacity: 0;
+        margin:0.5%;
+        color: white;
+        font-weight: bold;
+        font-size:60%;
+    }
+    .Box {
+        transition: margin 0.2s ease-in-out;
+    }
+    .Box:hover + .Hover {
+        opacity: 1;
+    }
+    #picPhone:hover {
+        animation: shake 0.7s;
+    }
+
+    #picDesktop:hover {
+        animation: shake 0.7s;
+    }
+
+    #picLaptop:hover {
+        animation: shake 0.7s;
+    }
+    
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+
+    #promoLine {
+        display: flex;
+        width: 100%;
+        border: solid hidden;
+        align-items: center;
+    }
+
+    #timer {
+        font-size:60%;
+        letter-spacing: 1.2px;
+    }
+
+    /*New Product*/
+    #newProduct {
+        background-color:rgb(163, 209, 255);
+        width: 90%;
+        display: flex;
+        padding: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+    }
+
+    #newProdpic{
+        width: 40%;
+        border: solid hidden;
+        margin-right: 5%;
+    }
+
+    #newProdright > h2 {
+        margin:3.5%;
+        font-size: 100%;
+        color: white;
+        letter-spacing: 1.2px;
+    }
+    iframe {
+        height: 80%;
+    }
+}

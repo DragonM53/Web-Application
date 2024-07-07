@@ -1,0 +1,332 @@
+@font-face {
+    font-family: Roboto;
+    src: url('webfonts/Roboto-Regular.ttf') format('truetype');
+  }
+  
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('webfonts/NotoSans-Regular.ttf') format('truetype');
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roberto;
+    position: relative;
+}
+
+html{
+    height: -webkit-fill-available;
+}
+
+body{
+    min-height: 100vh;
+    background-size: contain;
+    background-attachment: fixed;
+    background-image: url(media/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1024px;
+    min-width: 360px; 
+    overflow-x: hidden;
+    height:  -webkit-fill-available;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 170px;
+}
+
+.head h2{
+    position: relative;
+    bottom: -8px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Verdana;
+}
+
+.head img{
+    width: 190px;
+}
+
+
+/*e-wallet*/
+.e-wallet h1{
+    font-size: 40px;
+    margin-top: 30px;
+    padding: 5px;
+    border: 1px solid black;
+    width: 90%;
+    text-align: center;
+}
+
+.e-wallet{
+    margin-top: auto;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+    border-radius: 10px;
+    min-width: 360px;
+}
+
+.e-wallet form{
+    margin-top: 30px;
+    background: lightskyblue;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid black;
+    font-size: 18px;
+    max-width: 600px;
+    min-width: 315px;
+}
+
+.e-wallet form .input-field{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 600px;
+}
+
+
+.e-wallet form .input-field input, .e-wallet form .input-field select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    max-width: 600px;
+}
+
+.e-wallet .input-field input:hover{
+    box-shadow: 0 0 0 2px #fff ,0 0 0 3px black;
+}
+
+.e-wallet .input-field select{
+    height: 50px;
+    max-width:600px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.e-wallet .input-field select:hover{
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px black;
+}
+
+.e-wallet form .pay-btn-ewallet{
+    width: 100%;
+    background: linear-gradient(green, darkgreen);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: .1s ;
+    border-radius: 10px;
+}
+
+.e-wallet form .pay-btn-ewallet:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height:200px;
+}
+
+.footer img{
+   width: 190px;
+}
+
+.footer h2{
+    position: relative;
+    bottom: -8px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Verdana}
+
+.footer-end p{
+    display: flex;
+    color: white;
+    position: relative;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-family: Verdana;
+}
+
+input:focus, select:focus, textarea:focus{
+    background-color: gainsboro;
+  }
+
+  input#fullname:focus:valid{
+    background: lightgreen url(media/correct.png) right/contain no-repeat;
+}
+
+input#fullname:focus:invalid{
+    background: rgb(255, 220, 220) url(media/wrong.png) right/contain no-repeat;
+}
+
+input#telenum:focus:valid{
+    background: lightgreen url(media/correct.png) right/contain no-repeat;
+}
+
+input#telenum:focus:invalid{
+    background: rgb(255, 220, 220) url(media/wrong.png) right/contain no-repeat;
+}
+
+input#email-add:focus:valid{
+    background: lightgreen url(media/correct.png) right/contain no-repeat;
+}
+
+input#email-add:focus:invalid{
+    background: rgb(255, 220, 220) url(media/wrong.png) right/contain no-repeat;
+}
+
+select#typeewallet:focus:valid{
+    background: lightgreen url(media/correct.png) right/contain no-repeat;
+}
+
+select#typeewallet:focus:invalid{
+    background: rgb(255, 220, 220) url(media/wrong.png) right/contain no-repeat;
+}
+
+
+
+@media only screen and (min-width: 360px){
+    .e-wallet h1{
+        font-size: 20px;
+    }
+
+    .head{
+        height: 120px;
+    }
+
+    .head img{
+        width: 100px;
+    }
+
+    .footer{
+        height: 120px;
+    }
+
+    .footer img{
+        width: 100px;
+    }
+
+   .e-wallet form .input-field{
+    padding-left: -5%;
+   }
+
+   .e-wallet form{
+   width: 280px;
+   }
+
+}
+
+
+@media only screen and (min-width: 600px){
+
+    .e-wallet h1{
+        font-size: 40px;
+    }
+
+
+    .head{
+        height: 170px;
+    }
+
+
+    .head img{
+        width: 190px;
+    }
+
+    .footer{
+        height: 200px;
+    }
+
+    .footer img{
+        width: 190px;
+    }
+
+    .e-wallet form .input-field input, .e-wallet form .input-field select{
+        width: 530px;
+       }
+    
+       .e-wallet form{
+       width: 600px;
+       }
+}
+
+@media only screen and (max-width: 410px){
+    .head h2{
+        font-size: 3.5vw;
+    }
+
+    .footer h2{
+        font-size: 3.5vw;
+    }
+
+    .footer p{
+        font-size: 3.5vw;
+    }
+
+    .e-wallet h1{
+        font-size: 3.5vw;
+    }
+
+    .e-wallet form .input-field input, .e-wallet form .input-field select{
+        width: 220px;
+    }
+
+}
+
+@media only screen and (max-width:360px){
+    .head img{
+        width: 100px;
+    }
+
+    .head{
+        height: 120px;
+    }
+
+    .footer{
+        height: 120px;
+    }
+
+    .footer img{
+        width: 100px;
+    }
+
+}
+

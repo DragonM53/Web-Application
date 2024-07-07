@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ez_reset.css">
+    <link rel="stylesheet" href="ez_payment_style.css">
+    <link rel="icon" href="media/icon.ico" type="image/x-icon">
+    <title>EZTech | Payment Page</title>
+</head>
+<body>
+    <div class="head">
+        <!--<h1><span id="EZ">EZ</span><span id="Tech">Tech</span></h1>-->
+        <img src="media/logo.jpg" alt="eztech">
+        <h2>Making people's lives simpler</h2>
+        </div>
+
+        <div class="container" id="header">
+            <h1>Payment Page</h1>
+            <div class="pytimage">
+            <img id="pyt" src="media/paymentimage.png" alt="payment" />
+            <img src="media/paymentimage2.png" alt="payment" />
+            <img src="media/paymentimage3.png" alt="payment" />
+        </div>
+        
+            <h1 class="pay">Payable Total is: RM<span id="totalamount"></span></h1>
+
+                <div class="pay-option">
+                <h3>Pay with: </h3>
+               <button type="button" onclick="credit_section()">Credit-card</button>
+
+                <button id="ewallet" type="button" value="e-wallet" onclick="ewallet_section()">E-wallet</button>
+                </div>
+
+                <div class="write">
+                    <h2>More information about Credit Card and E-wallet Payments</h2>
+                    <h3 class="credit">Credit-card: Please note that we only accept <b class="visa">Visa</b> and <b class="master">Mastercard</b>. To successfully purchase your desired products, please fill in the form with the correct information and you are ready to go.</h3>
+                    <h3 class="ewlt">E-wallet: Please be aware that the E-wallet payment <b class="master">does not use QR code,</b> but it requires you to fill in a form and submit it for transaction. E-wallet has more varieties of payment: Touch N Go, Grab Pay, CIMB Pay, Boost Pay, Alipay, Google Pay and Apple Pay. </h3>
+                </div>
+
+        
+            
+        </div>
+
+        <footer>
+            <div class="footer">
+                <!--<h1><span id="EZ">EZ</span><span id="Tech">Tech</span></h1>-->
+                <img src="media/logo.jpg" alt="eztechlogo">
+                <h2>Making people's lives simpler</h2>
+    
+                <div class="footer-end">
+                    <p>&copy;EZTech 2022. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            //to prevent user to go back previous page
+            function preback(){window.history.forward();}
+            setTimeout("preback()",0);
+            window.onunload=function(){null};
+
+            function credit_section(){
+                window.location.replace("ez_credit_card.html");
+            }
+
+            function ewallet_section(){
+                window.location.replace("ez_ewallet.html");
+            }
+
+
+            function getProTotal() {
+                var LSProductTotal = localStorage.getItem("finalordertotal");
+                var tolamt = document.getElementById("totalamount");
+                tolamt.innerHTML = LSProductTotal;
+            }
+
+            function init(){
+                getProTotal();
+            }
+            window.onload=init;
+           // function getorderdel(){
+                //var delcartbody= document.getElementById("orderdet_Body");
+                //for (var i = 0; i < localStorage.length; i++){
+                  //  var key = localStorage.key(i);
+                  // if (key.substr(0, 10) == "eztechprod"){
+                  //      var value = localStorage.getItem(key);
+                   //     var productObj = JSON.parse(value);
+                  //      var createTr = document.createElement('TR');
+                  //      delcartbody.appendChild(createTr);
+                //        for (var j=0; j < 7; j++){
+                //            var createTd = document.createElement('TD');
+               //             createTd.style.boxSizing = "border-box";
+
+              //      if (j == 0) { //Product Code
+                //    createTd.style.width = '300';
+				//	createTd.style.textAlign = "left";
+			//	    createTd.setAttribute("data-label", "Product Code")
+			//		createTd.appendChild(document.createTextNode(productObj.prodcode));
+			//		 } else if (j == 1) { //Product Name
+			//			createTd.style.width = '300';
+			//			 createTd.style.textAlign = "left";
+			//			 createTd.setAttribute("data-label", "Product Name")
+			//		     createTd.appendChild(document.createTextNode(productObj.prodname));
+			//		 } else if (j == 2) { //Price (RM)
+             //           createTd.style.width = '150';
+			//			 createTd.style.textAlign = "right";
+			//			 createTd.setAttribute("data-label", "Price")
+			//			 createTd.appendChild(document.createTextNode(productObj.price));
+			//		 } else if (j == 3) { //Quantity
+             //            createTd.style.width = '100';
+				//		 createTd.style.textAlign = "right";
+				//		 createTd.setAttribute("data-label", "Quantity")
+				//		 createTd.appendChild(document.createTextNode(productObj.quantity));				 
+			//		 } else if (j == 4) {
+			//			 createTd.style.width = '250';
+			//			 var subTTL = parseFloat(productObj.price) * parseFloat(productObj.quantity);
+			//			 var subTTLStr = subTTL.toString() + ".00";
+			//			 createTd.style.textAlign = "right";
+			//			 createTd.setAttribute("data-label", "Line Total (RM)")
+			//			 createTd.appendChild(document.createTextNode(subTTLStr));
+			//		 }
+			//	     createTr.appendChild(createTd); //Append table cell to table row in DOM
+            //            }
+           //             delcartbody.appendChild(tr);
+           //         }
+           //     }
+          //  }//
+              //  window.onload = init;
+             //   function init(){
+             //   getorderdel();
+              //  }
+            
+        </script>
+</body>
+</html>

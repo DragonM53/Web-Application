@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EZTech | Promotion</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="media/logoicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="ez_reset.css"/>
+    <link rel="stylesheet" href="ez_base.css"/>
+    <link rel="stylesheet" href="ez_promotions.css"/> 
+</head>
+
+<body>
+  <header>
+    <a href="ez_index.html"><img src="media/logo.jpg" alt="Logo" id="ezlogo" /></a>
+      <div class="top-buttons">
+        <a class="home-button" href="ez_index.html"><span class="buttontxt">Home</span></a>
+        <a class="aboutus-button" href="ez_about_us.html"><span class="buttontxt">About Us</span></a>
+        <a class="contactus-button" href="ez_contact_us.html"><span class="buttontxt">Contact Us</span></a>
+        <a class="promotion-button" href="ez_promotions.html"><span class="buttontxt">Promotions</span></a>
+        <a class="cart-button" href="ez_shopcart.html"><span class="buttontxt">Cart</span></a>
+        <a class="support-button">
+          <span class="buttontxt">Support</span>
+          <ul id="support-options">
+            <li id="ds">Device Support</li>
+            <li id="faq">FAQs</li>
+          </ul>
+        </a>
+        <button type="submit" onclick="showsearchbar()" class="mySearch">
+          <img src="media\search.png" width="30" class="Btn" id="myBtn">
+        </button>
+        <div class="search">
+          <script>                
+              function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('myInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName('li');
+              
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+              function showsearchbar() {
+                  var modal = document.getElementById("myModal");
+                  var btn = document.getElementById("myBtn");
+                  var span = document.getElementsByClassName("close")[0];
+                  
+                  document.getElementById("myModal").style.display = "block";
+                  
+                  span.onclick = function() {
+                  modal.style.display = "none";
+                  }
+  
+                  window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                      }
+                  }
+              }
+          </script>
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products.."><i class="fa fa-search"></i></input>
+                  <ul id="myUL">
+                    <li><a href="ez_desktop.html">Desktop PCs</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_imac512GB.html">IMAC 24" 512 GB Storage</a></li>
+                        <li><a href="ez_apple_imac256GB.html">IMAC 24" 256 GB Storage</a></li>
+                        <li><a href="ez_Samsung_ArtPC_PULSE.html">Samsung ArtPc Pulse</a></li>
+                        <li><a href="ez_Samsung_Odyssey_OLED_G8.html">Odyssey OLED G8</a></li>
+                        <li><a href="ez_huawei_matestation_x.html">Huawei Matestation X</a></li>
+                        <li><a href="ez_huawei_matestation_s.html">Huawei Matestation S</a</li>
+                        <li><a href="ez_ASUS_V241.html">Asus V241</a></li>
+                        <li><a href="ez_ASUS_ZenAio.html">Asus Zen AIO 24 A5401</a></li>
+                    </ul>
+                    <li><a href="ez_smartphone.html">Smartphone</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_iphone14plus.html">Iphone 14 Plus</a></li>
+                        <li><a href="ez_apple_iphone14promax.html">Iphone 14 Pro Max</a></li>
+                        <li><a href="ez_Samsung_Galaxy_A53_5G.html">Samsung A53 5G</a></li>
+                        <li><a href="ez_Samsung_Galaxy_A73_5G.html">Samsung A73 5G</a></li>
+                        <li><a href="ez_huawei_nova_10.html">Huawei Nova 10</a></li>
+                        <li><a href="ez_huawei_mate_50_pro.html">Huawei Mate 50 Pro</a></li>
+                        <li><a href="ez_ASUS_Zenfone8.html">Zenfone 8</a></li>
+                        <li><a href="ez_ASUS_Zenfone9.html">Zenfone 9</a></li>
+                    </ul>
+                    <li><a href="ez_laptop.html">Laptop</a></li>
+                    <ul id="myUL">
+                        <li><a href="ez_apple_macbookair.html">Macbook Air</a></li>
+                        <li><a href="ez_apple_macbookpro.html">Macbook Pro 14"</a></li>
+                        <li><a href="ez_Samsung_Galaxy_Book2_pro_360.html">Galaxy Book 2 Pro 360</a></li>
+                        <li><a href="ez_Samsung_Galaxy_Book2_pro.html">Galaxy Book 2</a></li>
+                        <li><a href="ez_huawei_matebook_d14.html">Huawei Matebook D14</a></li>
+                        <li><a href="ez_huawei_matebook_xpro.html">Huawei Matebook XPRO</a></li>
+                        <li><a href="ez_ASUS_ExpertBook14Flip.html">Expertbook B7 Flip</a></li>
+                        <li><a href="ez_ASUS_Zeenbook17Fold.html">Zenbook 17 Fold OLED</a></li>
+                    </ul>
+                </ul>
+              </div>
+        </div>
+      </div>
+      </div>
+  </header>   
+  <nav id="horizontal">
+    <ul>
+      <li class="cat">
+        <a href="ez_smartphone.html?brand=all" >Smartphones</a>
+        <ul id="subcat1">
+          <li class="brand"><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+          <li class="brand"><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+          <li class="brand"><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+          <li class="brand"><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+        </ul>
+      </li>          
+      <li class="cat">
+        <a href="ez_laptop.html?brand=all">Laptops</a>
+        <ul id="subcat2">
+          <li class="brand"><a href="ez_laptop.html?brand=apple">Apple</a></li>
+          <li class="brand"><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+          <li class="brand"><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+          <li class="brand"><a href="ez_laptop.html?brand=asus">Asus</a></li>
+        </ul>
+      </li>
+      <li class="cat">
+        <a href="ez_desktop.html?brand=all">Desktop PCs</a>
+        <ul id="subcat3">
+          <li class="brand"><a href="ez_desktop.html?brand=apple">Apple</a></li>
+          <li class="brand"><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+          <li class="brand"><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+          <li class="brand"><a href="ez_desktop.html?brand=asus">Asus</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <nav id="vertical">   
+    <a href="#" id="navicon"><img src="media/navicon.png" width="40" height="40" id="actualnavicon"/><img src="media/promodollar.png" id="lpgImg" width="40" height="40"/><span id="lpgText">Lowest Price Guaranteed!</span><span id="isoText">ISO 9001:2015</span>
+    <ul id="hiddenMainMenu">
+      <li>
+        <a href="ez_smartphone.html?brand=all" class="cat">Smartphones
+        <ul class="hiddenSubMenu">
+          <li><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+          <li><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+          <li><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+          <li><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+        </ul>
+        </a>
+      </li>
+      <li>
+        <a href="ez_laptop.html?brand=all" class="cat">Laptops
+        <ul class="hiddenSubMenu">
+          <li><a href="ez_laptop.html?brand=apple">Apple</a></li>
+          <li><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+          <li><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+          <li><a href="ez_laptop.html?brand=asus">Asus</a></li>
+        </ul>
+        </a>
+      </li>
+      <li>
+        <a href="ez_desktop.html?brand=all" class="cat">Desktop PCs
+        <ul class="hiddenSubMenu">
+          <li><a href="ez_desktop.html?brand=apple">Apple</a></li>
+          <li><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+          <li><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+          <li><a href="ez_desktop.html?brand=asus">Asus</a></li>
+        </ul>
+        </a>
+      </li>
+      <img src="media/cny.png" width="150" height="90" id="cny"/>
+    </ul>
+    
+    </a>
+  </nav>
+
+    <article>
+    <h2 id="promoTitle">Promotions</h2>
+    <div  id="bestprice" >
+        <p id="PromoDesc">LOWEST PRICE GUARANTEE FOR ALL PRODUCTS</p>
+        <img id="bestpricePic" src="media/IMG/BestpriceBanner.jpg"/>
+    </div>  
+
+    <div id="christmasBanner">
+      <h2 id="bannerTitle">CHRISTMAS PROMOTION</h2>
+      <div id="timer"></div>
+        <div id="promoLine">
+          <div>
+            <div class="Box"><a href="ez_smartphone.html"><img id="picPhone" src="media/IMG/promoPhone.png"/></a></div>
+            <div class="Hover">Free Earbuds & Powerbank</div>
+          </div>
+          <div>
+            <div class="Box"><a href="ez_desktop.html"><img id="picDesktop" src="media/IMG/promoDesktop.png"/></a></div>
+            <div class="Hover">Free Mouse & Keyboard</div>
+          </div>
+          <div>
+            <div class="Box"><a href="ez_laptop.html"><img id="picLaptop" src="media/IMG/promoLaptop.jpg"/></a></div>
+            <div class="Hover">Free Mouse & <br>Backpack</div>
+          </div>
+      </div>
+    </div>
+
+    <div id="newProduct">
+      <div id="newProdright">
+        <h2>New Pixel7 Pro COMING SOON!</h2>
+        <img id="newProdpic"src="media/pixel7pro.png"/>
+        <img id="newProdpic"src="media/pixel7prob.png"/>
+      </div>
+      <iframe width="50%" height="auto" src="https://youtube.com/embed/sYn_Heq8HHI"></iframe>      
+    </div>
+    </article>
+        <script>
+          var countdown = new Date("Jan 31, 2023 00:00:00").getTime();
+
+          var x = setInterval(function() {
+
+            var now = new Date().getTime();
+  
+            var distance = countdown - now;
+  
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+
+              if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("timer").innerHTML = "Promo Ended";
+            }
+          }, 1000);
+
+ 
+        var coll = document.getElementsByClassName("promoCol");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+
+        </script>
+   
+      <footer>
+        <div class="footer">
+          <img src="media/logo.jpg" id="footerLogo" alt="Logo Footer" width="170" height="90"/>
+          <h2 id="catchphrase">Making people's lives simpler</h2>
+          <img src="media/iso9001-2015.png" id="ISO" width="200" height="120"/>
+          <ul class="icons">
+              <p id="latestNews">Get the latest news:</p>
+              <li><a href="https://www.facebook.com/people/EZTech/100088570681662/" target="blank"><img src="media/facebook3.png" width="40" height="40"/></a></li>
+              <li><a href="ez_contact_us.html"><img src="media/whatsapp3.png" width="40" height="40"/></a></li>
+              <li><a href="https://twitter.com/EZTech2022"><img src="media/twitter3.png" width="40" height="40"/></a></li>
+          </ul>
+
+          <div class="footer-end">
+              <p>&copy;EZTech 2022. All rights reserved.
+              <a href="ez_sitemap.html">Sitemap</a>          
+              <a href="ez_device_support_page.html">Device Support</a>
+              <a href="ez_questions_support_page.html">FAQ</a>
+            </p>
+          </div>
+
+          <div class="more-info">
+              <p>STAY CONNECTED WITH US:</p>
+              <form action="ez_promotions.html" method="get">
+                <input type="email" name="emailAddr" id="emailAddr" required placeholder="Enter your email address" />
+                <input type="submit" value="Register"/>
+              </form>
+          </div> 
+          </div>
+      </div>
+      </footer> 
+      <script>
+        var support1 = document.getElementById("ds");
+        support1.onclick = function() {
+          window.location.href = "ez_device_support_page.html";
+        }
+
+        var support2 = document.getElementById("faq");
+        support2.onclick = function() {
+          window.location.href = "ez_questions_support_page.html";
+        }
+
+        function init() {
+        document.forms[0].onsubmit = function() {
+          if (this.checkValidity()) alert("Registered successfully!\nThank you.");
+            return true;
+          }
+        }
+        window.onload = init;
+      </script>
+</body>
+</html>

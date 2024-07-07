@@ -1,0 +1,71 @@
+
+body > h2 {
+    background-color: lightgrey;
+    color: black;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 150%;
+}
+article{
+  min-height: 590px;
+}
+
+.seperator {
+  background-color: lightgrey;
+  height:10px;
+}
+.subHead {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-right:10px;
+  font-weight: bold;
+   font-size: 120%;
+   color: black;
+}
+
+.footer {
+  margin-top: 0%;
+  margin-bottom: -2% !important;
+}
+
+.collapsible {
+    background-color: rgb(207, 231, 255);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 100%;
+  }
+  
+  .active, .collapsible:hover {
+    background-color:rgb(117, 184, 252);
+    color:white;
+    font-weight: bold;
+  }
+  
+  .content {
+    padding: 20px 20px;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(237, 237, 237);
+    color: black;
+  }
+
+  body {
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    article {
+      min-height: auto;
+    }
+    .content {
+      padding-bottom: 10px;
+    }
+}
+  

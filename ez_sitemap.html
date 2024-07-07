@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset = "utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="icon" href="media/logoicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="ez_reset.css"/>
+    <link rel="stylesheet" href="ez_base.css"/>
+    <link href = "ez_sitemap.css" rel = "stylesheet" />  
+    <title>EZTech | Sitemap</title>
+</head>
+
+<body>
+    <header>
+      <a href="ez_index.html"><img src="media/logo.jpg" alt="Logo" id="ezlogo" /></a>
+      <div class="top-buttons">
+        <a class="home-button" href="ez_index.html"><span class="buttontxt">Home</span></a>
+        <a class="aboutus-button" href="ez_about_us.html"><span class="buttontxt">About Us</span></a>
+        <a class="contactus-button" href="ez_contact_us.html"><span class="buttontxt">Contact Us</span></a>
+        <a class="promotion-button" href="ez_promotions.html"><span class="buttontxt">Promotions</span></a>
+        <a class="cart-button" href="ez_shopcart.html"><span class="buttontxt">Cart</span></a>
+        <a class="support-button">
+          <span class="buttontxt">Support</span>
+          <ul id="support-options">
+            <li id="ds">Device Support</li>
+            <li id="faq">FAQs</li>
+          </ul>
+        </a>
+        <button type="submit" onclick="showsearchbar()" class="mySearch">
+          <img src="media\search.png" width="30" class="Btn" id="myBtn">
+        </button>
+        <div class="search">
+          <script>                
+              function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('myInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName('li');
+              
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+              function showsearchbar() {
+                  var modal = document.getElementById("myModal");
+                  var btn = document.getElementById("myBtn");
+                  var span = document.getElementsByClassName("close")[0];
+                  
+                  document.getElementById("myModal").style.display = "block";
+                  
+                  span.onclick = function() {
+                  modal.style.display = "none";
+                  }
+  
+                  window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                      }
+                  }
+              }
+          </script>
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products.."><i class="fa fa-search"></i></input>
+                  <ul id="myUL">
+                      <li><a href="ez_desktop.html">Desktop PCs</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_imac512GB.html">IMAC 24" 512 GB Storage</a></li>
+                          <li><a href="ez_apple_imac256GB.html">IMAC 24" 256 GB Storage</a></li>
+                          <li><a href="ez_Samsung_ArtPC_PULSE.html">Samsung ArtPc Pulse</a></li>
+                          <li><a href="ez_Samsung_Odyssey_OLED_G8.html">Odyssey OLED G8</a></li>
+                          <li><a href="ez_huawei_matestation_x.html">Huawei Matestation X</a></li>
+                          <li><a href="ez_huawei_matestation_s.html">Huawei Matestation S</a</li>
+                          <li><a href="ez_ASUS_V241.html">Asus V241</a></li>
+                          <li><a href="ez_ASUS_ZenAio.html">Asus Zen AIO 24 A5401</a></li>
+                      </ul>
+                      <li><a href="ez_smartphone.html">Smartphone</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_iphone14plus.html">Iphone 14 Plus</a></li>
+                          <li><a href="ez_apple_iphone14promax.html">Iphone 14 Pro Max</a></li>
+                          <li><a href="ez_Samsung_Galaxy_A53_5G.html">Samsung A53 5G</a></li>
+                          <li><a href="ez_Samsung_Galaxy_A73_5G.html">Samsung A73 5G</a></li>
+                          <li><a href="ez_huawei_nova_10.html">Huawei Nova 10</a></li>
+                          <li><a href="ez_huawei_mate_50_pro.html">Huawei Mate 50 Pro</a></li>
+                          <li><a href="ez_ASUS_Zenfone8.html">Zenfone 8</a></li>
+                          <li><a href="ez_ASUS_Zenfone9.html">Zenfone 9</a></li>
+                      </ul>
+                      <li><a href="ez_laptop.html">Laptop</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_macbookair.html">Macbook Air</a></li>
+                          <li><a href="ez_apple_macbookpro.html">Macbook Pro 14"</a></li>
+                          <li><a href="ez_Samsung_Galaxy_Book2_pro_360.html">Galaxy Book 2 Pro 360</a></li>
+                          <li><a href="ez_Samsung_Galaxy_Book2_pro.html">Galaxy Book 2</a></li>
+                          <li><a href="ez_huawei_matebook_d14.html">Huawei Matebook D14</a></li>
+                          <li><a href="ez_huawei_matebook_xpro.html">Huawei Matebook XPRO</a></li>
+                          <li><a href="ez_ASUS_ExpertBook14Flip.html">Expertbook B7 Flip</a></li>
+                          <li><a href="ez_ASUS_Zeenbook17Fold.html">Zenbook 17 Fold OLED</a></li>
+                      </ul>
+                  </ul>
+              </div>
+        </div>
+      </div>
+      </div>
+    </header>   
+    <nav id="horizontal">
+      <ul>
+        <li class="cat">
+          <a href="ez_smartphone.html?brand=all" >Smartphones</a>
+          <ul id="subcat1">
+            <li class="brand"><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+            <li class="brand"><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+            <li class="brand"><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+            <li class="brand"><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+          </ul>
+        </li>          
+        <li class="cat">
+          <a href="ez_laptop.html?brand=all">Laptops</a>
+          <ul id="subcat2">
+            <li class="brand"><a href="ez_laptop.html?brand=apple">Apple</a></li>
+            <li class="brand"><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+            <li class="brand"><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+            <li class="brand"><a href="ez_laptop.html?brand=asus">Asus</a></li>
+          </ul>
+        </li>
+        <li class="cat">
+          <a href="ez_desktop.html?brand=all">Desktop PCs</a>
+          <ul id="subcat3">
+            <li class="brand"><a href="ez_desktop.html?brand=apple">Apple</a></li>
+            <li class="brand"><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+            <li class="brand"><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+            <li class="brand"><a href="ez_desktop.html?brand=asus">Asus</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <nav id="vertical">   
+      <a href="#" id="navicon"><img src="media/navicon.png" width="40" height="40" id="actualnavicon"/><img src="media/promodollar.png" id="lpgImg" width="40" height="40"/><span id="lpgText">Lowest Price Guaranteed!</span><span id="isoText">ISO 9001:2015</span>
+      <ul id="hiddenMainMenu">
+        <li>
+          <a href="ez_smartphone.html?brand=all" class="cat">Smartphones
+          <ul class="hiddenSubMenu">
+            <li><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+            <li><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+            <li><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+            <li><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+          </ul>
+          </a>
+        </li>
+        <li>
+          <a href="ez_laptop.html?brand=all" class="cat">Laptops
+          <ul class="hiddenSubMenu">
+            <li><a href="ez_laptop.html?brand=apple">Apple</a></li>
+            <li><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+            <li><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+            <li><a href="ez_laptop.html?brand=asus">Asus</a></li>
+          </ul>
+          </a>
+        </li>
+        <li>
+          <a href="ez_desktop.html?brand=all" class="cat">Desktop PCs
+          <ul class="hiddenSubMenu">
+            <li><a href="ez_desktop.html?brand=apple">Apple</a></li>
+            <li><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+            <li><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+            <li><a href="ez_desktop.html?brand=asus">Asus</a></li>
+          </ul>
+          </a>
+        </li>
+        <img src="media/cny.png" width="150" height="90" id="cny"/>
+      </ul>
+      
+      </a>
+    </nav>
+    
+    <div class="sitemap_container">     
+        <h1>Sitemap of EZTech Website</h1>
+        <div class="scroll">                      
+        <img id="sitemap1" src="media/sitemap.png" usemap="#image_map" allowfullscreen="">
+        <map name="image_map">
+            <area id="Home" target="_blank" alt="Home page" title="Home page" href="ez_index.html"  shape="rect" coords="320,10,388,51">
+            <area id="Question" target="_blank" alt="Frequently Asked Question" title="Frequently Asked Question" href="ez_questions_support_page.html" coords="10,97,78,132" shape="rect">
+            <area id="DeviceSupport" target="_blank" alt="Device Support" title="Device Support" href="ez_device_support_page.html" coords="87,96,144,130" shape="rect">
+            <area id="Sitemap" target="_blank" alt="Sitemap" title="Sitemap" href="ez_sitemap.html" coords="157,98,214,132" shape="rect">
+            <area id="Smartphone" target="_blank" alt="Smartphone" title="Smartphone" href="ez_smartphone.html" coords="225,98,282,132" shape="rect">
+            <area id="Laptops" target="_blank" alt="Laptops" title="Laptops" href="ez_laptop.html" coords="294,98,351,132" shape="rect">
+            <area id="Desktop" target="_blank" alt="Desktop PCs" title="Desktop PCs" href="ez_desktop.html" coords="358,98,415,132" shape="rect">
+            <area id="Promotion" target="_blank" alt="Promotion" title="Promotion" href="ez_promotions.html" coords="426,98,483,132" shape="rect">
+            <area id="About" target="_blank" alt="About Us" title="About Us" href="ez_about_us.html" coords="493,99,550,133" shape="rect">
+            <area id="Contact" target="_blank" alt="Contact Us" title="Contact Us" href="ez_contact_us.html" coords="561,100,619,132" shape="rect">
+            <area id="Cart" target="_blank" alt="Shopping Cart" title="Shopping Cart" href="ez_shopcart.html" coords="629,212,687,244" shape="rect">
+              <area id="Product" target="_self" alt="Product details" title="Product details" href="#" coords="322,210,389,246" shape="rect" onclick="errorMessageProductDetails()">
+              <area id="Delivery" target="_self" alt="Delivery page" title="Delivery page" href="#"coords="325,276,392,312" shape="rect" onclick="errorMessageDeliveryPage()">
+              <area id="Payment" target="_self" alt="Payment page" title="Payment page" href="#" coords="326,337,393,373" shape="rect" onclick="errorMessagePaymentPage()">
+              <area id="Order" target="_self" alt="Order Completion page" title="Order Completion page" href="#" coords="316,402,403,437" shape="rect" onclick="errorMessageOrderCompletionPage()">
+        </map>
+      </div>
+    </div>
+    <div class="scrollmenu">
+      <a href="ez_index.html">Home</a>
+      <a href="ez_questions_support_page.html">FAQs</a>
+      <a href="ez_device_support_page.html">Device Support</a>
+      <a href="ez_sitemap.html">Sitemap</a>
+      <a href="ez_smartphone.html">Smartphones</a>
+      <a href="ez_laptop.html">Laptops</a>
+      <a href="ez_desktop.html">Desktop PCs</a>
+      <a href="ez_promotions.html">Promotions</a>
+      <a href="ez_about_us.html">About Us</a>
+      <a href="ez_contact_us.html">Contact Us</a>
+      <a href="ez_shopcart.html">Shopping Cart</a>
+    </div>
+    <script>
+      function errorMessageProductDetails() {
+        alert("User can only go to product details page from the product catalog pages!");
+      }
+      function errorMessageDeliveryPage() {
+        alert("User can go to Delivery page only when the user has created an order!");
+      }
+      function errorMessagePaymentPage() {
+        alert("User can go to Payment page only when the user has created an order!");
+      }
+      function errorMessageOrderCompletionPage() {
+        alert("User can go to Order Completion page only when the user has created and confirmed an order!");
+      }
+
+
+      setInterval(mySitemap, 1000);
+      function mySitemap() {
+        var w = window.innerWidth;
+        var Home = document.getElementById("Home").coords;
+        var Question = document.getElementById("Question").coords;
+        var DeviceSupport = document.getElementById("DeviceSupport").coords;
+        var Sitemap = document.getElementById("Sitemap").coords;
+        var Smartphone = document.getElementById("Smartphone").coords;
+        var Laptops = document.getElementById("Laptops").coords;
+        var Desktop = document.getElementById("Desktop").coords;
+        var Promotion = document.getElementById("Promotion").coords;
+        var About = document.getElementById("About").coords;
+        var Contact = document.getElementById("Contact").coords;
+        var Cart = document.getElementById("Cart").coords;
+        var Product = document.getElementById("Product").coords;
+        var Delivery = document.getElementById("Delivery").coords;
+        var Payment = document.getElementById("Payment").coords;
+        var Order = document.getElementById("Order").coords;
+
+        const mediaQuery1 = window.matchMedia('(max-width: 480px)')
+        const mediaQuery2 = window.matchMedia('(min-width: 769px)','(max-width: 1024px)')
+        const mediaQuery3 = window.matchMedia('(max-width: 770px)','(min-width: 481px)')
+        if (mediaQuery1.matches) {
+          document.getElementById("Home").coords = "183,6,223,31";
+          document.getElementById("Question").coords = "6,58,43,78";
+          document.getElementById("DeviceSupport").coords = "50,58,82,78";
+          document.getElementById("Sitemap").coords = "90,59,122,79";
+          document.getElementById("Smartphone").coords = "129,59,161,79";
+          document.getElementById("Laptops").coords = "168,59,200,79";
+          document.getElementById("Desktop").coords = "205,59,237,79";
+          document.getElementById("Promotion").coords = "244,58,276,78";
+          document.getElementById("About").coords = "281,60,313,80";
+          document.getElementById("Contact").coords = "321,61,353,81";
+          document.getElementById("Cart").coords = "360,127,392,147";
+          document.getElementById("Product").coords = "184,127,222,147";
+          document.getElementById("Delivery").coords = "186,166,222,187";
+          document.getElementById("Payment").coords = "185,201,224,223";
+          document.getElementById("Order").coords = "180,242,229,263";
+        } else if(mediaQuery2.matches) {
+          document.getElementById("Home").coords = "320,10,388,51";
+          document.getElementById("Question").coords = "10,97,78,132";
+          document.getElementById("DeviceSupport").coords = "87,96,144,130";
+          document.getElementById("Sitemap").coords = "157,98,214,132";
+          document.getElementById("Smartphone").coords = "225,98,282,132";
+          document.getElementById("Laptops").coords = "294,98,351,132";
+          document.getElementById("Desktop").coords = "358,98,415,132";
+          document.getElementById("Promotion").coords = "426,98,483,132";
+          document.getElementById("About").coords = "493,99,550,133";
+          document.getElementById("Contact").coords = "561,100,619,132";
+          document.getElementById("Cart").coords = "629,212,687,244";
+          document.getElementById("Product").coords = "322,210,389,246";
+          document.getElementById("Delivery").coords = "325,276,392,312";
+          document.getElementById("Payment").coords = "326,337,393,373";
+          document.getElementById("Order").coords = "316,402,403,437";          
+        } else if(mediaQuery3.matches) {
+          document.getElementById("Home").coords = "230,9,278,41";
+          document.getElementById("Question").coords = "8,78,56,106";
+          document.getElementById("DeviceSupport").coords = "60,78,103,104";
+          document.getElementById("Sitemap").coords = "113,79,153,105";
+          document.getElementById("Smartphone").coords = "160,79,202,105";
+          document.getElementById("Laptops").coords = "210,79,251,106";
+          document.getElementById("Desktop").coords = "255,80,297,105";
+          document.getElementById("Promotion").coords = "302,79,344,104";
+          document.getElementById("About").coords = "351,80,393,105";
+          document.getElementById("Contact").coords = "400,81,442,106";
+          document.getElementById("Cart").coords = "449,171,491,196";
+          document.getElementById("Product").coords = "231,169,278,198";
+          document.getElementById("Delivery").coords = "233,221,280,250";
+          document.getElementById("Payment").coords = "232,269,279,298";
+          document.getElementById("Order").coords = "224,322,287,350";  
+        }
+      }
+  </script>
+    <!--footer-->
+    <footer>
+      <div class="footer">
+        <img src="media/logo.jpg" id="footerLogo" alt="Logo Footer" width="170" height="90"/>
+        <h2 id="catchphrase">Making people's lives simpler</h2>
+        <img src="media/iso9001-2015.png" id="ISO" width="200" height="120"/>
+        <ul class="icons">
+            <p id="latestNews">Get the latest news:</p>
+            <li><a href="https://www.facebook.com/people/EZTech/100088570681662/" target="blank"><img src="media/facebook3.png" width="40" height="40"/></a></li>
+            <li><a href="ez_contact_us.html"><img src="media/whatsapp3.png" width="40" height="40"/></a></li>
+            <li><a href=""><img src="media/twitter3.png" width="40" height="40"/></a></li>
+        </ul>
+
+        <div class="footer-end">
+            <p>&copy;EZTech 2022. All rights reserved.
+            <a href="ez_sitemap.html">Sitemap</a>          
+            <a href="ez_device_support_page.html">Device Support</a>
+            <a href="ez_questions_support_page.html">FAQ</a>
+          </p>
+        </div>
+
+        <div class="more-info">
+            <p>STAY CONNECTED WITH US:</p>
+            <form action="ez_sitemap.html" method="get">
+              <input type="email" name="emailAddr" id="emailAddr" required placeholder="Enter your email address" />
+              <input type="submit" value="Register"/>
+            </form>
+        </div> 
+        </div>
+    </div>
+      </footer>      
+    <!--/footer-->
+    </body>
+    <script>
+      var support1 = document.getElementById("ds");
+      support1.onclick = function() {
+        location.replace("ez_device_support_page.html");
+      }
+
+      var support2 = document.getElementById("faq");
+      support2.onclick = function() {
+        location.replace("ez_questions_support_page.html");
+      }
+
+      function init() {
+        document.forms[0].onsubmit = function() {
+        if (this.checkValidity()) alert("Registered successfully!\nThank you.");
+          return true;
+        }
+      }
+      window.onload = init;
+    </script>
+</html>  

@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset = "utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="media/logoicon.ico" type="image/x-icon"> 
+    <link href="ez_reset.css" rel="stylesheet" />
+    <link href="ez_base.css" rel="stylesheet" />
+    <link href = "ez_about_us.css" rel = "stylesheet" />  
+    <title>EZTech | About us</title>
+</head>
+
+<body>
+    <header>
+        <a href="ez_index.html"><img src="media/logo.jpg" alt="Logo" id="ezlogo" /></a>
+      <div class="top-buttons">
+        <a class="home-button" href="ez_index.html"><span class="buttontxt">Home</span></a>
+        <a class="aboutus-button" href="ez_about_us.html"><span class="buttontxt">About Us</span></a>
+        <a class="contactus-button" href="ez_contact_us.html"><span class="buttontxt">Contact Us</span></a>
+        <a class="promotion-button" href="ez_promotions.html"><span class="buttontxt">Promotions</span></a>
+        <a class="cart-button" href="ez_shopcart.html"><span class="buttontxt">Cart</span></a>
+        <a class="support-button">
+          <span class="buttontxt">Support</span>
+          <ul id="support-options">
+            <li id="ds">Device Support</li>
+            <li id="faq">FAQs</li>
+          </ul>
+        </a>
+        <button type="submit" onclick="showsearchbar()" class="mySearch">
+          <img src="media\search.png" width="30" class="Btn" id="myBtn">
+        </button>
+        <div class="search">
+          <script>                
+              function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('myInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("myUL");
+                  li = ul.getElementsByTagName('li');
+              
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                      a = li[i].getElementsByTagName("a")[0];
+                      txtValue = a.textContent || a.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                      } else {
+                          li[i].style.display = "none";
+                      }
+                  }
+              }
+              function showsearchbar() {
+                  var modal = document.getElementById("myModal");
+                  var btn = document.getElementById("myBtn");
+                  var span = document.getElementsByClassName("close")[0];
+                  
+                  document.getElementById("myModal").style.display = "block";
+                  
+                  span.onclick = function() {
+                  modal.style.display = "none";
+                  }
+  
+                  window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                      }
+                  }
+              }
+          </script>
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products.."><i class="fa fa-search"></i></input>
+                  <ul id="myUL">
+                      <li><a href="ez_desktop.html">Desktop PCs</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_imac512GB.html">IMAC 24" 512 GB Storage</a></li>
+                          <li><a href="ez_apple_imac256GB.html">IMAC 24" 256 GB Storage</a></li>
+                          <li><a href="ez_Samsung_ArtPC_PULSE.html">Samsung ArtPc Pulse</a></li>
+                          <li><a href="ez_Samsung_Odyssey_OLED_G8.html">Odyssey OLED G8</a></li>
+                          <li><a href="ez_huawei_matestation_x.html">Huawei Matestation X</a></li>
+                          <li><a href="ez_huawei_matestation_s.html">Huawei Matestation S</a</li>
+                          <li><a href="ez_ASUS_V241.html">Asus V241</a></li>
+                          <li><a href="ez_ASUS_ZenAio.html">Asus Zen AIO 24 A5401</a></li>
+                      </ul>
+                      <li><a href="ez_smartphone.html">Smartphone</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_iphone14plus.html">Iphone 14 Plus</a></li>
+                          <li><a href="ez_apple_iphone14promax.html">Iphone 14 Pro Max</a></li>
+                          <li><a href="ez_Samsung_Galaxy_A53_5G.html">Samsung A53 5G</a></li>
+                          <li><a href="ez_Samsung_Galaxy_A73_5G.html">Samsung A73 5G</a></li>
+                          <li><a href="ez_huawei_nova_10.html">Huawei Nova 10</a></li>
+                          <li><a href="ez_huawei_mate_50_pro.html">Huawei Mate 50 Pro</a></li>
+                          <li><a href="ez_ASUS_Zenfone8.html">Zenfone 8</a></li>
+                          <li><a href="ez_ASUS_Zenfone9.html">Zenfone 9</a></li>
+                      </ul>
+                      <li><a href="ez_laptop.html">Laptop</a></li>
+                      <ul id="myUL">
+                          <li><a href="ez_apple_macbookair.html">Macbook Air</a></li>
+                          <li><a href="ez_apple_macbookpro.html">Macbook Pro 14"</a></li>
+                          <li><a href="ez_Samsung_Galaxy_Book2_pro_360.html">Galaxy Book 2 Pro 360</a></li>
+                          <li><a href="ez_Samsung_Galaxy_Book2_pro.html">Galaxy Book 2</a></li>
+                          <li><a href="ez_huawei_matebook_d14.html">Huawei Matebook D14</a></li>
+                          <li><a href="ez_huawei_matebook_xpro.html">Huawei Matebook XPRO</a></li>
+                          <li><a href="ez_ASUS_ExpertBook14Flip.html">Expertbook B7 Flip</a></li>
+                          <li><a href="ez_ASUS_Zeenbook17Fold.html">Zenbook 17 Fold OLED</a></li>
+                      </ul>
+                  </ul>
+              </div>
+        </div>
+      </div>
+      </div>
+    </header>   
+    <nav id="horizontal">
+        <ul>
+          <li class="cat">
+            <a href="ez_smartphone.html?brand=all" >Smartphones</a>
+            <ul id="subcat1">
+              <li class="brand"><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>          
+          <li class="cat">
+            <a href="ez_laptop.html?brand=all">Laptops</a>
+            <ul id="subcat2">
+              <li class="brand"><a href="ez_laptop.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_laptop.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>
+          <li class="cat">
+            <a href="ez_desktop.html?brand=all">Desktop PCs</a>
+            <ul id="subcat3">
+              <li class="brand"><a href="ez_desktop.html?brand=apple">Apple</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+              <li class="brand"><a href="ez_desktop.html?brand=asus">Asus</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav id="vertical">   
+        <a href="#" id="navicon"><img src="media/navicon.png" width="40" height="40" id="actualnavicon"/><img src="media/promodollar.png" id="lpgImg" width="40" height="40"/><span id="lpgText">Lowest Price Guaranteed!</span><span id="isoText">ISO 9001:2015</span>
+        <ul id="hiddenMainMenu">
+          <li>
+            <a href="ez_smartphone.html?brand=all" class="cat">Smartphones
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+              <li><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <li>
+            <a href="ez_laptop.html?brand=all" class="cat">Laptops
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_laptop.html?brand=apple">Apple</a></li>
+              <li><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_laptop.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <li>
+            <a href="ez_desktop.html?brand=all" class="cat">Desktop PCs
+            <ul class="hiddenSubMenu">
+              <li><a href="ez_desktop.html?brand=apple">Apple</a></li>
+              <li><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+              <li><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+              <li><a href="ez_desktop.html?brand=asus">Asus</a></li>
+            </ul>
+            </a>
+          </li>
+          <img src="media/cny.png" width="150" height="90" id="cny"/>
+        </ul>
+        
+        </a>
+      </nav>
+    <!--leader-->
+    <aside>
+        <div class="leader_container">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="leader">
+                    <div class="leader_front">
+                        <img class="leader2" src="media/leader_background.jpg"   height="760" />        
+                        <h1>
+                            Our <br />Founder <br />
+                            - Kelvin <br />Lee
+                        </h1>
+                    </div>
+                    <div class="leader_back">
+                        <div class="leader_opacity">
+                            <img class="leader2" src="media/leader_background.jpg"   height="760" />
+                        </div>
+                        <h2>
+                        <img src="media/leader.jpg" class="leader3" /><br />
+                        Kelvin Lee Ho Ming
+                        </h2>
+                        <div class="leader_introduction">
+                        <ul>
+                            <li>EZTech is a small, start-up Malaysian company founded by Mr Kevin Lee Ho Ming in 2022.  </li><br /><br />
+                            <li>To make EZTech stand out from the crowd, Mr Lee strives to sell the latest and popular models of smartphones, laptops and desktops.</li><br /><br />
+                            <li>The company frequently has many promotions to entice potential customers to choose EZTech's products over its competitors, which could help to generate more sales for the company as well as increase its reputation in the market.</li><br /><br />
+                            <li>Although EZTech is still an evolving business, Mr Lee's vision is that EZTech will not only survive but also gain a decent amount of the digital gadgets market share so that the company can eventually expand and sell more variety of products.
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--/leader-->
+
+    <!--philosophy-->
+    <div class="philosophy_container">  
+        <div class="philosophy_back">
+            <h4>Making people's lives simpler and quality technology accessible to everyone.</h4>
+        </div>  
+        <span><div class="philosophy_front">            
+            <h3> Our Philosophy</h3>
+        </div></span>   
+    </div>
+    <!--/philosophy-->
+
+    <!--Logo-->
+    <div class="logo_container">
+        <div class="logo_back">
+            <h4>The "EZ" in our logo stands for "Easy". It is because we wanted to make it easier for our customers to purchase and use our products.</h4>
+        </div>
+        <div class="logo_front">
+            <h3>Our Logo</h3>
+        </div>
+    </div>
+    <!--/Logo-->
+    <img class="picture" src="media\family(1).jpg" float="left">
+    <img class="picture" src="media\family(2).jpg" float="right">
+
+    <!--Location-->
+    <div class="location_container">
+        <h5>Location of EZTech</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.9875933523837!2d101.66233429567312!3d3.1470193615131183!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49a9f4081793%3A0x1d8d935b3a0a77d!2sMenara%20Millennium!5e0!3m2!1sen!2smy!4v1671108817006!5m2!1sen!2smy" width="550" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h6>EZTech is located on floor 5 of Menara Millennium, which is located at 8, Jalan Damanlela, Pusat Bandar Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur.</h6>
+        
+    </div>
+    <!--/Location-->
+
+    <!--Partner Company-->
+    <div class="partner_container">
+        <h5>Partner Company</h5>
+        <img class="image" src="media\dhl.png" alt="DHL">
+        <img class="image" src="media\fedex.png" alt="FedEx">
+        <img class="image" src="media\j&t.png" alt="J&T">
+        <img class="image" src="media\ninjavan.png" alt="NinjaVan">
+        <img class="image" src="media\pos laju.png" alt="Pos Laju">
+    </div>
+    <!--/Partner Company-->
+
+    <!--Product Brand-->
+    <div class="product_container">
+        <h5>Product Brand</h5>
+        <img class="image" src="media\Apple.jpg" alt="Apple">
+        <img class="image" src="media\Asus.jpg" alt="Asus">
+        <img class="image" src="media\Huawei.webp" alt="Huawei">
+        <img class="image" src="media\Samsung.jpg" alt="NinjaVan">
+    </div>
+    <!--/Product Brand-->
+</body>
+
+    <!--footer-->
+    <footer>
+        <div class="footer">
+            <img src="media/logo.jpg" id="footerLogo" alt="Logo Footer" width="170" height="90"/>
+            <h2 id="catchphrase">Making people's lives simpler</h2>
+            <img src="media/iso9001-2015.png" id="ISO" width="200" height="120"/>
+            <ul class="icons">
+                <p id="latestNews">Get the latest news:</p>
+                <li><a href="https://www.facebook.com/people/EZTech/100088570681662/" target="blank"><img src="media/facebook3.png" width="40" height="40"/></a></li>
+                <li><a href="ez_contact_us.html"><img src="media/whatsapp3.png" width="40" height="40"/></a></li>
+                <li><a href="https://twitter.com/EZTech2022"><img src="media/twitter3.png" width="40" height="40"/></a></li>
+            </ul>
+  
+            <div class="footer-end">
+                <p>&copy;EZTech 2022. All rights reserved.
+                <a href="ez_sitemap.html">Sitemap</a>          
+                <a href="ez_device_support_page.html">Device Support</a>
+                <a href="ez_questions_support_page.html">FAQ</a>
+              </p>
+            </div>
+  
+            <div class="more-info">
+                <p>STAY CONNECTED WITH US:</p>
+                <form action="ez_about_us.html" method="get">
+                  <input type="email" name="emailAddr" id="emailAddr" required placeholder="Enter your email address" />
+                  <input type="submit" value="Register"/>
+                </form>
+            </div> 
+            </div>
+        </div>
+      </footer>      
+    <!--/footer-->
+    <script>
+        var support1 = document.getElementById("ds");
+        support1.onclick = function() {
+            window.location.href = "ez_device_support_page.html";
+        }
+
+        var support2 = document.getElementById("faq");
+        support2.onclick = function() {
+            window.location.href = "ez_questions_support_page.html";
+        
+        }
+
+        function init() {
+            document.forms[0].onsubmit = function() {
+            if (this.checkValidity()) alert("Registered successfully!\nThank you.");
+                return true;
+            }
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>

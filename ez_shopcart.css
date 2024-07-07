@@ -1,0 +1,427 @@
+@font-face {
+  font-family: Roboto;
+  src: url('webfonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('webfonts/NotoSans-Regular.ttf') format('truetype');
+}
+
+*{/*This configures the default padding and margin*/
+    margin: 0;
+   padding: 0;   
+   box-sizing: border-box; 
+ }
+ 
+ html {
+  background-attachment: fixed;
+  background-size: contain
+ }
+
+ table a:hover {
+  text-decoration: underline;
+ }
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+section { /*This sets the padding on the left and the right*/
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    margin-top: 0em !important;
+    padding-top: 1em !important;
+    margin-bottom: 2em !important;
+    height: 100% !important;
+    overflow: auto;
+    
+}
+
+article {
+    color: black !important;
+    margin: 20px auto 10px !important;
+    background: pink !important;
+    width: 70% !important;
+    padding: 0.5em 1em !important;
+    text-align: left !important;
+    font-size: 17px !important;
+}
+
+article h3 {
+    padding-bottom: 0.1em !important;
+    text-decoration: underline !important;
+    font-size: 20px !important
+}
+
+article p {
+  text-align: left !important
+}
+ 
+#amount {
+    text-align: center !important;
+    margin-top: 0 !important;
+    font-size: 1.7em !important
+}
+
+#order_amt {
+  font-weight: bold !important;
+}
+
+.hide { /*This is used to hide the local storage key column in the table.*/
+    display: none !important;
+    border: none !important;
+}
+
+.center { /*This centers the table containing the order details*/
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.confirmOrder { /*This sets the 'Proceed to CHECKOUT' button to the right of the table*/
+    background-color: skyblue;
+    color: white;
+}
+
+.confirmOrder:hover {
+    transform: scale(1.1);
+}
+
+section button { /*This configures the styles for the 'Proceed to CHECKOUT' button*/
+    font-size: 1.2em !important;
+    background-color: gold; 
+    border-radius: 7px !important; 
+    padding: 0.5em !important;
+    margin: 0.5em auto !important;
+    color: black; 
+    text-align: center; 
+    font-weight: bold;
+}
+
+#empty {
+    font-weight: bold;
+    font-size: 2vw !important;
+    margin-top: 3em;
+}
+
+h2 { /*This configures styles for heading 3, which displays the current order amount.*/
+    font-weight: normal;
+    color: black;
+    margin-top: 0;
+}
+
+table { /*This configures styles for the table, which displays the order details*/
+    width: 85% !important;
+    border: solid 1pt black;
+    border-collapse: collapse;
+    margin-bottom: 1em !important;
+    margin-top: 0.5em !important;
+    margin-left: 20% !important;
+}	
+
+tr { /*This configures styles for each row of the table*/
+    border-bottom: 1px solid black;
+    background-color: white
+}
+
+tr:hover { /*This causes the background colour and text colour of the rows to change the cursor hovers over them*/
+    background-color: gainsboro;
+    color: black;
+}
+
+td { /* This configures styles for each column of the table*/
+    padding: 0.3em 0.3em !important; color: black;
+    font-size: 15px !important;
+    
+}
+
+th { /* This configures styles for the table headers*/
+    background-color: #484848;
+    color: white;
+    padding: 1.5em 0.3em !important;
+    border-bottom: 1px solid black;
+    font-size: 15px !important
+}
+
+}
+
+@media only screen and (min-width: 481px) {
+
+section { /*This sets the padding on the left and the right*/
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 0em;
+  padding-top: 1em;
+  height: 60vh;
+  margin-bottom: 2em;
+  overflow: auto;
+  
+  
+}
+
+article {
+  color: black;
+  margin: 20px auto 10px;
+  background: pink;
+  width: 70%;
+  padding: 0.5em 1em;
+  text-align: left ;
+  font-size: 14px;
+}
+
+article h3 {
+  padding-bottom: 0.1em;
+  text-decoration: underline;
+  font-size: 20px
+}
+
+article p {
+text-align: left !important
+}
+
+#amount {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.4em
+}
+
+#order_amt {
+font-weight: bold;
+}
+
+.hide { /*This is used to hide the local storage key column in the table.*/
+  display: none;
+  border: none;
+}
+
+.center { /*This centers the table containing the order details*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.confirmOrder { /*This sets the 'Proceed to CHECKOUT' button to the right of the table*/
+  
+  background-color: skyblue;
+  color: white;
+}
+
+.confirmOrder:hover {
+  transform: scale(1.1);
+}
+
+section button { /*This configures the styles for the 'Proceed to CHECKOUT' button*/
+  font-size: 1em;
+  background-color: gold; 
+  border-radius: 7px; 
+  padding: 0.5em;
+  margin: 0.5em auto;
+  color: black; 
+  text-align: center; 
+  font-weight: bold;
+}
+
+
+#empty {
+  font-weight: bold;
+  font-size: 3vw;
+}
+
+h2 { /*This configures styles for heading 3, which displays the current order amount.*/
+  font-weight: normal;
+  color: black;
+  margin-top: 0;
+}
+
+table { /*This configures styles for the table, which displays the order details*/
+  width: 85%;
+  border: solid 1pt black;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  margin-left: 20%;
+}	
+
+
+tr { /*This configures styles for each row of the table*/
+  border-bottom: 1px solid black;
+  background-color: white
+}
+
+tr:hover { /*This causes the background colour and text colour of the rows to change the cursor hovers over them*/
+  background-color: gainsboro;
+  color: black;
+}
+
+td { /* This configures styles for each column of the table*/
+  padding: 0.3em 0.3em; color: black;
+  font-size: 12px;
+}
+
+
+th { /* This configures styles for the table headers*/
+  background-color: #484848;
+  color: white;
+  padding: 1.5em 0.3em;
+  border-bottom: 1px solid black;
+  font-size: 12px
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+  
+  section { /*This sets the padding on the left and the right*/
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 0em;
+    padding-top: 1em;
+    height: 60vh;
+    margin-bottom: 2em;
+    overflow: auto;    
+    
+  }
+  
+  article {
+    color: black;
+    margin: 20px auto 10px;
+    background: pink;
+    width: 70%;
+    padding: 0.5em 1em;
+    text-align: left ;
+    font-size: 13px;
+  }
+  
+  article h3 {
+    padding-bottom: 0.1em;
+    text-decoration: underline;
+    font-size: 20px
+  }
+  
+  article p {
+  text-align: left !important
+  }
+  
+  #amount {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.2em
+  }
+  
+  #order_amt {
+  font-weight: bold;
+  }
+  
+  .hide { /*This is used to hide the local storage key column in the table.*/
+    display: none;
+    border: none;
+  }
+  
+  .center { /*This centers the table containing the order details*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .confirmOrder { /*This sets the 'Proceed to CHECKOUT' button to the right of the table*/
+    
+    background-color: skyblue;
+    color: white;
+  }
+  
+  .confirmOrder:hover {
+    transform: scale(1.1);
+  }
+  
+  section button { /*This configures the styles for the 'Proceed to CHECKOUT' button*/
+    font-size: 0.8em;
+    background-color: gold; 
+    border-radius: 7px; 
+    padding: 0.5em;
+    margin: 0.5em auto;
+    color: black; 
+    text-align: center; 
+    font-weight: bold;
+  }
+
+  
+  
+  #empty {
+    font-weight: bold;
+    font-size: 4vw;
+  }
+  
+  h2 { /*This configures styles for heading 3, which displays the current order amount.*/
+    font-weight: normal;
+    color: black;
+    margin-top: 0;
+  }
+  
+  table { /*This configures styles for the table, which displays the order details*/
+    width: 85%;
+    border: solid 1pt black;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    margin-left: 20%;
+  }	
+  
+  
+  tr { /*This configures styles for each row of the table*/
+    border-bottom: 1px solid black;
+    background-color: white
+  }
+  
+  tr:hover { /*This causes the background colour and text colour of the rows to change the cursor hovers over them*/
+    background-color: gainsboro;
+    color: black;
+  }
+  
+  td { /* This configures styles for each column of the table*/
+    padding: 0.3em 0.3em; color: black;
+    font-size: 12px;
+  }
+  
+  
+  th { /* This configures styles for the table headers*/
+    background-color: #484848;
+    color: white;
+    padding: 1.5em 0.3em;
+    border-bottom: 1px solid black;
+    font-size: 12px
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  thead {
+    display: none;
+  }
+
+  table {
+    width: 60%;
+  }
+
+  tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    
+  }
+
+  td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: right !important;
+    font-size: 2.5vw
+  }
+
+  td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    
+    
+  }
+
+  table input {
+    position: relative;
+    right: 0;
+    font-size: 2.5vw !important;
+  }
+}

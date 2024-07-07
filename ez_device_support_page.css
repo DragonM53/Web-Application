@@ -1,0 +1,241 @@
+    
+@media only screen and (min-width:768px){
+    
+    body > h2 {
+        background-color: lightgrey;
+        color: black;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 150%;
+    }
+    fieldset{
+        background-color: rgb(163, 209, 255);
+        margin: 10%;
+        text-align: left;
+        color: black;
+        min-height: 800px;
+    }
+
+    #formTittle {
+        background-color: lightgrey;
+        color: black;
+        margin-top:15px;
+        margin-bottom: 0px;
+        padding:10px;
+        font-size: 40px;
+    }
+    legend {
+        color: black;
+        background-color: rgb(230, 241, 254);
+        padding: 20px;
+        font-size: 100%;
+        font-weight: bold;
+        margin: 20px;
+    }
+
+    input {
+        padding: 5px;
+    }
+
+    form {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    select {
+        margin: auto;
+        width: 87%;
+        padding: 5px;
+        float: right;
+    }
+    .line{
+        vertical-align: middle;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        margin-left: 20px;
+        padding:5px;
+        border: hidden solid;
+        float: right;
+        width: 100%;
+    }
+
+
+    #input_box1 {
+        float: right;
+        margin: auto;
+        width: 87%;   
+    }
+    #input_box2 {
+        float: right;
+        margin: auto;
+        width: 87%;   
+    }
+
+    #content_box {
+        margin: auto;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    #send_button {
+        padding: 5px;
+        margin: 10px;
+        font-size: 20px;
+        border: solid hidden;
+        background-color: grey;
+        border-radius: 10px;
+        color:white;
+        font-weight: bold;
+    }
+
+    #clear_button {
+        padding: 5px;
+        margin: 10px;
+        font-size: 20px;
+        border: solid hidden;
+        background-color: grey;
+        border-radius: 10px;
+        color:white;
+        font-weight: bold;
+    }
+
+    #form_button {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    #clear_button:hover, #send_button:hover {
+        background-color: lightgray;
+        offset: 3px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body > h2 {
+        background-color: lightgrey;
+        color: black;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 150%;
+    }
+    fieldset{
+        background-color: rgb(163, 209, 255);
+        margin: 5%;
+        text-align: left;
+        color: black;
+        min-height: 800px;
+    }
+
+    #formTittle {
+        background-color: lightgrey;
+        color: black;
+        margin-top:15px;
+        margin-bottom: 0px;
+        padding:10px;
+        font-size: 40px;
+    }
+    legend {
+        color: black;
+        background-color: rgb(230, 241, 254);
+        padding: 20px;
+        font-size: 100%;
+        font-weight: bold;
+        margin: 20px;
+    }
+
+    input {
+        padding: 5px;
+    }
+
+    form {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    select {
+        margin: auto;
+        width: 100%;
+        padding: 5px;
+        float: right;
+    }
+    .line{
+        vertical-align: middle;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        margin-left: 20px;
+        padding:5px;
+        border: hidden solid;
+        float: right;
+        width: 100%;
+    }
+
+
+    #input_box1 {
+        float: right;
+        margin: auto;
+        width: 100%;   
+    }
+    #input_box2 {
+        float: right;
+        margin: auto;
+        width: 100%;   
+    }
+
+    #content_box {
+        margin: auto;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    #send_button {
+        padding: 5px;
+        margin: 10px;
+        font-size: 20px;
+        border: solid hidden;
+        background-color: grey;
+        border-radius: 10px;
+        color:white;
+        font-weight: bold;
+    }
+
+    #clear_button {
+        padding: 5px;
+        margin: 10px;
+        font-size: 20px;
+        border: solid hidden;
+        background-color: grey;
+        border-radius: 10px;
+        color:white;
+        font-weight: bold;
+    }
+
+    #form_button {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    #clear_button:hover, #send_button:hover {
+        background-color: lightgray;
+        offset: 3px;
+    }
+    
+    form {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    b,label {
+        margin-bottom: 5px;
+    }
+    
+    body {
+        min-height: 720px;
+        margin-bottom: 10px;
+    }
+
+}

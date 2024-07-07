@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>EZTech | Shopping Cart</title>
+        <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="icon" href="media/logoicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="ez_reset.css">
+		<link rel="stylesheet" href="ez_base.css"/>
+        <link rel="stylesheet" href="ez_shopcart.css">
+		
+		
+</head>
+  <body>
+    <header>
+		<a href="ez_index.html"><img src="media/logo.jpg" alt="Logo" id="ezlogo" /></a>
+      	<div class="top-buttons">
+        <a class="home-button" href="ez_index.html"><span class="buttontxt">Home</span></a>
+        <a class="aboutus-button" href="ez_about_us.html"><span class="buttontxt">About Us</span></a>
+        <a class="contactus-button" href="ez_contact_us.html"><span class="buttontxt">Contact Us</span></a>
+        <a class="promotion-button" href="ez_promotions.html"><span class="buttontxt">Promotions</span></a>
+        <a class="cart-button" href="ez_shopcart.html"><span class="buttontxt">Cart</span></a>
+        <a class="support-button">
+          <span class="buttontxt">Support</span>
+          <ul id="support-options">
+            <li id="ds">Device Support</li>
+            <li id="faq">FAQs</li>
+          </ul>
+        </a>
+        <button type="submit" onclick="showsearchbar()" class="mySearch">
+          <img src="media\search.png" width="30" id="myBtn">
+        </button>
+		<div class="search">
+			<script>                
+				function myFunction() {
+					// Declare variables
+					var input, filter, ul, li, a, i, txtValue;
+					input = document.getElementById('myInput');
+					filter = input.value.toUpperCase();
+					ul = document.getElementById("myUL");
+					li = ul.getElementsByTagName('li');
+				
+					// Loop through all list items, and hide those who don't match the search query
+					for (i = 0; i < li.length; i++) {
+						a = li[i].getElementsByTagName("a")[0];
+						txtValue = a.textContent || a.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							li[i].style.display = "";
+						} else {
+							li[i].style.display = "none";
+						}
+					}
+				}
+				function showsearchbar() {
+					var modal = document.getElementById("myModal");
+					var btn = document.getElementById("myBtn");
+					var span = document.getElementsByClassName("close")[0];
+					
+					document.getElementById("myModal").style.display = "block";
+					
+					span.onclick = function() {
+					modal.style.display = "none";
+					}
+	
+					window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+						}
+					}
+				}
+			</script>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for products.."><i class="fa fa-search"></i></input>
+					<ul id="myUL">
+						<li><a href="ez_desktop.html">Desktop PCs</a></li>
+						<ul id="myUL">
+							<li><a href="ez_apple_imac512GB.html">IMAC 24" 512 GB Storage</a></li>
+							<li><a href="ez_apple_imac256GB.html">IMAC 24" 256 GB Storage</a></li>
+							<li><a href="ez_Samsung_ArtPC_PULSE.html">Samsung ArtPc Pulse</a></li>
+							<li><a href="ez_Samsung_Odyssey_OLED_G8.html">Odyssey OLED G8</a></li>
+							<li><a href="ez_huawei_matestation_x.html">Huawei Matestation X</a></li>
+							<li><a href="ez_huawei_matestation_s.html">Huawei Matestation S</a</li>
+							<li><a href="ez_ASUS_V241.html">Asus V241</a></li>
+							<li><a href="ez_ASUS_ZenAio.html">Asus Zen AIO 24 A5401</a></li>
+						</ul>
+						<li><a href="ez_smartphone.html">Smartphone</a></li>
+						<ul id="myUL">
+							<li><a href="ez_apple_iphone14plus.html">Iphone 14 Plus</a></li>
+							<li><a href="ez_apple_iphone14promax.html">Iphone 14 Pro Max</a></li>
+							<li><a href="ez_Samsung_Galaxy_A53_5G.html">Samsung A53 5G</a></li>
+							<li><a href="ez_Samsung_Galaxy_A73_5G.html">Samsung A73 5G</a></li>
+							<li><a href="ez_huawei_nova_10.html">Huawei Nova 10</a></li>
+							<li><a href="ez_huawei_mate_50_pro.html">Huawei Mate 50 Pro</a></li>
+							<li><a href="ez_ASUS_Zenfone8.html">Zenfone 8</a></li>
+							<li><a href="ez_ASUS_Zenfone9.html">Zenfone 9</a></li>
+						</ul>
+						<li><a href="ez_laptop.html">Laptop</a></li>
+						<ul id="myUL">
+							<li><a href="ez_apple_macbookair.html">Macbook Air</a></li>
+							<li><a href="ez_apple_macbookpro.html">Macbook Pro 14"</a></li>
+							<li><a href="ez_Samsung_Galaxy_Book2_pro_360.html">Galaxy Book 2 Pro 360</a></li>
+							<li><a href="ez_Samsung_Galaxy_Book2_pro.html">Galaxy Book 2</a></li>
+							<li><a href="ez_huawei_matebook_d14.html">Huawei Matebook D14</a></li>
+							<li><a href="ez_huawei_matebook_xpro.html">Huawei Matebook XPRO</a></li>
+							<li><a href="ez_ASUS_ExpertBook14Flip.html">Expertbook B7 Flip</a></li>
+							<li><a href="ez_ASUS_Zeenbook17Fold.html">Zenbook 17 Fold OLED</a></li>
+						</ul>
+					</ul>
+				</div>
+		  </div>
+		</div>
+      </div>
+	</header>   
+	<nav id="horizontal">
+		<ul>
+		  <li class="cat">
+			<a href="ez_smartphone.html?brand=all" >Smartphones</a>
+			<ul id="subcat1">
+			  <li class="brand"><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+			  <li class="brand"><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+			  <li class="brand"><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+			  <li class="brand"><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+			</ul>
+		  </li>          
+		  <li class="cat">
+			<a href="ez_laptop.html?brand=all">Laptops</a>
+			<ul id="subcat2">
+			  <li class="brand"><a href="ez_laptop.html?brand=apple">Apple</a></li>
+			  <li class="brand"><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+			  <li class="brand"><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+			  <li class="brand"><a href="ez_laptop.html?brand=asus">Asus</a></li>
+			</ul>
+		  </li>
+		  <li class="cat">
+			<a href="ez_desktop.html?brand=all">Desktop PCs</a>
+			<ul id="subcat3">
+			  <li class="brand"><a href="ez_desktop.html?brand=apple">Apple</a></li>
+			  <li class="brand"><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+			  <li class="brand"><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+			  <li class="brand"><a href="ez_desktop.html?brand=asus">Asus</a></li>
+			</ul>
+		  </li>
+		</ul>
+	  </nav>
+	  <nav id="vertical">   
+		<a href="#" id="navicon"><img src="media/navicon.png" width="40" height="40" id="actualnavicon"/><img src="media/promodollar.png" id="lpgImg" width="40" height="40"/><span id="lpgText">Lowest Price Guaranteed!</span><span id="isoText">ISO 9001:2015</span>
+		<ul id="hiddenMainMenu">
+		  <li>
+			<a href="ez_smartphone.html?brand=all" class="cat">Smartphones
+			<ul class="hiddenSubMenu">
+			  <li><a href="ez_smartphone.html?brand=apple">Apple</a></li>
+			  <li><a href="ez_smartphone.html?brand=samsung">Samsung</a></li>
+			  <li><a href="ez_smartphone.html?brand=huawei">Huawei</a></li>
+			  <li><a href="ez_smartphone.html?brand=asus">Asus</a></li>
+			</ul>
+			</a>
+		  </li>
+		  <li>
+			<a href="ez_laptop.html?brand=all" class="cat">Laptops
+			<ul class="hiddenSubMenu">
+			  <li><a href="ez_laptop.html?brand=apple">Apple</a></li>
+			  <li><a href="ez_laptop.html?brand=samsung">Samsung</a></li>
+			  <li><a href="ez_laptop.html?brand=huawei">Huawei</a></li>
+			  <li><a href="ez_laptop.html?brand=asus">Asus</a></li>
+			</ul>
+			</a>
+		  </li>
+		  <li>
+			<a href="ez_desktop.html?brand=all" class="cat">Desktop PCs
+			<ul class="hiddenSubMenu">
+			  <li><a href="ez_desktop.html?brand=apple">Apple</a></li>
+			  <li><a href="ez_desktop.html?brand=samsung">Samsung</a></li>
+			  <li><a href="ez_desktop.html?brand=huawei">Huawei</a></li>
+			  <li><a href="ez_desktop.html?brand=asus">Asus</a></li>
+			</ul>
+			</a>
+		  </li>
+		  <img src="media/cny.png" width="150" height="90" id="cny"/>
+		</ul>
+		</a>
+	  </nav>
+	<section>
+		
+		<h2 id="amount">Current Order Amount: RM <span id="order_amt" >0.00</span></h2> 
+		<button type="button" id="showbutton" style="font-weight:bold" class="confirmOrder" onclick="goDeliveryForm()">CONFIRM ORDER</button>
+		<br style="clear: right"/>
+		<table id="shopcartTable" class="center"> 
+			<thead> <!--This displays the column headings of the table. This is the static part of the table.-->
+				<tr>
+					<th style="text-align:left; box-sizing: border-box; height: auto; width: 100px; ">Option</th> <!--This is the heading for the column which allows the customer to delete a particular product(s) from the shopping cart.-->
+					<th style="display:none; box-sizing: border-box; height: auto; width: 0px">Key</th>
+					<th style="text-align:left; box-sizing: border-box; height: auto;  width:300px">Product Code</th>
+					<th style="text-align:left; box-sizing: border-box; height: auto; width:300px">Product Name</th>
+					<th style="text-align:right; box-sizing: border-box; height: auto; width:150px">Price (RM)</th>
+					<th style="text-align:right; box-sizing: border-box; height: auto; width:100px">Quantity</th>
+					<th style="text-align:right; box-sizing: border-box; height: auto; width:250px">Line Total (RM)</th>
+				</tr>
+			</thead>
+			<tbody id="shopcartBody"> <!--This displays the customer's order details under their corresponding headings. This is the dynamic part of the table. A delete button will be included too.-->
+		    </tbody>
+		</table>
+		<h2 id="empty"><span>Your Shopping Cart is empty!<br>Add something to it so that you don't lose out.</span></h2>
+	 <script>
+		 var orderTotalAmt = 0; //Global variable for order total amount	
+		 var qtyTTL = 0; //to keep track of total quantity
+		 //1. Display Shopping Cart Sub Module
+		 function displayShoppingCart() {
+			var shoppingcartBody = document.getElementById("shopcartBody");	
+		    for (var i = 0; i < localStorage.length; i++) {
+		       var key = localStorage.key(i);
+		       if (key.substr(0, 10) == "eztechprod") { //This string identifies the retrieved local storage element as an order item
+		          var value = localStorage.getItem(key); //Get contents of the Order Item
+				  var productObj = JSON.parse(value); //Convert Order Item contents from strings to object components
+		          var createTr = document.createElement('TR'); //Create a Table Row to hold the order item info
+		          shoppingcartBody.appendChild(createTr); //Append Row to the Table Body in the DOM
+				  //For each of the Order Item field, create a table Cell to store it.
+				  //The leftmost cell will contain the Delete button
+				  for (var j=0; j < 7; j++){
+				     var createTd = document.createElement('TD');
+				     //td.width='75';
+					 createTd.style.boxSizing = "border-box";
+					 if (j == 0) { //Delete button
+						 createTd.innerHTML= '<input type="button" value = "Remove" onClick="deleteRow(this)" style="font-size: 12px">';
+						 createTd.style.width = '100';
+						 createTd.style.textAlign = "left"
+						 createTd.setAttribute("data-label", "Option")
+					 } else if (j == 1) { //This cell contains the local storage key for the order item
+						 createTd.style.width = '0';
+						 createTd.appendChild(document.createTextNode(key));
+						 createTd.className = "hide"; //Hide local storage keys
+					 } else if (j == 2) { //Product Code
+						 createTd.style.width = '300';
+						 createTd.style.textAlign = "left";
+						 createTd.setAttribute("data-label", "Product Code")
+					     createTd.appendChild(document.createTextNode(productObj.pCode));
+					 } else if (j == 3) { //Product Name
+						 var createA = document.createElement('a');
+						 createA.innerHTML = productObj.pName;
+						 createA.href = productObj.link;
+						 createTd.style.width = '300';
+						 createTd.style.textAlign = "left";
+						 createTd.setAttribute("data-label", "Product Name")
+					     createTd.appendChild(createA);					 
+					 } else if (j == 4) { //Price
+						 createTd.style.width = '150';
+						 createTd.style.textAlign = "right";
+						 createTd.setAttribute("data-label", "Price")
+						 createTd.appendChild(document.createTextNode(productObj.pPrice));	
+					 } else if (j == 5) { //Quantity
+						 createTd.style.width = '100';
+						 createTd.style.textAlign = "right";
+						 createTd.setAttribute("data-label", "Quantity")
+						 createTd.appendChild(document.createTextNode(productObj.itemQty));	 
+					 } else if (j == 6) {
+						 createTd.style.width = '250';
+						 var subTTL = parseFloat(productObj.pPrice) * parseFloat(productObj.itemQty);
+						 var subTTLStr = subTTL.toString() + ".00";
+						 createTd.style.textAlign = "right";
+						 createTd.setAttribute("data-label", "Line Total (RM)")
+						 createTd.appendChild(document.createTextNode(subTTLStr));
+					 }
+				     createTr.appendChild(createTd); //Append table cell to table row in DOM				 
+				  }
+				  //After each row has been processed, accumulate the Order Total
+				  var convertedPrice = parseFloat(productObj.pPrice);
+				  var convertedQty = parseFloat(productObj.itemQty);
+				  qtyTTL += convertedQty; //new code
+				  orderTotalAmt = orderTotalAmt + (convertedPrice * convertedQty); //Accumulate Order Total
+				  //shopcartBody.appendChild(tr); //Create table row in DOM
+	           }
+		    } 
+			
+			var currentOrdAmt = document.getElementById("order_amt"); //Get DOM element for Order Amount
+			currentOrdAmt.innerHTML = orderTotalAmt.toFixed(2); //Update and display Order Amount
+			if (qtyTTL != 0)
+			{
+				document.getElementById("empty").style.display = "none";
+			}
+			document.forms[0].onsubmit = function() {
+        	if (this.checkValidity()) alert("Registered successfully!\nThank you.");
+          		return true;
+        }
+		}
+		//2. Delete Row Sub Module
+		//This function executes when the user deletes an order item.
+		function deleteRow(obj) {
+			if (confirm("Are you sure you want to remove this item from the cart?") == 1)
+			{
+				var row_index = obj.parentNode.parentNode.rowIndex;
+		    	var table = document.getElementById("shopcartTable");
+				var currentRow = table.rows[row_index]; //Get row to be deleted
+				var key_td = currentRow.cells[1]; //Get hidden local storage key for row
+				var keytd_val = key_td.innerHTML;
+				localStorage.removeItem(keytd_val); //Remove item from Local Storage
+				table.deleteRow(row_index); // Remove row from DOM	
+				var price_td = currentRow.cells[4]; //Get row Price
+				var pricetd_val = parseFloat(price_td.innerHTML);
+				var qty_td = currentRow.cells[5]; //Get row Quantity
+				var qtytd_val = parseFloat(qty_td.innerHTML);
+            	orderTotalAmt = orderTotalAmt - (pricetd_val*qtytd_val); // Decrement global variable Order Total amount
+				qtyTTL -= qtytd_val;
+				if (qtyTTL == 0)
+				{
+					document.getElementById("empty").style.display = "block";
+				}
+				
+				var currentOrdAmt = document.getElementById("order_amt"); //Get DOM element for Order Amount
+				currentOrdAmt.innerHTML = orderTotalAmt.toFixed(2); //Update and display Order Amount
+			}
+		    
+		}
+		//3. Go to Delivery Form Page Sub Module
+        //This function executes when the user clicks the Confirm Order button.
+		//It will redirect the user to the Ckeckout screen.
+		function goDeliveryForm() {
+			if (orderTotalAmt == 0) {
+				alert("You cannot proceed to Delivery Form page\nbecause your Order Amount is Zero.")
+			} else {
+				if (confirm("Are you sure you want to confirm your order?") == 1)
+				{
+					var key = "finalordertotal"; //Local Storage Key for the Order Total
+					localStorage.removeItem(key); //Remove previous order total, just in case
+					var orderAmtVal = document.getElementById("order_amt").innerHTML; //Get Order Total from screen field
+					localStorage.setItem(key, orderAmtVal); //Store Order Total in local storage to be retrieved in the Payment screen
+					window.location.replace("ez_delivery.html"); //Redirect to the Delivery Address Form
+				}				
+			}
+		}
+
+		var support1 = document.getElementById("ds");
+      	support1.onclick = function() {
+        	window.location.href = "ez_device_support_page.html";
+      	}
+
+      	var support2 = document.getElementById("faq");
+      	support2.onclick = function() {
+        	window.location.href = "ez_questions_support_page.html";
+      	}
+		window.onload = displayShoppingCart;
+	 </script>
+	 
+	 
+	 <article>
+	 <h3>Notice</h3>
+	 <p>When you have added the desired products into your shopping cart and would like to confirm your order, click the "CONFIRM ORDER" button at the top of the page.</p>
+	 </article>
+	</section>
+	<footer>
+		<div class="footer">
+			<img src="media/logo.jpg" id="footerLogo" alt="Logo Footer" width="170" height="90"/>
+			<h2 id="catchphrase">Making people's lives simpler</h2>
+			<img src="media/iso9001-2015.png" id="ISO" width="200" height="120"/>
+			<ul class="icons">
+				<p id="latestNews">Get the latest news:</p>
+				<li><a href="https://www.facebook.com/people/EZTech/100088570681662/" target="blank"><img src="media/facebook3.png" width="40" height="40"/></a></li>
+				<li><a href="ez_contact_us.html"><img src="media/whatsapp3.png" width="40" height="40"/></a></li>
+				<li><a href="https://twitter.com/EZTech2022"><img src="media/twitter3.png" width="40" height="40"/></a></li>
+			</ul>
+  
+			<div class="footer-end">
+				<p>&copy;EZTech 2022. All rights reserved.
+				<a href="ez_sitemap.html">Sitemap</a>          
+				<a href="ez_device_support_page.html">Device Support</a>
+				<a href="ez_questions_support_page.html">FAQ</a>
+			  </p>
+			</div>
+  
+			<div class="more-info">
+				<p>STAY CONNECTED WITH US:</p>
+				<form action="ez_shopcart.html" method="get">
+				  <input type="email" name="emailAddr" id="emailAddr" required placeholder="Enter your email address" />
+				  <input type="submit" value="Register"/>
+				</form>
+			</div> 
+			</div>
+		</div>
+	  </footer>      
+   </body>
+</html>

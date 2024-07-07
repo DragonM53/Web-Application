@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ez_reset.css">
+    <link rel="stylesheet" href="ez_ewallet_style.css">
+    <link rel="icon" href="media/logoicon.ico" type="image/x-icon">
+    <title>EZTech | Payment page</title>
+</head>
+<body>
+    <div class="head">
+        <!--<h1><span id="EZ">EZ</span><span id="Tech">Tech</span></h1>-->
+        <img src="media/logo.jpg" alt="eztech">
+        <h2>Making people's lives simpler</h2>
+        </div>
+
+        <!--E-wallet-->
+        <div id="e-wallet" class="e-wallet">
+            <h1>Payment Page (E-wallet)</h1>
+
+         <form action="ez_completion_ewallet.html" onsubmit="return ewallet_complete();">
+            <h2>Total amount is: RM<span id="totalamount">0.00</span></h2>
+
+            <div class="input-field">
+                <label>Full Name (as per I.C.)</label>
+                <input  id="fullname" type="text" name="name" placeholder= " e.g. Lim Xiao Ming" minlength="5" onkeyup="ltronly()" required > 
+                <p id="alert-name">&nbsp;</p>
+            </div>
+
+            <div class="input-field">
+                <label>Telephone Number</label>
+                <input id="telenum" name="teleNum"  type="text" pattern="[0-9]{10}"  placeholder="e.g. 0161112222" required>
+            </div>
+
+            <div class="input-field">
+                <label>Email Address</label>
+                <input id="email-add" name="email" type="email" placeholder="e.g. eztech@gmail.com" minlength="8" required>
+            </div>
+
+            <div class="input-field">
+                <span>Type of E-wallet</span>
+                <select class="select-bank" required id="typeewallet"  name="type_of_ewallet">
+                    <option value="">&nbsp;</option>
+                    <option value="Touch N Go">Touch N Go</option>
+                    <option value="Grab Pay">Grab Pay</option>
+                    <option value="CIMB Pay">CIMB Pay</option>
+                    <option value="Boost Pay">Boost Pay</option>
+                    <option value="Alipay">Alipay</option>
+                    <option value="Google Pay">Google Pay</option>
+                    <option value="Apple Pay">Apple Pay</option>
+                </select>
+            </div>
+
+            <input type="submit" value="PAY NOW" class="pay-btn-ewallet" />
+
+        </form>
+
+        </div>
+
+        <footer>
+            <div class="footer">
+                <!--<h1><span id="EZ">EZ</span><span id="Tech">Tech</span></h1>-->
+                <img src="media/logo.jpg" alt="eztechlogo">
+                <h2>Making people's lives simpler</h2>
+    
+                <div class="footer-end">
+                    <p>&copy;EZTech 2022. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            //to prevent user to go back previous page
+            function preback(){window.history.forward();}
+            setTimeout("preback()",0);
+            window.onunload=function(){null};
+
+            function ltronly(){
+       var str= document.getElementById("fullname").value;
+       var namealert= document.getElementById("alert-name");
+       if(!((/^[a-z A-Z]+$/.test(str) ) || str.length==0)){
+            namealert.style.display="block";
+            alert("Warning! letters only.");
+            document.getElementById("fullname").value="";
+       }else{
+        namealert.style.display="none";
+        nameflag=true;
+       }
+      }
+
+
+            function ewallet_complete(){
+                var key="ewallet_payment";
+                localStorage.removeItem(key);
+                var name= document.getElementById("fullname").value;
+                var type_of_ewallet = document.getElementById("typeewallet").value;
+                var telephone_number = document.getElementById("telenum").value;
+                var date = localStorage.setItem("DateT", new Date())
+
+                var payment_ewallet = {
+                    "EW_Name" : name,
+                    "TelNum" : telephone_number,
+                    "TypeEwt" : type_of_ewallet
+                };
+                
+                localStorage.setItem(key,JSON.stringify(payment_ewallet));
+                return true;
+            }
+
+            function getProTotal() {
+                var LSProductTotal = localStorage.getItem("finalordertotal");
+                var tolamt = document.getElementById("totalamount");
+                tolamt.innerHTML = LSProductTotal;
+            }
+
+            function init(){
+                getProTotal();
+            }
+            
+window.onload= init;
+
+            </script>
+            </body>
+</html>

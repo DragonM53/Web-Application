@@ -1,0 +1,1909 @@
+@font-face {
+  font-family: Roboto;
+  src: url('webfonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('webfonts/NotoSans-Regular.ttf') format('truetype');
+}
+
+*{/*This configures the default padding and margin*/
+  margin: 0;
+ padding: 0;    
+ box-sizing: border-box;
+}
+
+html {
+ background-attachment: fixed;
+ background-size: contain
+}
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+#lowestPrice {
+  width: 12vw !important;
+  height: 19vh !important;
+  margin: 0.1em 0.2em 0.1em 0.2em !important;
+  display: block !important;
+}
+
+#learnMore {
+  margin-left: 1em;
+  margin-right: 1.5em;
+  background-color: white !important;
+  color: black !important;
+  padding: 2px 4px !important;
+  font-weight: bold !important;
+  border-radius: 5px !important;
+  display: block !important;
+}
+
+#learnMore:hover {
+  background-color: black !important;
+  color: white !important
+}
+
+#dialogBox {
+  box-sizing: border-box;
+  display: none ; 
+  position: fixed !important; 
+  z-index: 1000 !important; 
+  left: 10vw !important;
+  top: 50% !important;
+  width: 80vw !important; 
+  text-align: left !important;
+}
+
+#dialogBox h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0.015em #101010,0 -0.015em #101010,0.01em 0 #101010,-0.01em 0 #101010;
+  text-align: center;
+  font-size: 2vw;
+  color: black;
+  
+}
+
+#dialogBox-content img {
+ 
+  float: left !important;
+  margin-bottom: 0 !important;
+  margin-left: 20px !important;
+  margin-right: 0px !important;
+  margin-top: -10px !important;
+  filter: brightness(109%) !important;
+  width: 6vw !important;
+  height: 6vw !important;
+  display: block !important;
+  
+}
+
+/* Modal Content/Box */
+#dialogBox-content {
+  display: block !important;
+  background-color: orange !important;
+  margin: 15% auto !important; /* 15% from the top and centered */
+  padding: 20px !important;
+  border: 1px solid #888 !important;
+  width: 80% !important; /* Could be more or less, depending on screen size */
+  display: block !important;
+}
+
+#dialogBox-content p {
+  font-family: Roboto !important;
+  font-weight: bold !important;
+  font-size: 1.8vw !important;
+  color: black !important;
+  word-spacing: 100% !important;
+  line-height: 1.1 !important;
+  display: inline !important;
+  word-wrap: normal;
+  
+}
+
+#dialogBox a {
+  text-decoration: underline !important;
+  
+}
+
+/* The Close Button */
+#closeBtn {
+  color: white !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  margin-left: 55px !important;
+  float: right !important;
+  position: relative !important;
+  left: 20px !important;
+  bottom: 20.4px !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+  background-color: red !important;
+  display: block !important;
+}
+
+#closeBtn:hover,
+#closeBtn:focus {
+  color: black !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  display: block !important;
+}
+
+.introsection{/*This determines the styling commands for the section that has the same class name.*/
+  background-repeat: no-repeat !important;
+  box-sizing: border-box !important;
+  background-size: 100% 100% !important;
+  margin: 0 auto 2em auto !important;
+  width: 80vw !important;
+  height: 70vh !important;
+  animation-name: example !important;
+  animation-duration: 15s !important;
+  animation-iteration-count: infinite !important;
+  animation-direction: alternate !important;
+  position: relative !important;
+}
+
+@keyframes example {
+  0% {background-image: url('media/appleproduct.jpeg'); }
+  50% {background-image: url('media/huaweiprod.jpg'); }
+  100% {background-image: url('media/intropic.jpg'); }
+}
+
+#samsung {
+  position: absolute !important;
+  left: 84% !important;
+  top:16% !important;
+  border-radius: 10px !important;
+  width: 10vw !important;
+  height: 7vw !important;
+}
+
+#asus {
+  position: absolute !important;
+  left: 84% !important;
+  top: 54% !important;
+  width: 10vw !important;
+  border-radius: 10px !important;  
+  height: 7vw !important;    
+}
+
+#huawei {
+  position: absolute !important;
+  left: 84% !important;
+  top: 73% !important;
+  width: 10vw !important;
+  background-color: white !important;
+  border-radius: 10px !important;
+  height: 7vw !important;
+}
+
+#apple {
+  position: absolute !important;
+  background-color: white !important;
+  border-radius: 15px !important;
+  left: 84% !important;
+  top: 35% !important;
+  width: 10vw !important;
+  height: 7vw !important;
+  
+  
+}
+
+#samsung:hover, #apple:hover, #huawei:hover, #asus:hover {
+  transform: scale(1.2) !important;
+}
+
+
+
+      
+  
+.introinfo {
+  text-shadow: 0.15em 0.15em 0.15em  black !important;
+  font-size: 5.5vw !important;
+  color: white !important;
+  text-align: left !important;
+  position: absolute !important;
+  top: 20% !important;
+  left: 5% !important;
+  animation-name: textColor !important; 
+  animation-duration: 15s !important;
+  animation-iteration-count: infinite !important;
+  animation-direction: alternate !important;   
+  
+}
+
+#hiddenintroinfo {
+  font-size: 5.2vw !important;
+  opacity: 0 ;
+  color: black !important;
+  text-align: left !important;
+  position: absolute !important;
+  top: 3% !important;
+  left: 1% !important;
+  animation-name: hiddenText !important; 
+  animation-duration: 15s !important;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes hiddenText {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+
+
+@keyframes textColor {
+  0% {color: black; opacity: 0;}
+  50% {color: white; text-shadow: 0.15em 0.15em 0.15em  black;}
+  100% {color: white; text-shadow: 0.15em 0.15em 0.15em  black;}
+}
+
+
+
+
+
+.phoneprodinfo, .laptopprodinfo, .desktopprodinfo , .chooseus {
+  margin-top: 20px !important;
+  font-size: 4vw !important;
+  color: black !important;
+  font-family: "Segoe UI" !important;        
+}
+
+.whychooseus .chooseus {
+  margin-top: 50px !important;
+  font-size: 4.5vw !important;
+  color: white !important;
+  font-family: "Segoe UI" !important;
+}  
+
+      .points {
+        margin: 1em auto !important;
+      }
+
+      .points li{
+        color: gold !important;
+        font-size: 3.2vw !important;
+        margin-top: -20px !important;
+        margin-left: 20%!important;
+        margin-bottom: -1.5em !important;
+        text-shadow: 0.1em 0.1em 0.1em black !important;
+        text-align: left !important;
+      }
+
+      #quality {
+        float: right !important;
+        margin-left: -10% !important;
+        width: 25vw !important;
+        height: auto !important;
+        margin-top: 0% !important
+      }
+
+      .whychooseus {
+        background-image: linear-gradient(to right,white, skyblue, #728FCE ) !important;
+        box-sizing: border-box !important;
+        padding-bottom: 1.5em !important;
+        background-repeat: none !important;
+        margin: 0 auto 2em auto !important;
+        width: 80vw !important;
+        height: 70vh !important;
+        border-radius: 20px !important;
+        border-color: black !important;
+        border-style: solid !important;
+        border-width: 2px !important;
+
+      }
+      .whychooseus:hover {
+        transform: scale(1.02) !important;
+      }
+
+      /**/
+
+      .phonesection {/*This determines the styling commands for the section that has the same class name.*/
+        background-image: linear-gradient(to right, white, white, pink) !important;
+        box-sizing: border-box !important;
+        margin: 0 auto 2em auto !important;
+        width: 80vw !important;
+        height: 57vh !important;
+        border-style: solid !important;
+        border-width: 2px !important;
+        border-radius: 20px !important;
+        padding-right: 10px !important;
+        padding-top: 3px !important;
+        padding-left: 7px !important;
+        border-color: black !important;
+        position: relative !important;
+      }
+
+      .phonesection img {
+        width: 33vw !important;
+        height: 55vh !important;
+        margin-top: 0% !important;
+        
+      }
+
+      .phonesection:hover {
+        transform: scale(1.01)
+      }
+
+      .phone {
+        float: left;
+      }
+
+      img.phone {
+        display: none;
+      }
+
+      #phonebutton {
+        background-color: black !important;
+        border-radius: 10px !important;
+        position: absolute !important;
+        top: 62% !important;
+        right: 17% !important;
+        padding: 3% 2% !important;
+        color: white !important;
+        font-weight: bold !important;
+        font-size: 2vw !important;
+        float: right !important;
+        width: 18vw !important;
+        height: auto !important;
+      }
+
+      #phonebutton:hover {
+        background-color: gray !important ;
+      }
+
+      /**/
+
+      .laptopsection {/*This determines the styling commands for the section that has the same class name.*/
+        background-image: linear-gradient(to right, white, beige, #9F8C76) !important;
+        margin: 0 auto 2em auto !important;
+        box-sizing: border-box !important;
+        width: 80vw !important;
+        height: 53vh !important;
+        border-style: solid !important;
+        border-width: 2px !important;
+        border-radius: 20px !important;
+        padding-right: 10px !important;
+        padding-top: 3px !important;
+        padding-left: 7px !important;
+        border-color: black !important;
+        position: relative !important
+       
+      }
+
+      .laptopsection:hover {
+        transform: scale(1.01)
+      }
+
+      .laptopsection img {
+        width: 33vw !important;
+        height: 45vh !important;
+        margin-top: 0%;
+        
+      }
+
+      .laptop {
+        float: right;
+      }
+
+      img.laptop {
+        display: none;
+      }
+
+      #laptopbutton {
+        background-color: black !important;
+        border-radius: 10px !important;
+        position: absolute !important;
+        left: 20% !important;
+        top: 65% !important;
+        padding: 3% 2% !important;
+        color: white !important;
+        font-weight: bold !important;
+        font-size: 2vw !important;
+        float: left !important;
+        width: 13vw !important;
+        height: auto !important;
+      }
+
+      #laptopbutton:hover {
+        background-color: gray !important;
+      }
+
+      .desc {
+        position: relative !important;
+        top: 50px !important;
+        margin-top: 90px !important;
+        font-size: 3.2vw !important;
+        color: #808080 !important;
+        text-align: center !important;
+      }
+
+      /**/
+
+      .desktopsection {/*This determines the styling commands for the section that has the same class name.*/
+        background-image: linear-gradient(to right, white, white, #FFAA33) !important;
+        box-sizing: border-box !important;
+        margin: 0 auto 2em auto !important;
+        width: 80vw !important;
+        height: 55vh !important;
+        border-style: solid !important;
+        border-width: 2px !important;
+        border-radius: 20px !important;
+        padding-right: 10px !important;
+        padding-top: 3px !important;
+        padding-left: 7px !important;
+        border-color: black !important;
+        position: relative !important
+      }
+
+      .desktopsection:hover {
+        transform: scale(1.01)
+      }
+
+      .desktopsection img {
+        width: 30vw !important;
+        height: 49vh !important;
+        margin-top: 0% !important;
+      }
+
+      .desktop {
+        float: left;
+      }
+
+      img.desktop {
+        display: none;
+      }
+
+      #desktopbutton {
+        background-color: black !important;
+        border-radius: 10px !important;
+        position: absolute !important;
+        right: 23% !important;
+        top: 69% !important;
+        padding: 3% 2% !important;
+        color: white !important;
+        font-weight: bold !important;
+        font-size: 2vw !important;
+        float: right !important;
+      }
+
+      #desktopbutton:hover {
+        background-color: gray !important;
+      }
+
+      #newprodsection {
+        
+        background-image: url('media/sunrise.png') !important;
+        background-size: 100% !important;
+        height: 64vh !important;
+        margin-bottom: 1em !important;
+        background-repeat: no-repeat !important;
+
+      }
+
+      #newprodsection img{
+        width: 16vw !important;
+        height: 35vh !important
+      }
+
+      figcaption {
+        font-size: 2vw !important;
+        font-weight: bold !important;
+        color: white !important;
+        text-shadow: 1.5px 1.5px 1px black !important;
+        filter: brightness(120%) !important
+        
+      }
+
+      #environmentsection {
+        background-image: url('media/environmentbg.png') !important;
+        background-size: 100% !important;
+        background-repeat: no-repeat !important;
+        height: 50vh !important;
+        position: relative !important;
+        margin-bottom: 1em !important;
+      }
+
+      #environmentsection img {
+        position: absolute !important;
+        top: 70% !important;
+        left: 45% !important;
+        border-radius: 500px !important;
+        width: 7vw !important;
+        height: 10vh !important
+      }
+
+      #environmentsection p, #charitysection p {
+        
+        margin-top: 8% !important;
+        
+        text-align: center !important;
+        font-size: 2.2vw !important;
+        line-height: 150% !important;
+        font-family: Roboto !important;
+        text-shadow: 1.5px 1.5px 1.5px black !important;
+      }
+
+      
+
+      #charitysection {
+       
+        background-image: url('media/charity.png') !important;
+        background-size: 100% !important;
+        height: 50vh !important;
+        position: relative !important;
+        background-repeat: no-repeat !important;
+      }
+
+      .sectionContent {
+        margin-top: 5em !important;
+        
+        display: flex !important;
+        flex-flow: row wrap !important;
+        justify-content: center !important;
+      }
+
+      .sectionContent img {
+        margin-left: 3.5vw !important;
+        margin-right: 3.5vw !important;
+        flex: 0 2 auto !important;
+      }
+
+      .newsinfo {
+        margin: 0.3em 0 !important;
+        font-size: 4.5vw !important;
+        color: black !important;
+        font-family: "Segoe UI" !important;  
+      }
+
+      .newsSubheadings {
+        position: relative !important;
+        top: 50px !important;
+        font-size: 3.5vw !important;
+        color: white !important;
+        text-align: center !important;
+        text-shadow: 2px 2px 1px black !important
+      }
+
+
+
+
+      /**/
+
+      .newssection {/*This determines the styling commands for the section that has the same class name.*/
+        box-sizing: border-box !important;
+        margin: 0 auto 1em auto !important;
+        width: 80vw !important;
+        height: 86vh !important;
+        border-style: outset !important;
+        border-width: 2px !important;
+        border-radius: 20px !important;
+        padding-top: 3px !important;
+        border-color: black !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        background-color: #E8E8E8 !important;
+       
+      }
+
+      .newssection::-webkit-scrollbar {
+        display: none;
+      }
+
+      .newssection:hover {
+        transform: scale(1.01)
+      }
+
+      section { display: flex !important; 
+      flex-wrap: wrap !important; align-content: flex-start !important;
+      flex-grow: 1 !important;
+      font-family: sans-serif!important;
+      padding-bottom: 3.5em !important; 
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-top: 0 !important;
+      }
+
+       .wrapper{/*This determines the styling commands for the contents within it.*/
+        display: flex !important;
+      }
+      
+      .wrapper .sidebar{/*This determines the styling commands for the navigation sidebar.*/
+        box-sizing: border-box !important;
+        width: 15vw !important;
+        height: 800px !important;
+        background:#484848 !important;
+        padding-top: 0 !important;
+        padding-bottom: 20% !important;
+        position: sticky !important;
+        top:0 !important;
+        text-align: left !important;
+        margin-top: 0 !important;
+        display: block !important
+        
+        
+      }
+       
+      
+      .wrapper .sidebar ul li{/*This determines the styling commands for the listing in the unordered list in the navigation sidebar.*/
+        padding: 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        border-top: 7px solid rgba(255,255,255,0.05) !important;
+        font-weight: bold !important;
+        font-family: 'Roboto' !important;
+        display: block !important;
+        font-size: 1.7vw !important;
+        color: white !important;
+      }
+
+      .wrapper .sidebar ul li:nth-of-type(1) {
+        padding: 20px !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        border-top: 7px solid rgba(255,255,255,0.05) !important;
+        font-weight: bold !important;
+        font-family: 'Roboto' !important;
+        display: block !important;
+        font-size: 1em !important;
+        color: white !important;
+
+      }
+    
+      
+      
+      .wrapper .sidebar ul li a:link{/*This determines the styling commands for the links in the navigation sidebar.*/
+        color: white !important;
+      }
+      .wrapper .sidebar ul li a:visited{/*This determines the styling commands for the links in the navigation sidebar that have been visited.*/
+        color: yellow !important;}
+    
+      .wrapper .sidebar ul li a:hover{/*This determines the styling commands for the links in the navigation sidebar when tey are hovered over by the cursor.*/
+        color:gray !important;
+    }
+    
+          ol { /*this determines the styling commands for the ordered list*/
+            color: black !important;
+        }
+    
+        ol li {/*this determines the styling commands for the listing in the ordered list*/
+            font-family: 'Arial Narrow Bold', sans-serif !important;
+            font-size: 1.5em !important;
+            color: black !important;
+            text-align: justify !important;
+            padding-top: 1em !important;
+            padding-bottom: 1em !important;
+            font-weight: 700 !important;
+            margin-left: 2em !important;
+            
+        }
+      
+}
+
+/**Temporary Tablet version**/
+
+@media only screen and (min-width: 481px) {
+
+#lowestPrice {
+  width: 12vw !important;
+  height: 19vh !important;
+  margin: 0.1em 0.2em 0.1em 0.2em !important;
+  display: block !important;
+}
+
+#learnMore {
+  margin-left: 2.5vw !important;
+  background-color: white !important;
+  color: black !important;
+  padding: 2px 4px !important;
+  font-weight: bold !important;
+  border-radius: 5px !important;
+  display: block !important;
+}
+
+#learnMore:hover {
+  background-color: black !important;
+  color: white !important
+}
+
+#dialogBox {
+  display: none ;   
+}
+
+
+
+.introsection{/*This determines the styling commands for the section that has the same class name.*/
+  background-repeat: no-repeat ;
+  box-sizing: border-box ;
+  background-size: 100% 100% ;
+  margin: 0 auto 1em auto ;
+  width: 80vw ;
+  height: 45vh ;
+  animation-name: example ;
+  animation-duration: 15s ;
+  animation-iteration-count: infinite ;
+  animation-direction: alternate ;
+  position: relative ;
+}
+
+@keyframes example {
+  0% {background-image: url('media/appleproduct.jpeg'); }
+  50% {background-image: url('media/huaweiprod.jpg'); }
+  100% {background-image: url('media/intropic.jpg'); }
+}
+
+#samsung {
+  position: absolute ;
+  left: 84% ;
+  top:18% ;
+  border-radius: 5px ;
+  width: 8vw ;
+  height: 4vw ;
+}
+
+#asus {
+  position: absolute ;
+  left: 84% ;
+  top: 56% ;
+  width: 8vw ;
+  border-radius: 5px ;  
+  height: 4vw ;    
+}
+
+#huawei {
+  position: absolute ;
+  left: 84% ;
+  top: 75% ;
+  width: 8vw ;
+  background-color: white ;
+  border-radius: 5px ;
+  height: 4vw ;
+}
+
+#apple {
+  position: absolute ;
+  background-color: white ;
+  border-radius: 5px ;
+  left: 84% ;
+  top: 37% ;
+  width: 8vw ;
+  height: 4vw ;
+  
+  
+}
+
+#samsung:hover, #apple:hover, #huawei:hover, #asus:hover {
+  transform: scale(1.2) ;
+}
+
+
+
+      
+  
+.introinfo {
+  text-shadow: 0.15em 0.15em 0.15em  black ;
+  font-size: 5.5vw ;
+  color: white ;
+  text-align: left ;
+  position: absolute ;
+  top: 20% ;
+  left: 5% ;
+  animation-name: textColor ; 
+  animation-duration: 15s ;
+  animation-iteration-count: infinite ;
+  animation-direction: alternate ;   
+  
+}
+
+#hiddenintroinfo {
+  font-size: 5.2vw ;
+  opacity: 0 ;
+  color: black ;
+  text-align: left ;
+  position: absolute ;
+  top: 3% ;
+  left: 1% ;
+  animation-name: hiddenText ; 
+  animation-duration: 15s ;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes hiddenText {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+
+
+@keyframes textColor {
+  0% {color: black; opacity: 0;}
+  50% {color: white; text-shadow: 0.15em 0.15em 0.15em  black;}
+  100% {color: white; text-shadow: 0.15em 0.15em 0.15em  black;}
+}
+
+
+
+
+
+.phoneprodinfo, .laptopprodinfo, .desktopprodinfo , .chooseus {
+  margin-top: 20px !important;
+  font-size: 4vw !important;
+  color: black !important;
+  font-family: "Segoe UI" !important;        
+}
+
+.whychooseus .chooseus {
+  margin-top: 20px ;
+  font-size: 4.5vw !important;
+  color: white !important;
+  font-family: "Segoe UI" !important;
+}  
+
+      .points {
+        margin: 1em auto !important;
+      }
+
+      .points li{
+        color: gold !important;
+        font-size: 3.2vw !important;
+        margin-top: -20px !important;
+        margin-left: 20%!important;
+        margin-bottom: -1.5em ;
+        text-shadow: 0.1em 0.1em 0.1em black ;
+        text-align: left ;
+      }
+
+      #quality {
+        float: right !important;
+        margin-left: -10% !important;
+        width: 25vw !important;
+        height: auto !important;
+        margin-top: 6%
+      }
+
+      .whychooseus {
+        background-image: linear-gradient(to right,white, skyblue, #728FCE ) ;
+        box-sizing: border-box ;
+        padding-bottom: 1.5em ;
+        background-repeat: none ;
+        margin: 0 auto 1em auto;
+        width: 80vw ;
+        height: 50vh ;
+        border-radius: 20px ;
+        border-color: black ;
+        border-style: solid ;
+        border-width: 2px ;
+
+      }
+      .whychooseus:hover {
+        transform: scale(1.02) ;
+      }
+
+      /**/
+
+      .phonesection {/*This determines the styling commands for the section that has the same class name.*/
+        background-image: linear-gradient(to right, white, white, pink) ;
+        box-sizing: border-box ;
+        margin: 0 auto 1em auto ;
+        width: 80vw ;
+        height: 41vh ;
+        border-style: solid ;
+        border-width: 2px ;
+        border-radius: 20px ;
+        padding-right: 10px ;
+        padding-top: 3px ;
+        padding-left: 7px ;
+        border-color: black ;
+        position: relative ;
+      }
+
+      .phonesection img {
+        width: 25vw ;
+        height: 35vh ;
+        margin-top: 3%;
+        
+      }
+
+      .phonesection:hover {
+        transform: scale(1.01)
+      }
+
+      .phone {
+        float: left;
+      }
+
+      img.phone {
+        display: none;
+      }
+
+      #phonebutton {
+        background-color: black ;
+        border-radius: 10px ;
+        position: absolute ;
+        top: 62% ;
+        right: 24% ;
+        padding: 3% 2% ;
+        color: white ;
+        font-weight: bold ;
+        font-size: 2vw ;
+        float: right ;
+        width: 18vw ;
+        height: auto ;
+      }
+
+      #phonebutton:hover {
+        background-color: gray !important;
+      }
+
+      /**/
+
+      .laptopsection {/*This determines the styling commands for the section that has the same class name.*/
+        background-image: linear-gradient(to right, white, beige, #9F8C76) ;
+        margin: 0 auto 1em auto ;
+        box-sizing: border-box ;
+        width: 80vw ;
+        height: 43vh ;
+        border-style: solid ;
+        border-width: 2px ;
+        border-radius: 20px ;
+        padding-right: 10px ;
+        padding-top: 3px ;
+        padding-left: 7px ;
+        border-color: black ;
+        position: relative 
+       
+      }
+
+      .laptopsection:hover {
+        transform: scale(1.01)
+      }
+
+      .laptopsection img {
+        width: 33vw ;
+        height: 35vh ;
+        margin-top: 3%
+      }
+
+      .laptop {
+        float: right;
+      }
+
+      img.laptop {
+        display: none;
+      }
+
+      #laptopbutton {
+        background-color: black ;
+        border-radius: 10px ;
+        position: absolute ;
+        left: 20% ;
+        top: 62% ;
+        padding: 3% 2%;
+        color: white ;
+        font-weight: bold ;
+        font-size: 2vw ;
+        float: left ;
+        width: 13vw ;
+        height: auto ;
+      }
+
+      #laptopbutton:hover {
+        background-color: gray !important;
+      }
+
+      .desc {
+        position: relative ;
+        top: 20px ;
+        padding-left: 2%;;
+        margin-top: 90px ;
+        font-size: 3.2vw ;
+        color: #808080 ;
+        text-align: center ;
+      }
+
+
+
+
+
+      /**/
+
+      .desktopsection {/*This determines the styling commands for the section that has the same class name.*/
+        background-image: linear-gradient(to right, white, white, #FFAA33) ;
+        box-sizing: border-box ;
+        margin: 0 auto 1em auto ;
+        width: 80vw ;
+        height: 43vh ;
+        border-style: solid ;
+        border-width: 2px ;
+        border-radius: 20px ;
+        padding-right: 10px ;
+        padding-top: 3px ;
+        padding-left: 7px ;
+        border-color: black ;
+        position: relative 
+      }
+
+      .desktopsection:hover {
+        transform: scale(1.01)
+      }
+
+      .desktopsection img {
+        width: 35vw ;
+        height: 35vh ;
+        margin-top: 3%
+      }
+
+      .desktop {
+        float: left;
+      }
+
+      img.desktop {
+        display: none;
+      }
+
+      #desktopbutton {
+        background-color: black ;
+        border-radius: 10px ;
+        position: absolute ;
+        right: 20% ;
+        top: 63% ;
+        padding: 3% 2% ;
+        color: white ;
+        font-weight: bold ;
+        font-size: 2vw ;
+        float: right ;
+      }
+
+      #desktopbutton:hover {
+        background-color: gray !important;
+      }
+
+      #newprodsection {
+        
+        background-image: url('media/sunrise.png') ;
+        background-size: 100% 100%;
+        height: 46vh ;
+        margin-bottom: 0.5em ;
+        background-repeat: no-repeat ;
+
+      }
+
+      #newprodsection img{
+        width: 16vw ;
+        height: 25vh 
+      }
+
+      figcaption {
+        font-size: 2vw ;
+        font-weight: bold ;
+        color: white ;
+        text-shadow: 1.5px 1.5px 1px black ;
+        filter: brightness(120%) 
+        
+      }
+
+      #environmentsection {
+        background-image: url('media/environmentbg.png') ;
+        background-size: 100% 100%;
+        background-repeat: no-repeat ;
+        height: 45vh ;
+        position: relative ;
+        margin-bottom: 0.5em ;
+      }
+
+      #environmentsection img {
+        position: absolute ;
+        top: 60% ;
+        left: 45% ;
+        border-radius: 500px ;
+        width: 9vw;
+        height: 10vh
+      }
+
+      #environmentsection p, #charitysection p {
+        
+        margin-top: 8% !important;
+        
+        text-align: center !important;
+        font-size: 2.2vw !important ;
+        line-height: 150% !important ;
+        font-family: Roboto ;
+        text-shadow: 1.5px 1.5px 1.5px black ;
+      }
+
+      
+
+      #charitysection {
+       
+        background-image: url('media/charity.png') ;
+        background-size: 100% 100% ;
+        height: 50vh ;
+        position: relative ;
+        background-repeat: no-repeat ;
+        
+      }
+
+      .sectionContent {
+        margin-top: 2em ;
+        
+        display: flex ;
+        flex-flow: row wrap ;
+        justify-content: center ;
+      }
+
+      .sectionContent img {
+        margin-left: 3.5vw ;
+        margin-right: 3.5vw ;
+        flex: 0 2 auto ;
+      }
+
+      .newsinfo {
+        margin: 0.1em 0 ;
+        font-size: 4.5vw ;
+        color: black ;
+        font-family: "Segoe UI" ;  
+      }
+
+      .newsSubheadings {
+        position: relative ;
+        top: 20px ;
+        font-size: 3.5vw ;
+        color: white ;
+        text-align: center ;
+        text-shadow: 2px 2px 1px black 
+      }
+
+
+
+
+      /**/
+
+      .newssection {/*This determines the styling commands for the section that has the same class name.*/
+        box-sizing: border-box ;
+        margin: 0 auto 1em auto ;
+        width: 80vw ;
+        height: 60vh ;
+        border-style: outset ;
+        border-width: 2px ;
+        border-radius: 20px ;
+        padding-top: 3px ;
+        border-color: black ;
+        overflow-y: auto ;
+        overflow-x: hidden ;
+        background-color: #E8E8E8 ;
+       
+      }
+
+      .newssection::-webkit-scrollbar {
+        display: none;
+      }
+
+      .newssection:hover {
+        transform: scale(1.01)
+      }
+
+      
+
+
+     
+      
+      section { display: flex !important; 
+      flex-wrap: wrap !important; align-content: flex-start !important;
+      flex-grow: 1 !important;
+      font-family: sans-serif!important;
+      padding-bottom: 3.5em !important; 
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-top: 0 !important;
+      }
+
+       .wrapper{/*This determines the styling commands for the contents within it.*/
+        display: flex !important;
+      }
+      
+      .wrapper .sidebar{/*This determines the styling commands for the navigation sidebar.*/
+        box-sizing: border-box !important;
+        width: 15vw !important;
+        height: 800px !important;
+        background:#484848 !important;
+        padding-top: 0 !important;
+        padding-bottom: 20% !important;
+        position: sticky !important;
+        top:0 !important;
+        text-align: left !important;
+        margin-top: 0 !important;
+        display: none;
+        
+        
+      }
+       
+      
+      .wrapper .sidebar ul li{/*This determines the styling commands for the listing in the unordered list in the navigation sidebar.*/
+        padding: 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        border-top: 7px solid rgba(255,255,255,0.05) !important;
+        font-weight: bold !important;
+        font-family: 'Roboto' !important;
+        display: block !important;
+        font-size: 1.7vw !important;
+        color: white !important;
+      }
+
+      .wrapper .sidebar ul li:nth-of-type(1) {
+        padding: 20px !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        border-top: 7px solid rgba(255,255,255,0.05) !important;
+        font-weight: bold !important;
+        font-family: 'Roboto' !important;
+        display: block !important;
+        font-size: 1em !important;
+        color: white !important;
+
+      }
+    
+      
+      
+      .wrapper .sidebar ul li a:link{/*This determines the styling commands for the links in the navigation sidebar.*/
+        color: white !important;
+      }
+      .wrapper .sidebar ul li a:visited{/*This determines the styling commands for the links in the navigation sidebar that have been visited.*/
+        color: yellow !important;}
+    
+      .wrapper .sidebar ul li a:hover{/*This determines the styling commands for the links in the navigation sidebar when tey are hovered over by the cursor.*/
+        color:gray !important;
+    }
+  
+          ol { /*this determines the styling commands for the ordered list*/
+            color: black !important;
+        }
+    
+        ol li {/*this determines the styling commands for the listing in the ordered list*/
+            font-family: 'Arial Narrow Bold', sans-serif !important;
+            font-size: 1.5em !important;
+            color: black !important;
+            text-align: justify !important;
+            padding-top: 1em !important;
+            padding-bottom: 1em !important;
+            font-weight: 700 !important;
+            margin-left: 2em !important;
+            
+        }
+      
+/*End of navigation*/ 
+  
+ 
+}
+
+/*Mobile Version
+    0-480 px */
+
+    @media only screen and (max-width: 480px) {
+      
+      #learnMore {
+        margin-left: 40px;
+        background-color: white;
+        color: black;
+        padding: 2px 4px;
+        font-weight: bold;
+        border-radius: 5px
+      }
+      
+      #learnMore:hover {
+        background-color: black;
+        color: white
+      }
+      
+      #dialogBox {
+        box-sizing: border-box;
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 18.8%;
+        top: 60%;
+        width: 510px; /* Full width */
+        text-align: left;
+        
+        
+      }
+      
+      #dialogBox-content img {
+        clear: right;
+        float: right;
+        clear: both;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 0px;
+        margin-top: -10px;
+        filter: brightness(109%)
+        
+        
+      }
+      
+      /* Modal Content/Box */
+      #dialogBox-content {
+        display: block;
+        background-color: orange;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        
+      }
+      
+      #dialogBox-content p {
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 15px;
+        color: black;
+        text-align: left ;
+        word-spacing: 100%;
+        line-height: 1.1;
+      }
+      
+      #dialogBox a {
+        text-decoration: underline;
+      }
+      
+      /* The Close Button */
+      #closeBtn {
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 55px;
+        float: right;
+        position: relative;
+        left: 20px;
+        bottom: 20.4px;
+        font-size: 28px;
+        font-weight: bold;
+        background-color: red;
+      }
+      
+      #closeBtn:hover,
+      #closeBtn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .introsection{/*This determines the styling commands for the section that has the same class name.*/
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        background-size: 100% 100%;
+        margin: 0 auto 1em auto;
+        width: 90vw;
+        height: 35vh;
+        animation-name: example;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        position: relative;
+      }
+      
+      @keyframes example {
+        0% {background-image: url('media/appleproduct.jpeg'); }
+        50% {background-image: url('media/huaweiprod.jpg'); }
+        100% {background-image: url('media/intropic.jpg'); }
+      }
+      
+      #samsung {
+        position: absolute;
+        left: 84%;
+        top: 18%;
+        border-radius: 5px;
+        width: 10vw;
+        height: 5vh;
+      }
+      
+      #asus {
+        position: absolute;
+        left: 84%;
+        top: 55%;
+        width: 10vw;
+        border-radius: 5px;  
+        height: 5vh;       
+      }
+      
+      #huawei {
+        position: absolute;
+        left: 84%;
+        top: 73%;
+        width: 10vw;
+        background-color: white;
+        border-radius: 5px;
+        height: 5vh;
+      }
+      
+      #apple {
+        position: absolute;
+        background-color: white;
+        border-radius: 5px;
+        left: 84%;
+        top: 36%;
+        width: 10vw;
+        height: 5vh;
+        
+      }
+      
+      #samsung:hover, #apple:hover, #huawei:hover, #asus:hover {
+        transform: scale(1.2);
+      }
+      
+      
+      
+            
+        
+      .introinfo {
+        text-shadow: 0.15em 0.15em 0.15em  black;
+        font-size: 5vw;
+        color: white;
+        text-align: left;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        animation-name: textColor; 
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;   
+        
+      }
+      
+      #hiddenintroinfo {
+        font-size: 5vw;
+        opacity: 0;
+        color: black;
+        text-align: left;
+        position: absolute;
+        top: 1%;
+        left: 8%;
+        animation-name: hiddenText; 
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      
+      @keyframes hiddenText {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 0;}
+      }
+      
+      
+      
+      @keyframes textColor {
+        0% {color: black; opacity: 0;}
+        50% {color: white; text-shadow: 0.15em 0.15em 0.15em  black;}
+        100% {color: white; text-shadow: 0.15em 0.15em 0.15em  black;}
+      }
+      
+      
+      
+      
+      
+      .phoneprodinfo, .laptopprodinfo, .desktopprodinfo , .chooseus {
+        margin-top: 20px;
+        font-size: 5vw;
+        color: black;
+        font-family: "Segoe UI";        
+      }
+      
+      .whychooseus .chooseus {
+        margin-top: 20px;
+        font-size: 6.5vw;
+        color: white;
+        font-family: "Segoe UI";
+      }  
+      
+            .points {
+              margin: 1em auto;
+            }
+      
+            .points li{
+              color: gold;
+              font-size: 4vw;
+              margin-top: -20px;
+              margin-left: 10%;
+              margin-bottom: -1.5em;
+              text-shadow: 0.1em 0.1em 0.1em black;
+              text-align: left;
+            }
+      
+            #quality {
+              float: right;
+              margin-left: -10%;
+              margin-top: 5%;
+              width: 33vw;
+              height: auto
+            }
+      
+            .whychooseus {
+              background-image: linear-gradient(to right,white, skyblue, #728FCE );
+              box-sizing: border-box;
+              padding-bottom: 1.5em;
+              background-repeat: none;
+              margin: 0 auto 1em auto;
+              width: 90vw;
+              height: 43vh;
+              border-radius: 20px;
+              border-color: black;
+              border-style: solid;
+              border-width: 2px;
+      
+            }
+            .whychooseus:hover {
+              transform: scale(1.02);
+            }
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            /**/
+      
+            .phonesection {/*This determines the styling commands for the section that has the same class name.*/
+              background-image: linear-gradient(to right, white, white, pink);
+              box-sizing: border-box;
+              margin: 0 auto 1em auto;
+              width: 90vw;
+              height: 35vh;
+              border-style: solid;
+              border-width: 2px;
+              border-radius: 20px;
+              padding-right: 10px;
+              padding-top: 3px;
+              padding-left: 7px;
+              border-color: black;
+              position: relative;
+            }
+
+            .phonesection img {
+              width: 35vw;
+              height: 30vh;
+              margin-top: 2%; 
+            }
+      
+            .phonesection:hover {
+              transform: scale(1.01)
+            }
+      
+            .phone {
+              float: left;
+              
+            }
+      
+            img.phone {
+              display: none;
+            }
+      
+            #phonebutton {
+              background-color: black;
+              border-radius: 10px;
+              position: absolute;
+              right: 18%;
+              top: 65%;
+              padding: 3% 2%;
+              color: white;
+              font-weight: bold;
+              font-size: 3vw;
+              width: 25vw;
+              height: auto;
+              float: right;
+            }
+      
+            #phonebutton:hover {
+              background-color: gray !important;
+            }
+      
+            /**/
+      
+            .laptopsection {/*This determines the styling commands for the section that has the same class name.*/
+              background-image: linear-gradient(to right, white, beige, #9F8C76);
+              margin: 0 auto 1em auto;
+              box-sizing: border-box;
+              width: 90vw;
+              height: 35vh;
+              border-style: solid;
+              border-width: 2px;
+              border-radius: 20px;
+              padding-right: 10px;
+              padding-top: 3px;
+              padding-left: 7px;
+              border-color: black;
+              position: relative;
+             
+            }
+      
+            .laptopsection:hover {
+              transform: scale(1.01)
+            }
+
+            .laptopsection img {
+              width: 40vw;
+              height: 25vh;
+              overflow: hidden;
+              margin-bottom: 5%;
+              margin-left: 0;
+              margin-right: 0;
+              padding: 0;
+            }
+      
+            .laptop {
+              float: right;
+              width: 150px;
+              height: 120px;
+              margin-top: 35px
+            }
+      
+            img.laptop {
+              display: none;
+            }
+      
+            #laptopbutton {
+              background-color: black;
+              border-radius: 10px;
+              position: absolute;
+              left: 15%;
+              top: 65%;
+              padding: 3% 2%;
+              color: white;
+              font-weight: bold;
+              font-size: 3vw;
+              float: left;
+              width: 19vw;
+              height: auto
+            }
+      
+            #laptopbutton:hover {
+              background-color: gray !important;
+            }
+      
+            .desc {
+              position: relative;
+              top: 20px;
+              margin-top: 90px;
+              font-size: 20px;
+              color: #808080;
+              text-align: center;
+            }
+      
+      
+      
+      
+      
+            /**/
+      
+            .desktopsection {/*This determines the styling commands for the section that has the same class name.*/
+              background-image: linear-gradient(to right, white, white, #FFAA33);
+              box-sizing: border-box;
+              margin: 0 auto 1em auto;
+              width: 90vw;
+              height: 35vh;
+              border-style: solid;
+              border-width: 2px;
+              border-radius: 20px;
+              padding-right: 10px;
+              padding-top: 3px;
+              padding-left: 7px;
+              border-color: black;
+              position: relative
+            }
+      
+            .desktopsection:hover {
+              transform: scale(1.01)
+            }
+
+            .desktopsection img {
+              width: 45vw;
+              height: 30vh;
+              margin-top: 4%
+            }
+      
+            .desktop {
+              float: left;
+              width: 150px;
+              height: 120px;
+              margin-top: 35px
+            }
+      
+            img.desktop {
+              display: none;
+            }
+      
+            #desktopbutton {
+              background-color: black;
+              border-radius: 10px;
+              position: absolute;
+              right: 14%;
+              top: 75%;
+              padding: 10px 20px;
+              color: white;
+              font-weight: bold;
+              font-size: 3vw;
+              float: right;
+            }
+      
+            #desktopbutton:hover {
+              background-color: gray !important;
+            }
+      
+            #newprodsection {
+              background-image: url('media/sunrise.png');
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              height: 40vh;    
+              margin-bottom: 0.5em      
+      
+            }
+      
+            figcaption {
+              font-size: 2.5vw;
+              font-weight: bold;
+              color: white;
+              text-shadow: 1.5px 1.5px 1px black;
+              filter: brightness(120%);
+              word-wrap:break-word;
+              text-align: center;
+              
+              
+            }
+      
+            #environmentsection {
+              
+              background-image: url('media/environmentbg.png');
+              background-size: 100% 100%;
+              height: 40vh;
+              background-repeat: no-repeat;
+              position: relative;
+              margin-bottom: 0.5em;
+            }
+      
+            #environmentsection img {
+              position: absolute;
+              top: 54%;
+              left: 43%;
+              border-radius: 500px;
+              width: 12vw;
+              height: 10vh
+            }
+      
+            #environmentsection p, #charitysection p{
+              margin-top: 8%;
+              text-align: center;
+              font-size: 3vw;
+              line-height: 150%;
+              font-family: Roboto;
+              text-shadow: 1.5px 1.5px 1.5px black;
+            }
+      
+            #charitysection {
+              background-image: url('media/charity.png');
+              background-size: 100% 100%; 
+              height: 36vh;
+              background-repeat: no-repeat;
+              position: relative;
+              
+            }
+      
+            .sectionContent {
+              margin-top: 3em;
+              margin-right: -50px;
+              display: flex;
+              flex-flow: row wrap;
+              padding-left: 4%;
+            }
+      
+            .sectionContent img {
+              margin-left: 3.5vw;
+              margin-right: 3.5vw;
+              width: 22vw;
+              height: 20vh
+            }
+      
+            .newsinfo {
+              margin: 0.3em  0;
+              font-size: 4.5vw;
+              color: black;
+              font-family: "Segoe UI";  
+            }
+      
+            .newsSubheadings {
+              position: relative;
+              top: 20px;
+              font-size: 3.5vw;
+              color: white;
+              text-align: center;
+              text-shadow: 2px 2px 1px black
+            }
+      
+      
+      
+      
+            /**/
+      
+            .newssection {/*This determines the styling commands for the section that has the same class name.*/
+              box-sizing: border-box;
+              width: 90vw;
+              height: 46vh;
+              border-style: outset;
+              border-width: 2px;
+              border-radius: 20px;
+              margin: 0 auto 1em auto;
+              padding-top: 3px;
+              border-color: black;
+              overflow-y: auto;
+              overflow-x: hidden;
+              background-color: #E8E8E8;
+             
+            }
+
+            .newssection::-webkit-scrollbar {
+              display: none;
+            }
+      
+            .newssection:hover {
+              transform: scale(1.01)
+            }
+      
+            /**/
+      
+            section { display: flex; 
+            flex-wrap: wrap; align-content: flex-start;
+            flex-grow: 1;
+            font-family: sans-serif;
+            padding-bottom: 3.5em; 
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            }
+      
+             .wrapper{/*This determines the styling commands for the contents within it.*/
+              display: flex;
+            }
+            
+            .wrapper .sidebar{/*This determines the styling commands for the navigation sidebar.*/
+              display: none;
+              
+            }
+             
+              ol { /*this determines the styling commands for the ordered list*/
+                  color: black;
+              }
+          
+              ol li {/*this determines the styling commands for the listing in the ordered list*/
+                  font-family: 'Arial Narrow Bold', sans-serif;
+                  font-size: 1.5em;
+                  color: black;
+                  text-align: justify;
+                  padding-top: 1em;
+                  padding-bottom: 1em;
+                  font-weight: 700;
+                  margin-left: 2em;
+                  
+              }
+            
+              br {/*this determines the styling commands for the br tag*/
+                padding-bottom: 5em;
+                padding-top:5em ;
+              }
+    }
+    
+    
+
+        
+
+      
+ 
